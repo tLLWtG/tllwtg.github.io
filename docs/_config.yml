@@ -27,6 +27,7 @@ github_username:  tLLWtG
 markdown: kramdown
 theme: minima
 plugins:
+
 #  - jekyll-feed
 
 # Exclude from processing.
