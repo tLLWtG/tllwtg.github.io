@@ -8,7 +8,7 @@ header-img: "img/post-bg-2015.jpg"
 catalog: true
 tags:
     - Life
-    - Tech
+    - Code
 ---
 
 > “Yeah It's on. ”
@@ -47,6 +47,7 @@ tLLWtG 的 Blog 开通了。
 
 ## 后记
 
-(保留)
+*(保留)*
 
-—— () 后记于 ()
+
+<!-- *———      __ 后记于 __* -->
