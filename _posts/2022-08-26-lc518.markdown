@@ -1,10 +1,11 @@
 ---
 layout:     post
-title:      "LC Problems' Solution -518"
+title:      "LC Problems' Solutions -518"
 subtitle:   " \"LeetCode\""
 date:       2022-08-26 22:00:00
 author:     "tLLWtG"
 header-img: "img/LeetCode.png"
+header-mask: 0.3
 catalog: true
 tags:
     - Code
@@ -24,50 +25,37 @@ You are given an integer array coins representing coins of different denominatio
 
 Return the number of combinations that make up that amount. If that amount of money cannot be made up by any combination of the coins, return 0.
 
-You may assume that you have an infinite number of each kind of coin.
-
-The answer is guaranteed to fit into a signed 32-bit integer.
+You may assume that you have an infinite number of each kind of coin.The answer is guaranteed to fit into a signed 32-bit integer.
 
 ---
 
 * **Example 1:**
 
-Input: amount = 5, coins = [1,2,5]
-
-Output: 4
-
+Input: amount = 5, coins = [1,2,5]  
+Output: 4  
 Explanation: there are four ways to make up the amount:
 
-5=5
-
-5=2+2+1
-
-5=2+1+1+1
-
+5=5  
+5=2+2+1  
+5=2+1+1+1  
 5=1+1+1+1+1
 
 * **Example 2:**
 
-Input: amount = 3, coins = [2]
-
-Output: 0
-
+Input: amount = 3, coins = [2]  
+Output: 0  
 Explanation: the amount of 3 cannot be made up just with coins of 2.
 * **Example 3:**
 
-Input: amount = 10, coins = [10]
-
+Input: amount = 10, coins = [10]  
 Output: 1
  
 
 * **Constraints:**
 
-1 <= coins.length <= 300
-
-1 <= coins[i] <= 5000
-
-All the values of coins are unique.
-
+1 <= coins.length <= 300  
+1 <= coins[i] <= 5000  
+All the values of coins are unique.  
 0 <= amount <= 5000
 
 ## Tanslation
@@ -77,56 +65,43 @@ All the values of coins are unique.
 
 请你计算并返回可以凑成总金额的硬币组合数。如果任何硬币组合都无法凑出总金额，返回 0 。
 
-假设每一种面额的硬币有无限个。 
-
-题目数据保证结果符合 32 位带符号整数。
+假设每一种面额的硬币有无限个。 题目数据保证结果符合 32 位带符号整数。
 
 ---
 
 * **示例 1：**
 
-输入：amount = 5, coins = [1, 2, 5]
-
-输出：4
-
+输入：amount = 5, coins = [1, 2, 5]  
+输出：4  
 解释：有四种方式可以凑成总金额：
 
-5=5
-
-5=2+2+1
-
-5=2+1+1+1
-
+5=5  
+5=2+2+1  
+5=2+1+1+1  
 5=1+1+1+1+1
 
 * **示例 2：**
 
-输入：amount = 3, coins = [2]
-
-输出：0
-
+输入：amount = 3, coins = [2]  
+输出：0  
 解释：只用面额 2 的硬币不能凑成总金额 3 。
 
 * **示例 3：**
 
-输入：amount = 10, coins = [10] 
-
+输入：amount = 10, coins = [10]  
 输出：1
  
 
 * **提示：**
 
-1 <= coins.length <= 300
-
-1 <= coins[i] <= 5000
-
-coins 中的所有值 互不相同
-
+1 <= coins.length <= 300  
+1 <= coins[i] <= 5000  
+coins 中的所有值 互不相同  
 0 <= amount <= 5000
 
 ## 题解
 
-这很明显是一道涉及排列组合的完全背包问题。
+显然，这是一道涉及排列组合的完全背包问题。背包问题的dp解法不再赘述，我们重点关注dp中**排列数与组合数**的问题。
 
 1. 先来找找下面两个代码块的不同
 ```
@@ -160,7 +135,7 @@ class Solution:
         return dp[amount]
 ```
 2. 没错，很明显这两块代码的循环嵌套顺序不同。用本题的测试用例1跑一遍后我们得到两个结果：4和9。由~~答案~~题意可知，4是我们想要的结果。那么循环顺序的交换是怎么对结果产生影响的呢？
-3. 我们依次来枚举一下。在dp的过程中，以硬币种类作为外循环时，我们是按1-->2-->5的顺序使用硬币。而以钱的总额作为外循环时，我们是按1-->2-->3-->4-->5的顺序累计方案的数目。举其中一种方案{1，2，2}为例，前者将同种硬币放在一起处理，对于此方案只计入一次，即数学中的组合数，而后者则没有限制，对于此方案重复记录了三次{1，2，2}，{2，1，2}，{2，2，1}，即数学中的排列数。
+3. 我们依次来枚举一下。在dp的过程中，以**硬币种类**作为外循环时，我们是按1-->2-->5的顺序使用硬币。而以**钱的总额**作为外循环时，我们是按1-->2-->3-->4-->5的顺序累计方案的数目。举其中一种方案{1，2，2}为例，前者将同种硬币放在一起处理，对于此方案只计入一次，即数学中的组合数，而后者则没有限制，对于此方案重复记录了三次{1，2，2}，{2，1，2}，{2，2，1}，即数学中的排列数。
 4. 综上，对于完全背包问题，dp过程中循环嵌套的顺序将决定我们求得的解是排列数还是组合数。
 
 ## 后记

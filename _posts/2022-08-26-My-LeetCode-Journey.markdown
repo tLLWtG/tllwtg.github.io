@@ -5,6 +5,7 @@ subtitle:   " \"LeetCode\""
 date:       2022-08-26 20:00:00
 author:     "tLLWtG"
 header-img: "img/LeetCode.png"
+header-mask: 0.3
 catalog: true
 tags:
     - Code
