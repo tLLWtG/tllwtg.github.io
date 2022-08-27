@@ -2,4 +2,4 @@
 
 Hi! This is my personal website -- tLLWtG Blog.
 
-*Addition: the theme is forked from Hux*
+*Addition: the theme is forked from Hux.*
