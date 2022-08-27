@@ -10,7 +10,6 @@ catalog: true
 tags:
     - Code
     - Study
-    - LeetCode
 ---
 
 ## To be edited ......
