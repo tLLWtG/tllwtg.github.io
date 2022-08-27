@@ -1,13 +1,13 @@
 {
-  "name": "Hux Blog",
-  "short_name": "Hux Blog",
+  "name": "tLLWtG Blog",
+  "short_name": "LLW",
   "description": "About an engineer & designer who loves web.",
   "icons": [{
-    "src": "icons/128.png",
+    "src": "icons/white-128.png",
     "sizes": "128x128",
     "type": "image/png"
   }, {
-    "src": "icons/512.png",
+    "src": "icons/white-512.png",
     "sizes": "512x512",
     "type": "image/png"
   }],
