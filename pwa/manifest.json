@@ -3,13 +3,13 @@
   "short_name": "LLW",
   "description": "About an engineer & designer who loves web.",
   "icons": [{
-    "src": "icons/white-128.png",
+    "src": "icons/white-128.jpg",
     "sizes": "128x128",
-    "type": "image/png"
+    "type": "image/jpg"
   }, {
-    "src": "icons/white-512.png",
+    "src": "icons/white-512.jpg",
     "sizes": "512x512",
-    "type": "image/png"
+    "type": "image/jpg"
   }],
   "background_color": "#fff",
   "theme_color": "#000",
