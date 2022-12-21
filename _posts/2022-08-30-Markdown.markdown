@@ -1,0 +1,388 @@
+---
+layout:     post
+title:      "Markdown Notes"
+subtitle:   " \"Markdown\""
+date:       2022-08-30 14:00:00
+author:     "tLLWtG"
+header-img: "img/md.png"
+header-mask: 0.3
+mathjax: true
+catalog: true
+tags:
+    - Code
+    - Study
+---
+
+>众所周知，Markdown是世界上最为流行的轻量级标记语言~~之一？~~，它允许人们以纯文本格式编写出各种各样的文档。而本博客也是由Markdown语言编写。
+
+
+* 创始人John Gruber的[Markdown说明文档](https://daringfireball.net/projects/markdown/)。
+
+**基于此文档，让我们一起来学习Markdown的基本语法。**
+
+<font size=2 color="gray" >注：请忽略部分语法展示使用的"+"</font>
+
+<!--[第一节](#第一节) -->
+
+
+### 笔记目录
+
+[**1. 标题**](#1-标题)  
+[**2. 引用**](#2-引用)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*1)单层引用*  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*2)多层引用*  
+[**3. 分割线**](#3-分割线)  
+[**4. 代码块**](#4-代码块)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*1)行内式*  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*2)缩进式*  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*3)多行代码*  
+[**5. 列表**](#5-列表)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*1)无序列表*  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*2)有序列表*  
+[**6. 字体**](#6-字体)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*1)粗体与斜体*  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*2)删除线*  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*3)html字体变换*  
+[**7. 换行与缩进**](#7-换行与缩进)  
+[**8. 图片**](#8-图片)  
+[**9. 链接**](#9-超链接)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*1)行内式*  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*2)参考式*  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*3)直接链接*  
+[**10. 锚点**](#10-锚点)  
+[**11. 目录**](#11-自动目录)  
+[**12. 注脚**](#12-注脚)  
+[**13. LaTeX公式**](#13-latex公式)  
+[**14. 表格**](#14-表格)  
+[**15. HTML**](#15-html)  
+[**16. 其他**](#16-其他)  
+
+
+### 1. 标题
+在Markdown中，标题用一个`#`加**空格**表示，并支持多级标题的编写。除此之外，在文字下方加上多个`=`或`-`也可表示标题。
+
+* **语法**
+
+```
+一级标题： # aaa
+二级标题： ## aaa
+三级标题： ### aaa
+
+aaa
+===
+aaa
+---
+
+```
+* **显示效果**
+
+---
+
+# aaa
+## aaa
+### aaa
+
+aaa
+===
+
+aaa
+---
+
+---
+
+### 2. 引用
+你可以使用一个`>`来表示引用文字，多个`>`嵌套可表示多层引用。
+
+* **语法**
+
+```
+单层引用： > aaa
+多层引用：
+>>> aaa
+
+>> bbb
+
+> ccc  
+```
+
+* **显示效果**
+
+> aaa
+
+>>> aaa
+
+>> bbb
+
+>ccc
+
+### 3. 分割线
+使用多个`-`或`*`或`_`可形成一条分割线。  
+**注意**：多个`-`用于一行文字的下方表示加粗而不是分割线。
+
+* **语法**
+
+```
+第一种方式： ---
+第二种方式： ***
+第三种方式： ___
+```
+* **显示效果**
+
+---
+***
+___
+
+
+### 4. 代码块
+
+* **语法**
+
+```
+1)行内式：`aaa`
+2)缩进式：(Tab或四个空格)aaa
+3)多行代码：
+六个`包裹aaa
+```
+
+* **显示效果**
+
+`aaa`
+
+    aaa
+
+```
+aaa
+```
+
+### 5. 列表
+Markdown本身有两种列表形式：**无序列表**和**有序列表**。其中无序列表用`*`或`+`或`-`加上空格表示，有序列表使用数字加`.`加空格表示。除此之外，部分平台还支持自定义型列表。
+
+* **语法**
+
+```
+* aaa
+- aaa
++ aaa
+
+1. aaa
+2. bbb
+
+```
+
+* **显示效果**
+
+* aaa
+- aaa
++ aaa
+
+1. aaa
+2. bbb
+
+### 6. 字体
+原生Markdown仅自带**斜体**、**粗体**、**删除线**三种字体样式，若想要实现更多字体效果可使用HTML中的font标签。
+
+* **语法**
+
+```
+*斜体*
+**粗体**
+***粗斜体***
+
+~~删除线~~
+
+<font color=aqua size=5 face="黑体">color=aqua size=5 face="黑体"</font>
+
+```
+
+* **显示效果**
+
+*斜体*  
+**粗体**  
+***粗斜体***  
+
+~~删除线~~  
+ 
+
+<font color=aqua size=5 face="黑体">color=aqua size=5 face="黑体"</font>
+
+### 7. 换行与缩进
+段内**换行**可在行末加上多个空格，而**分段**则需要在段间间隔一行。
+
+由于Markdown语言不注重格式的特性，正常情况下我们无法主动缩进文字，在段首加上空格或制表符也难以达到想要的效果。要解决缩进问题，我们只能使用HTML或LaTeX的语法。
+
+* **语法**
+
+```
+
+换行：
+aaa  
+aaa
+
+aaa
+
+缩进：
+&nbsp;aaa
+&emsp;aaa
+<figure>aaa</figure>
+
+$\qquad$ aaa
+$\quad$ aaa
+
+```
+
+* **显示效果**
+
+换行：  
+aaa  
+aaa
+
+aaa  
+
+缩进：  
+&nbsp;aaa  
+&emsp;aaa
+<figure>aaa</figure>
+
+$\qquad$ aaa  
+$\quad$ aaa  
+
+### 8. 图片
+
+* **语法**
+
+```
+!+[图片说明]+(图片地址 "title")
+```
+
+* **显示效果**
+
+![图片说明](../../../../img/md.png "title")
+
+### 9. 超链接
+**参考式**的链接可放在文本的任意位置。
+
+* **语法**
+
+```
+
+行内式：[百度](https://www.baidu.com "title")
+
+参考式：[baidu][1]
+
+[1]:https://www.baidu.com "title"
+
+直接链接：<https://www.baidu.com>
+
+```
+* **显示效果**
+
+[百度](https://www.baidu.com "title")  
+
+[baidu][1]  
+
+[1]:https://www.baidu.com "title"
+
+<https://www.baidu.com>  
+
+### 10. 锚点
+Markdown只支持在**标题后**插入锚点，如果想在任意位置添加锚点可使用HTML。
+
+* **语法**
+
+```
+[跳到目录](#目录)
+```
+* **显示效果**
+
+[跳到目录](#笔记目录)
+
+### 11. 自动目录
+可用`[toc]`或`@[toc]`自动生成目录，但此功能只有部分编辑器支持。
+
+### 12. 注脚
+脚注会自动后移至文末。
+
+* **语法**
+
+```
+Markdown[^1]
+[^1]:Markdown是一种轻量级标记语言
+```
+* **显示效果**
+
+Markdown[^1]
+
+[^1]:Markdown是一种轻量级标记语言
+
+### 13. LaTeX公式
+部分编辑器在使用整行公式时需加上转义符号`\`。
+
+* **语法**
+
+```
+行内公式：$E=mc^2$
+整行公式：
+$$E=mc^2$$
+或
+$\$E=mc^2$\$
+```
+* **显示效果**
+
+$E=mc^2$
+
+$\$E=mc^2$\$
+
+### 14. 表格
+`:--`表示左对齐，同理有`:-:`和`--:`
+
+* **语法**
+
+```
+|aaa|bbb|ccc|
+|:--|:-:|--:|
+|A|B|C|
+|AA|BB|CC|
+|AAA|BBB|CCC|
+```
+* **显示效果**
+
+|aaa|bbb|ccc|
+|:-|:-:|-:|
+|A|B|C|
+|AA|BB|CC|
+|AAA|BBB|CCC|
+
+### 15. HTML
+Markdown文档支持HTML的语法，`&`、`<`和`>`会自动转化成HTML实体。下面是几个常用的HTML元素。
+
+* **语法**
+
+```
+<div align="right">右对齐</div>
+<!--注释-->
+<ins>aaa</ins>
+
+<font>aaa</font>
+```
+
+
+* **显示效果**
+
+<div align="right">右对齐</div>
+<!--注释-->
+<ins>aaa</ins>
+
+<font>aaa</font>
+
+### 16. 其他
+除了先前介绍的语法外，Markdown还能实现绘制**流程图**、**时序图**、**甘特图**、**类图**等功能，但它们并不通用于所有平台，故不在此介绍。
+
+### 后记
+
+*(保留)*
+
+
+<!-- *———      __ 后记于 __* -->
+
+
+### 脚注

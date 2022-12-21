@@ -42,7 +42,7 @@ tLLWtG 的 Blog 开通了。
 
 配置的过程中也没遇到什么坑，基本就是 Git 的流程，相当顺手
 
-大的 Jekyll 主题上直接 fork 了 Clean Blog
+大的 Jekyll 主题上直接 fork 了 Huxpro
 
 
 ## 后记
