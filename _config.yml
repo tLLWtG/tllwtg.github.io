@@ -91,7 +91,11 @@ page-mathjax: false
 # Friends
 friends:
   [
-     { title: "tLLWtG", href: "https://tllwtg.github.io/" },
+     { title: "tLLWtG", href: "https://tllwtg.github.io" },
+     { title: "Codeforces", href: "https://codeforces.com" },
+     { title: "洛谷", href: "https://www.luogu.com.cn" },
+     { title: "OI Wiki", href: "https://oi.wiki" },
+     { title: "一言", href: "https://hitokoto.cn" }
 #edited
 #    { title: "乱序（Midare）", href: "http://mida.re/" },
 #    { title: "Ebn Zhang", href: "https://ebnbin.dev/" },
