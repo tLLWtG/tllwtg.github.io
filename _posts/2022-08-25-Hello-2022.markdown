@@ -25,9 +25,9 @@ tLLWtG 的 Blog 开通了。
 
 ## 正文
 
-接下来说说搭建这个博客的技术细节(forked from HUX)。  
+接下来说说搭建这个博客的技术细节(forked from Huxpro)。  
 
-简单来说就是[GitHub Pages](https://pages.github.com/) + [Jekyll](http://jekyllrb.com/) 快速 Building Blog 的技术方案，非常轻松时尚。
+简单来说就是 [GitHub Pages](https://pages.github.com/) + [Jekyll](http://jekyllrb.com/) 快速 Building Blog 的技术方案，非常轻松时尚。
 
 其优点非常明显：
 
@@ -48,9 +48,9 @@ tLLWtG 的 Blog 开通了。
 
 * 2022.12.22
 
-1. Sidebar中添加了**一言**模块。
+1. Sidebar 中添加了**一言**模块。
 2. 引入了**百度统计**的脚本用于分析访问数据。
-3. 使用**百度搜索资源平台**方便进行SEO。
+3. 使用**百度搜索资源平台**方便进行 SEO。
 
 
 ## 后记
