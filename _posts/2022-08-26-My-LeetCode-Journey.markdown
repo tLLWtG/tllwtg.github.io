@@ -10,7 +10,7 @@ catalog: true
 tags:
     - Code
     - Study
-    - LeetCode
+    - CP
 ---
 
 >This is my LeetCode Journey...

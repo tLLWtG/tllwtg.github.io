@@ -10,8 +10,7 @@ catalog: true
 tags:
     - Code
     - Study
-    - LeetCode
-    - DP
+    - CP
 ---
 
 >Problem -518- Coin Change 2

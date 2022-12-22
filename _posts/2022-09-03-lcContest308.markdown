@@ -10,8 +10,7 @@ catalog: true
 tags:
     - Code
     - Study
-    - LeetCode
-    - Contest
+    - CP
 ---
 
 >第一次AK力扣周赛！！！
