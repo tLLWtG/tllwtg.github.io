@@ -7,3 +7,5 @@ gem "rake"
 gem "webrick", "~> 1.7.0"
 
 gem "kramdown-parser-gfm"
+
+gem 'jekyll-sitemap'

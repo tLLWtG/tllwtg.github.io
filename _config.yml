@@ -42,7 +42,7 @@ timezone: CN
 # from PR#40, to support local preview for Jekyll 3.0
 # make sure you have this gem installed
 # `$ gem install jekyll-paginate`
-plugins: [jekyll-paginate]
+#plugins: [jekyll-paginate] (move to the bottom)
 
 # Markdown settings
 # replace redcarpet to kramdown,
@@ -105,3 +105,9 @@ friends:
 #    { title: "DHong Say", href: "http://dhong.co" },
 #    { title: "尹峰以为", href: "http://ingf.github.io/" },
   ]
+
+# added sitemap
+url: "https://tllwtg.github.io" # the base hostname & protocol for your site
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
