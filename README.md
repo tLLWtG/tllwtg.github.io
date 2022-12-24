@@ -17,3 +17,13 @@ Hi! This is my personal website  **"tLLWtG Blog"**.
   
 1. 增加了 **robots.txt** 文件以禁止不必要的内容爬取。
 2. 安装了 **jekyll-sitemap** 插件用于自动生成 sitemap.xml，方便搜索引擎抓取内容。
+3. 增加主页 intro-header 随机选择背景图的脚本
+
+* 2022.12.24
+
+1. 修复主页 intro-header 随机背景图显示不完全的 Bug (主页自适应背景图
+
+
+## License
+
+This project is licensed under the [Apache License 2.0](https://github.com/tLLWtG/tLLWtG.github.io/blob/main/LICENSE).
