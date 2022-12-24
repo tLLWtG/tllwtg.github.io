@@ -94,8 +94,29 @@
 {% endif %}
 
 {% if include.type == 'page' %}
-<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
-  <div class="header-mask"></div>
+<!--be random-->
+{% if page.header-img %}
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{{ page.header-img }}')">
+{% else %}
+<!--
+<header class="intro-header" id="randombg" style="background-image: url('{{ site.baseurl }}/{{ site.header-img }}')">
+!-->
+<script>
+    var x=Math.floor(Math.random() * 13)
+    var str=x.toString()
+    var bg='/img/bg/image_'+str+'.jpg'
+    document.write('<header class="intro-header" style="background-image: url('+bg+')">')
+</script>
+    <!--
+    <script>
+        var x=Math.floor(Math.random() * 1)
+        var str=x.toString()
+        var bg='/img/bg/image_'+str+'.jpg'
+        document.getElementById('randombg').style.background='url('+bg+')'
+    </script>
+    -->
+{% endif %} 
+    <div class="header-mask"></div>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">

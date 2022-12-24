@@ -1,11 +1,12 @@
 # Site settings
 title: tLLWtG Blog
 SEOTitle: tLLWtG Blog | tLLWtG的博客
+# bg changed to random
 header-img: img/home-bg.jpg
 email: tllwtg@gmail.com
 description: "这里是 tLLWtG 的个人博客，与你一起发现更大的世界 | 要做一个有 swag 的程序员"
 keyword: "tLLWtG, tLLWtG的博客, tLLWtG Blog, 博客, 个人网站, 互联网, Web"
-url: "https://tllwtg.github.io/" # your host, for absolute URL
+url: "https://tllwtg.github.io" # your host, for absolute URL
 baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -95,19 +96,9 @@ friends:
      { title: "Codeforces", href: "https://codeforces.com" },
      { title: "洛谷", href: "https://www.luogu.com.cn" },
      { title: "一言", href: "https://hitokoto.cn" }
-#edited
-#    { title: "乱序（Midare）", href: "http://mida.re/" },
-#    { title: "Ebn Zhang", href: "https://ebnbin.dev/" },
-#    { title: "Kun Qian", href: "http://kunq.me" },
-#    { title: "Sherry Woo", href: "https://sherrywoo.me/" },
-#    { title: "SmdCn", href: "http://blog.smdcn.net" },
-#    { title: "JiyinYiyong", href: "http://tiye.me/" },
-#    { title: "DHong Say", href: "http://dhong.co" },
-#    { title: "尹峰以为", href: "http://ingf.github.io/" },
   ]
 
 # added sitemap
-url: "https://tllwtg.github.io" # the base hostname & protocol for your site
 plugins:
   - jekyll-sitemap
   - jekyll-paginate
