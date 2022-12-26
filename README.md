@@ -24,6 +24,10 @@ Hi! This is my personal website  **"tLLWtG Blog"**.
 1. 修复主页 intro-header 随机背景图显示不完全的 Bug (主页自适应背景图
 
 
+* 2022.12.26
+
+1. 加入busuanzi的访客统计功能
+
 ## License
 
 This project is licensed under the [Apache License 2.0](https://github.com/tLLWtG/tLLWtG.github.io/blob/main/LICENSE).
