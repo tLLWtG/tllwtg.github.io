@@ -1,9 +1,28 @@
-# tLLWtG.github.io
+# tllwtg.github.io
 
-Hi! This is my personal website  **"tLLWtG Blog"**.
+Hi! This is my personal website **[tLLWtG Blog](https://tllwtg.github.io)**.
 
-> The Jekyll theme is forked from [Huxpro](https://github.com/Huxpro/huxpro.github.io).
+> The Jekyll theme is based on Hux Blog.
 
+## Deploy
+
+1. You will need [Ruby](https://www.ruby-lang.org/en/) and [Bundler](https://bundler.io/) to use [Jekyll](https://jekyllrb.com/). Following [Using Jekyll with Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/) to fullfill the enviromental requirement.
+
+2. Installed dependencies in the `Gemfile`:
+
+```sh
+$ bundle install 
+```
+
+3. Serve the website (`localhost:4000` by default):
+
+```sh
+$ bundle exec jekyll serve  # alternatively, npm start
+```
+
+## Development
+
+**[User Manual of Blog](_doc/Manual.md)**
 
 ## UPD
 
