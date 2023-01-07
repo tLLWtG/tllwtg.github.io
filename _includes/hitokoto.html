@@ -1,17 +1,54 @@
-<hr>
-<h5>一言（ヒトコト）</h5>
-<div id="hitokoto_text" style="color: rgb(102, 102, 102);"></div>
-<div style="text-align: right; margin-top: 15px; font-size: 0.9em; " id="hitokoto_from"></div>
+<hr />
+<h5 style="display: inline">一言（ヒトコト）</h5>
+<div style="display: inline; font-size: 1.5em; color: #a3a3a3">|&nbsp</div>
+<div
+  title="redo"
+  id="redo icon"
+  style="display: inline; font-weight: 600; font-size: 1.1em; color: #a3a3a3"
+>
+  next
+</div>
+<div
+  id="hitokoto_text"
+  style="margin-top: 20px; color: rgb(102, 102, 102)"
+></div>
+<div
+  style="text-align: right; margin-top: 15px; font-size: 0.9em"
+  id="hitokoto_from"
+></div>
 <script>
-    fetch('https://v1.hitokoto.cn/?c=a&c=b&c=d&c=i&c=k')
-        .then(response => response.json())
-        .then(data => {
-            const hitokoto_text = document.getElementById('hitokoto_text')
-            hitokoto_text.href = 'https://hitokoto.cn/?uuid=' + data.uuid
-            hitokoto_text.innerText = data.hitokoto
-            const hitokoto_from = document.getElementById('hitokoto_from')
-            hitokoto_from.href = 'https://hitokoto.cn/?uuid=' + data.uuid
-            hitokoto_from.innerText = '——' + data.from
-        })
-        .catch(console.error)
+  fetch("https://v1.hitokoto.cn/?c=a&c=b&c=d&c=i&c=k")
+    .then((response) => response.json())
+    .then((data) => {
+      const hitokoto_text = document.getElementById("hitokoto_text");
+      hitokoto_text.href = "https://hitokoto.cn/?uuid=" + data.uuid;
+      hitokoto_text.innerText = data.hitokoto;
+      const hitokoto_from = document.getElementById("hitokoto_from");
+      hitokoto_from.href = "https://hitokoto.cn/?uuid=" + data.uuid;
+      hitokoto_from.innerText = "——" + data.from;
+    })
+    .catch(console.error);
+</script>
+<script>
+  const redo = document.getElementById("redo icon");
+  redo.addEventListener("click", (e) => {
+    fetch("https://v1.hitokoto.cn/?c=a&c=b&c=d&c=i&c=k")
+      .then((response) => response.json())
+      .then((data) => {
+        const hitokoto_text = document.getElementById("hitokoto_text");
+        hitokoto_text.href = "https://hitokoto.cn/?uuid=" + data.uuid;
+        hitokoto_text.innerText = data.hitokoto;
+        const hitokoto_from = document.getElementById("hitokoto_from");
+        hitokoto_from.href = "https://hitokoto.cn/?uuid=" + data.uuid;
+        hitokoto_from.innerText = "——" + data.from;
+      })
+      .catch(console.error);
+  });
+  redo.addEventListener("mouseover", (e) => {
+    redo.style.cursor = "pointer";
+    redo.style.color = "rgb(100, 100, 100)";
+  });
+  redo.addEventListener("mouseout", (e) => {
+    redo.style.color = "#a3a3a3";
+  });
 </script>
