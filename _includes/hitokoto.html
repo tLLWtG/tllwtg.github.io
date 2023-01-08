@@ -90,10 +90,9 @@
         const hitokoto_from = document.getElementById("hitokoto_from");
         hitokoto_from.href = "https://hitokoto.cn/?uuid=" + data.uuid;
         hitokoto_from.innerText = "——" + data.from;
+        loading_off();
       })
       .catch(console.error);
-    setTimeout(loading_off, 1);
-    //loading_off();
   }
 
   gethitokoto();
