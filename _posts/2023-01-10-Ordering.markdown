@@ -1,0 +1,131 @@
+---
+layout:     post
+title:      "Strict Weak Ordering"
+subtitle:   " \"Ordering\""
+date:       2023-01-10 20:00:00
+author:     "tLLWtG"
+header-img: "img/STL.png"
+header-mask: 0.3
+catalog: true
+tags:
+    - Code
+    - Study
+    - CP
+---
+
+> 严格弱序是个大坑 : (
+
+我一直想总结一下 STL 中众多内含比较关系的函数和容器所用到的 **Strict Weak Ordering** 原则，即**严格弱序**。正好今天刷到 luogu 的 [P2123 皇后游戏](https://www.luogu.com.cn/problem/P2123)，于是就顺手整理了相关内容。
+
+## 定义
+
+我们知道，STL 的任何一种内含比较关系的函数(sort, upper_bound...) 、容器(set, priority_queue...)都需要重载运算符或者自定义一个比较函数。而重载或者自定义的比较函数都需要遵循一个叫 Strict Weak Ordering 的原则，其定义如下：
+
+A **Strict Weak Ordering** is a **Binary Predicate** that compares two objects, returning true if the first precedes the second. This predicate must satisfy the standard mathematical definition of a strict weak ordering. The **precise requirements** are stated below, but what they roughly mean is that a Strict Weak Ordering has to behave the way that "less than" behaves: if a is less than b then b is not less than a, if a is less than b and b is less than c then a is less than c, and so on.
+
+* **Irreflexivity**: 
+  
+  f(x, x) must be false.
+
+* **Antisymmetry**: 
+  
+  f(x, y) implies !f(y, x).
+
+* **Transitivity**: 
+  
+  f(x, y) and f(y, z) imply f(x, z).
+
+* **Transitivity of incomparability**: 
+  
+  If x is incomparable with y (meaning that neither f(x, y) nor f(y, x) is true) and if y is incomparable with z, then x is incomparable with z.
+
+
+当我们用小于号 `<` 来表示严格弱序，就有了以下四条规则：
+
+* **非自反性**
+  
+  x !< x
+
+* **非对称性**
+  
+  x < y **==>** y !< x 
+
+* **传递性**
+  
+  x < y, y < z **==>** x < z
+
+* **不可比性的传递性**
+  
+  x !< y, y !< x, y !< z, z !< y **==>** x !< z, z !< x
+
+> 这里的不可比可以简单理解成相等。但实际上 x 和 y 不一定相同(identical)，况且我们也没有定义 `==`。
+
+## 应用
+
+以自定义类 fool 为例，重载其小于号，并自定义比较函数 cmp。
+
+```cpp
+class fool {
+  int num;
+
+  bool operator<(const fool &a) const {
+    return this.num < a.num;
+  }
+};
+
+bool cmp(const bool &x, const bool &y)
+{
+    return x.num < y.num;
+}
+```
+
+也许有人要问了，如果只定义小于号 `<`，那程序怎么区分大于和等于呢？  
+**相等**是酱紫判断的：!(x <= y) && !(x <= y)  
+这里给出由小于号 `<` 推出的**逻辑运算**的表达式：
+
+`<(a, b): (a < b)`   
+`>(a, b): (b < a)`  
+`==(a, b): !(a < b) && !(b < a)`  
+`<=(a, b): !(b < a)`  
+`>=(a, b): !(a < b)`  
+`!=(a, b): (a < b) || (b < a)`  
+
+显而易见，上面的重载和 cmp 都符合严格弱序。但是当**比较规则**变得**复杂**的时候，我们就必须小心判断比较规则是否遵循了严格弱序的定义。下面以文章开头讲的 [P2123 皇后游戏](https://www.luogu.com.cn/problem/P2123)为例来谈谈如何处理复杂的比较规则。
+
+
+## 例题
+
+### P2123 皇后游戏
+
+由题意，我们进行一番~~简单的~~数学推理，可以得到一个贪心式：`min(ai, bj) < min(aj, bi)`，假如你从未听过过严格弱序的概念，大概会直接写出这样的比较函数：
+```cpp
+bool cmp(const fool &x, const fool &y)
+{
+    return min(x.a, y.b) < min(x.b, y.a);
+}
+```
+这样写有什么问题？  
+~~由数学证明，显然~~(具体推理过程[在这](https://www.luogu.com.cn/blog/ouuan/QAQ-p2123))  
+我们发现这个比较规则仅仅满足非自反性、非对称性、传递性，而不满足**不可比性的传递性**。那我们要怎么使求得的贪心式遵循严格弱序呢？  
+我们先按a与b的大小关系把所有数据分为三组：
+
+1. 当 ai < bi, aj < bj 时，ai <= aj 按 a 升序
+2. 当 ai == bi, aj == bj 时，whatever
+3. 当 ai > bi, aj > bj 时，bi >= bj 按 b 降序
+
+这里我们再引入一个符号函数 d = sgn(x)
+
+于是得到最终的**比较规则**：先按 d 值排序，然后若 d 值小于等于 0，按 a 升序排序（这里把 2 组归入 1 组）；若 d 值大于 0，则按 b 降序排序。
+
+```cpp
+bool cmp(const fool &x, const fool &y)
+{
+    return (x.d != y.d ? x.d < y.d : (x.d <= 0 ? x.a < y.a : x.b > y.b));
+}
+```
+
+这样对贪心式进行补充后，就满足了严格弱序。
+
+## 总结
+
+把长得奇奇怪怪的式子当做比较规则前，请检查一下它是否符合严格弱序。
