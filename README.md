@@ -40,7 +40,7 @@ $ git clone https://github.com/tLLWtG/tllwtg.github.io.git -b gh-pages
 2. After cloning the repo or decompression, start a http server with the following commands.
 
 ```sh
-$ cd tllwtg.github.io
+$ cd tllwtg.github.io  # or, cd tLLWtG_Blog
 $ python -m http.server
 ```
 
@@ -51,6 +51,8 @@ Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 ```
 
 Now you can visit tLLWtG_Blog through the url shown in your terminal.
+> Sometimes you have to replace `0.0.0.0:` with `localhost:`.  
+> And if your port `8000` is occupied, please set andother port like this `python -m http.server 1234`.
 
 ## Development
 
