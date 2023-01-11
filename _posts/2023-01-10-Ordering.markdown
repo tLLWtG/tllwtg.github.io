@@ -40,7 +40,7 @@ A **Strict Weak Ordering** is a **Binary Predicate** that compares two objects, 
   If x is incomparable with y (meaning that neither f(x, y) nor f(y, x) is true) and if y is incomparable with z, then x is incomparable with z.
 
 
-当我们用小于号 `<` 来表示严格弱序，就有了以下四条规则：
+当我们用小于号 `<` 来表示严格弱序的**比较规则**，就可推出以下四条性质：
 
 * **非自反性**
   
@@ -113,7 +113,7 @@ bool cmp(const fool &x, const fool &y)
 2. 当 ai == bi, aj == bj 时，whatever
 3. 当 ai > bi, aj > bj 时，bi >= bj 按 b 降序
 
-这里我们再引入一个符号函数 d = sgn(x)
+这里我们再引入一个符号函数 d = sgn(x) = sgn(a - b)
 
 于是得到最终的**比较规则**：先按 d 值排序，然后若 d 值小于等于 0，按 a 升序排序（这里把 2 组归入 1 组）；若 d 值大于 0，则按 b 降序排序。
 
@@ -128,4 +128,4 @@ bool cmp(const fool &x, const fool &y)
 
 ## 总结
 
-把长得奇奇怪怪的式子当做比较规则前，请检查一下它是否符合严格弱序。
+在把奇奇怪怪的式子用作比较规则之前，请先检查它是否符合严格弱序。
