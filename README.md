@@ -20,6 +20,38 @@ $ bundle install
 $ bundle exec jekyll serve  # alternatively, npm start
 ```
 
+#### Mirrors
+
+You can also get this repo from gitee.
+
+```sh
+$ git clone https://gitee.com/tllwtg/tllwtg.github.io.git
+```
+
+#### Offline version
+
+1. You can simply build a static website with the content of `gh-pages` branch.
+> Besides, it's also a good choice to just download "tLLWtG_Blog.zip" in Releases.
+
+```sh
+$ git clone https://github.com/tLLWtG/tllwtg.github.io.git -b gh-pages
+```
+
+2. After cloning the repo or decompression, start a http server with the following commands.
+
+```sh
+$ cd tllwtg.github.io
+$ python -m http.server
+```
+
+3. If you started your http server successfully, you will see something like this in you terminal:
+
+```sh
+Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+```
+
+Now you can visit tLLWtG_Blog through the url shown in your terminal.
+
 ## Development
 
 **[User Manual of Blog](_doc/Manual.md)**
