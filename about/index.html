@@ -15,17 +15,17 @@
     
     <!-- Open Graph -->
     <meta property="og:title"
-        content="tLLWtG Blog | tLLWtG 的博客">
+        content="About - tLLWtG Blog | tLLWtG 的博客">
     
     <meta property="og:type" content="website">
     <meta property="og:description"
-        content="「version 1.0」">
+        content="「me」">
     
     <meta property="og:image" content="http://localhost:4000https://avatars.githubusercontent.com/u/63890132">
-    <meta property="og:url" content="http://localhost:4000/">
+    <meta property="og:url" content="http://localhost:4000/about/">
     <meta property="og:site_name" content="tLLWtG Blog | tLLWtG 的博客">
 
-    <title>tLLWtG Blog | tLLWtG 的博客</title>
+    <title>About - tLLWtG Blog | tLLWtG 的博客</title>
 
     <!-- Web App Manifest -->
     <link rel="manifest" href="/pwa/manifest.json">
@@ -34,7 +34,7 @@
     <link rel="shortcut icon" href="/img/favicon.ico">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="http://localhost:4000/">
+    <link rel="canonical" href="http://localhost:4000/about/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href=" /css/bootstrap.min.css">
@@ -220,10 +220,17 @@
 <style type="text/css">
     header.intro-header{
         position: relative;
-        background-image: url('/img/home-bg.jpg');
+        background-image: url('/img/post-bg-2015.jpg');
         background: ;
     }
 
+    
+    header.intro-header .header-mask{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(0,0,0, 0.3);
+    }
     
 </style>
 
@@ -235,23 +242,7 @@
 
 <!--be random-->
 
-<!--
-<header class="intro-header" id="randombg" style="background-image: url('/img/home-bg.jpg')">
-!-->
-<script>
-    var x=Math.floor(Math.random() * 17)
-    var str=x.toString()
-    var bg='/img/bg/image_'+str+'.jpg'
-    document.write('<header class="intro-header" style="background-image: url('+bg+')">')
-</script>
-    <!--
-    <script>
-        var x=Math.floor(Math.random() * 1)
-        var str=x.toString()
-        var bg='/img/bg/image_'+str+'.jpg'
-        document.getElementById('randombg').style.background='url('+bg+')'
-    </script>
-    -->
+<header class="intro-header" style="background-image: url('/img/post-bg-2015.jpg')">
  
     <div class="header-mask"></div>
   <div class="container">
@@ -260,8 +251,8 @@
         
         <div class="site-heading">
         
-          <h1>tLLWtG Blog</h1>
-          <span class="subheading">「version 1.0」</span>
+          <h1>About</h1>
+          <span class="subheading">「me」</span>
         </div>
       </div>
     </div>
@@ -279,253 +270,34 @@
     <!-- PostList Container -->
     <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12
       col-xs-12 postlist-container">
-      
-<div class="post-preview">
-    <a href="/2023/01/10/Ordering/">
-        <h2 class="post-title">
-            Strict Weak Ordering
-        </h2>
-        
-        <h3 class="post-subtitle">
-             "Ordering"
-        </h3>
-        
-        <div class="post-content-preview">
-            
-                
-  严格弱序是个大坑 : (
+                      <!-- Language Selector -->
+                <select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
+                    <option value="0" selected> 中文 | Chinese </option>
+                    <option value="1"> 英文 | English </option>
+                </select>
 
 
-我一直想总结一下 STL 中众多内含比较关系的函数和容器所用到的 Strict Weak Ordering 原则，即严格弱序。正好今天刷到 luogu 的 P2123 皇后游戏，于是就顺手整理了相关内容。
 
-定义
-
-我们知道，STL 的任何一种内含比较关系的函数(sort, upper_bound…) 、容器(set, priority_queue…)都需...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by tLLWtG on January 10, 2023
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2022/12/21/First-Semester2/">
-        <h2 class="post-title">
-            My First Semester in XMU (Part 2)
-        </h2>
-        
-        <h3 class="post-subtitle">
-             "ACM"
-        </h3>
-        
-        <div class="post-content-preview">
-            
-                
-  书接上回（
-
-  这个学期除了有住在图书馆和学武楼的丰富多彩的校园生活，当然还少不了竞赛训练。
-(同时也通过ACM认识了好多学长和同学捏。
-
-
-XMU ACM Advanced Class(2022)
-
-学期初本人非常荣幸的被任命为厦门大学 ACM 提高班班长（其实很水捏
-
-
-
-
-  ACM 提高班举办的第一场周赛
-
-
-
-
-
-  三场周赛总成绩（淡绿色为赛后补题
-
-
-
-
-
-  线上讲座...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by tLLWtG on December 21, 2022
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2022/12/19/First-Semester1/">
-        <h2 class="post-title">
-            My First Semester in XMU (Part 1)
-        </h2>
-        
-        <h3 class="post-subtitle">
-             "军训, Course, Exam and Life"
-        </h3>
-        
-        <div class="post-content-preview">
-            
-                
-  这一鸽就过去了三个月捏（逃
-
-  虽然没有及时记录下来，但这个学期还是挺充实的。
-
-
-军训
-
-第一天拿到了训练服和装备。 
-然后第二天早上五点被拉起来，赶车去思明校区参加开学典礼和军训动员大会。
-
-
-  由于前一天晚上打CF，所以我一共就睡了4个小时
-
-
-
-
-训了一天太累辣，在操场上睡大觉↓
-
-
-
-
-
-在学校后面的香山进行拉练，这是山顶(?)的鼎。
-
-
-
-太阳好大捏：(
-
-
-
-战术排的...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by tLLWtG on December 19, 2022
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2022/09/07/XMU/">
-        <h2 class="post-title">
-            Hello XMU
-        </h2>
-        
-        <h3 class="post-subtitle">
-             "XMU"
-        </h3>
-        
-        <div class="post-content-preview">
-            
-                
-  紧张刺激的大学生活开始辽
-
-
-简单记录下大学报道和开学典礼。
-
-九月六号
-
-
-  到达世界最高城——翔安！(bushi) 太美丽啦，哎呀这不厦门大学嘛，再看看远处的。。。农田？
-
-
-这是东门 ↓
-
-
-这是田 ↓
-
-
-
-  翔安校区地图（巨大）
-
-
-
-
-
-  跟着志愿者乘上摆渡巴士
-
-
-
-
-
-  信息学院迎新点
-
-
-
-
-
-  拿到学生卡
-
-
-
-
-
-  帅到模糊的宿舍
-
-
-
-
-
-  我的床...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by tLLWtG on September 7, 2022
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2022/09/03/lcContest308/">
-        <h2 class="post-title">
-            LeetCode Contest 308
-        </h2>
-        
-        <h3 class="post-subtitle">
-             "Contest308"
-        </h3>
-        
-        <div class="post-content-preview">
-            
-                
-  第一次AK力扣周赛！！！
-
-
-力扣第308场周赛
-
-2022 年 8 月 28 日，tLLWtG 第一次 AK 力扣周赛，超激动！更刺激的是，我在最后一分钟内才提交了最后一题，而且居然一次就 Pass。
-简单记录一下心路历程：
-
-
-  
-    T1: 第一眼看到 Subsequence 时，真的吓了一跳。第一题就出这么难吗:-(然后条件反射的回想起各种数列 DP 的题。结果认真读完题...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by tLLWtG on September 3, 2022
-    </p>
-</div>
-<hr>
-
-
-<!-- Pager -->
-
-<ul class="pager">
+<!-- Chinese Version -->
+<div class="zh post-container">
     
+    <p>Hi，我是 tLLWtG，一个略懂计算机科学的新手，现为<del>翔安大学</del>厦门大学 大一学生。</p>
+
+<p>目前的物理活动范围主要在厦门，也想当个数字游<del>民</del>侠。虚拟分身日常出没于<a href="https://space.bilibili.com/353981156">B站</a>、<a href="https://twitter.com/tLLWtG1/">推特</a>、<a href="https://github.com/tLLWtG">Github</a> 等。</p>
+
+
+</div>
+
+<!-- English Version -->
+<div class="en post-container">
     
-    <li class="next">
-        <a href="/page2">Older Posts &rarr;</a>
-    </li>
-    
-</ul>
+    <p>Hey, I’m tllwtg, a greenhand who knows a bit about computer science. And recently, I became a freshman at <del>Xiangan University</del> XMU (Xiamen University).</p>
+
+<p>At present, my physical activity scope is mainly in Xiamen, and on Internet I’m also haunting in <a href="https://space.bilibili.com/353981156">bilibili</a>、<a href="https://twitter.com/tLLWtG1/">Twitter</a>、<a href="https://github.com/tLLWtG">Github</a> etc with a virtual avatar.</p>
+
+</div>
+
+
 
 
     </div>
@@ -954,7 +726,7 @@ XMU ACM Advanced Class(2022)
     function generateCatalog(selector) {
 
         // interop with multilangual 
-        if ('' == 'true') {
+        if ('true' == 'true') {
             _containerSelector = 'div.post-container.active'
         } else {
             _containerSelector = 'div.post-container'
@@ -1011,6 +783,58 @@ XMU ACM Advanced Class(2022)
 
 
 <!-- Multi-Lingual -->
+
+<!-- Handle Language Change -->
+<script type="text/javascript">
+    // get nodes
+    var $zh = document.querySelector(".zh");
+    var $en = document.querySelector(".en");
+    var $select = document.querySelector("select");
+
+    // Changes at v1.8.1: include lang flag as a url query. This interop well with catalog hash anchors.
+    function getLang() { return new URLSearchParams(document.location.search).get("lang") }
+
+    function setLang(newLang) {
+        var params = new URLSearchParams(document.location.search)
+        params.set("lang", newLang)
+        document.location.search = params.toString()  // refresh.
+    }
+
+    // handle render
+    function _render() {
+        var lang = getLang()
+        // en
+        if (lang == "en") {
+            $select.selectedIndex = 1;
+            $en.style.display = "block";
+            $en.classList.add("active");
+            $zh.style.display = "none";
+            $zh.classList.remove("active");
+            // default to zh-cn
+        } else {
+            $select.selectedIndex = 0;
+            $zh.style.display = "block";
+            $zh.classList.add("active");
+            $en.style.display = "none";
+            $en.classList.remove("active");
+        }
+        // interop with catalog 
+        generateCatalog(".catalog-body");
+    }
+
+    // handle select change
+    function onLanChange(index) {
+        if (index == 0) {
+            lang = "zh"
+        } else {
+            lang = "en"
+        }
+        setLang(lang)
+    }
+
+    // init
+    _render();
+</script>
 
 
 <!-- Simple Jekyll Search -->

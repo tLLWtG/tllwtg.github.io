@@ -15,17 +15,17 @@
     
     <!-- Open Graph -->
     <meta property="og:title"
-        content="tLLWtG Blog | tLLWtG 的博客">
+        content="Archive - tLLWtG Blog | tLLWtG 的博客">
     
     <meta property="og:type" content="website">
     <meta property="og:description"
-        content="「version 1.0」">
+        content="「我干了什么 究竟拿了时间换了什么」">
     
     <meta property="og:image" content="http://localhost:4000https://avatars.githubusercontent.com/u/63890132">
-    <meta property="og:url" content="http://localhost:4000/">
+    <meta property="og:url" content="http://localhost:4000/archive/">
     <meta property="og:site_name" content="tLLWtG Blog | tLLWtG 的博客">
 
-    <title>tLLWtG Blog | tLLWtG 的博客</title>
+    <title>Archive - tLLWtG Blog | tLLWtG 的博客</title>
 
     <!-- Web App Manifest -->
     <link rel="manifest" href="/pwa/manifest.json">
@@ -34,7 +34,7 @@
     <link rel="shortcut icon" href="/img/favicon.ico">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="http://localhost:4000/">
+    <link rel="canonical" href="http://localhost:4000/archive/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href=" /css/bootstrap.min.css">
@@ -213,14 +213,18 @@
   </div>
 </div>
 
-    <!-- Page Header -->
+    <!--
+Credits: this page shamelessly borrowed a lot from:
+https://github.com/kitian616/jekyll-TeXt-theme
+-->
+<!-- Page Header -->
 
 
 
 <style type="text/css">
     header.intro-header{
         position: relative;
-        background-image: url('/img/home-bg.jpg');
+        background-image: url('/img/bg-little-universe.jpg');
         background: ;
     }
 
@@ -235,33 +239,17 @@
 
 <!--be random-->
 
-<!--
-<header class="intro-header" id="randombg" style="background-image: url('/img/home-bg.jpg')">
-!-->
-<script>
-    var x=Math.floor(Math.random() * 17)
-    var str=x.toString()
-    var bg='/img/bg/image_'+str+'.jpg'
-    document.write('<header class="intro-header" style="background-image: url('+bg+')">')
-</script>
-    <!--
-    <script>
-        var x=Math.floor(Math.random() * 1)
-        var str=x.toString()
-        var bg='/img/bg/image_'+str+'.jpg'
-        document.getElementById('randombg').style.background='url('+bg+')'
-    </script>
-    -->
+<header class="intro-header" style="background-image: url('/img/bg-little-universe.jpg')">
  
     <div class="header-mask"></div>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
-        <div class="site-heading">
+        <div class="site-heading" id="tag-heading">
         
-          <h1>tLLWtG Blog</h1>
-          <span class="subheading">「version 1.0」</span>
+          <h1>Archive</h1>
+          <span class="subheading">「我干了什么 究竟拿了时间换了什么」</span>
         </div>
       </div>
     </div>
@@ -272,521 +260,176 @@
 
 <!-- Main Content -->
 <div class="container">
-  <div class="row">
-    
+	<div class="row">
+		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+			<!-- Tags (as filter) -->
+			<div id='tag_cloud' class="tags tags-sup js-tags">
+				<a class="tag-button--all" data-encode="">
+					Show All
+					<sup>9</sup>
+				</a>
 
-    <!-- USE SIDEBAR -->
-    <!-- PostList Container -->
-    <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12
-      col-xs-12 postlist-container">
-      
-<div class="post-preview">
-    <a href="/2023/01/10/Ordering/">
-        <h2 class="post-title">
-            Strict Weak Ordering
-        </h2>
-        
-        <h3 class="post-subtitle">
-             "Ordering"
-        </h3>
-        
-        <div class="post-content-preview">
-            
-                
-  严格弱序是个大坑 : (
+				
+				
+				
+				
+				
+				<a data-sort="0002"
+					data-encode="Code" class="tag-button" title="Code"
+					rel="7">
+					Code
+					<sup>7</sup>
+				</a>
+				
+				<a data-sort="0002"
+					data-encode="Study" class="tag-button" title="Study"
+					rel="7">
+					Study
+					<sup>7</sup>
+				</a>
+				
+				<a data-sort="0004"
+					data-encode="CP" class="tag-button" title="CP"
+					rel="5">
+					CP
+					<sup>5</sup>
+				</a>
+				
+				<a data-sort="0006"
+					data-encode="Life" class="tag-button" title="Life"
+					rel="3">
+					Life
+					<sup>3</sup>
+				</a>
+				
+				<a data-sort="0007"
+					data-encode="XMU" class="tag-button" title="XMU"
+					rel="2">
+					XMU
+					<sup>2</sup>
+				</a>
+			</div>
 
-
-我一直想总结一下 STL 中众多内含比较关系的函数和容器所用到的 Strict Weak Ordering 原则，即严格弱序。正好今天刷到 luogu 的 P2123 皇后游戏，于是就顺手整理了相关内容。
-
-定义
-
-我们知道，STL 的任何一种内含比较关系的函数(sort, upper_bound…) 、容器(set, priority_queue…)都需...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by tLLWtG on January 10, 2023
-    </p>
+			<!-- Article List -->
+			<div class="mini-post-list js-result d-none"><section>
+					<span class="fa listing-seperator">
+						<span class="tag-text">2023</span>
+					</span><div class="post-preview item" data-tags="Code,Study,CP">
+						<a href="/2023/01/10/Ordering/">
+							<h2 class="post-title">
+								Strict Weak Ordering
+							</h2>
+							
+							<h3 class="post-subtitle">
+								 "Ordering"
+							</h3>
+							
+						</a>
+						<hr>
+					</div></section><section>
+					<span class="fa listing-seperator">
+						<span class="tag-text">2022</span>
+					</span><div class="post-preview item" data-tags="Code,Study,CP">
+						<a href="/2022/12/21/First-Semester2/">
+							<h2 class="post-title">
+								My First Semester in XMU (Part 2)
+							</h2>
+							
+							<h3 class="post-subtitle">
+								 "ACM"
+							</h3>
+							
+						</a>
+						<hr>
+					</div><div class="post-preview item" data-tags="XMU,Life,Study">
+						<a href="/2022/12/19/First-Semester1/">
+							<h2 class="post-title">
+								My First Semester in XMU (Part 1)
+							</h2>
+							
+							<h3 class="post-subtitle">
+								 "军训, Course, Exam and Life"
+							</h3>
+							
+						</a>
+						<hr>
+					</div><div class="post-preview item" data-tags="XMU,Life">
+						<a href="/2022/09/07/XMU/">
+							<h2 class="post-title">
+								Hello XMU
+							</h2>
+							
+							<h3 class="post-subtitle">
+								 "XMU"
+							</h3>
+							
+						</a>
+						<hr>
+					</div><div class="post-preview item" data-tags="Code,Study,CP">
+						<a href="/2022/09/03/lcContest308/">
+							<h2 class="post-title">
+								LeetCode Contest 308
+							</h2>
+							
+							<h3 class="post-subtitle">
+								 "Contest308"
+							</h3>
+							
+						</a>
+						<hr>
+					</div><div class="post-preview item" data-tags="Code,Study">
+						<a href="/2022/08/30/Markdown/">
+							<h2 class="post-title">
+								Markdown Notes
+							</h2>
+							
+							<h3 class="post-subtitle">
+								 "Markdown"
+							</h3>
+							
+						</a>
+						<hr>
+					</div><div class="post-preview item" data-tags="Code,Study,CP">
+						<a href="/2022/08/26/lc518/">
+							<h2 class="post-title">
+								LC Problems' Solutions -518
+							</h2>
+							
+							<h3 class="post-subtitle">
+								 "LeetCode"
+							</h3>
+							
+						</a>
+						<hr>
+					</div><div class="post-preview item" data-tags="Code,Study,CP">
+						<a href="/2022/08/26/My-LeetCode-Journey/">
+							<h2 class="post-title">
+								My LeetCode Journey
+							</h2>
+							
+							<h3 class="post-subtitle">
+								 "LeetCode"
+							</h3>
+							
+						</a>
+						<hr>
+					</div><div class="post-preview item" data-tags="Life,Code">
+						<a href="/2022/08/25/Hello-2022/">
+							<h2 class="post-title">
+								Hello 2022
+							</h2>
+							
+							<h3 class="post-subtitle">
+								 "Hello World, Hello Blog"
+							</h3>
+							
+						</a>
+						<hr>
+					</div></section>
+			</div>
+		</div>
+	</div>
 </div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2022/12/21/First-Semester2/">
-        <h2 class="post-title">
-            My First Semester in XMU (Part 2)
-        </h2>
-        
-        <h3 class="post-subtitle">
-             "ACM"
-        </h3>
-        
-        <div class="post-content-preview">
-            
-                
-  书接上回（
-
-  这个学期除了有住在图书馆和学武楼的丰富多彩的校园生活，当然还少不了竞赛训练。
-(同时也通过ACM认识了好多学长和同学捏。
-
-
-XMU ACM Advanced Class(2022)
-
-学期初本人非常荣幸的被任命为厦门大学 ACM 提高班班长（其实很水捏
-
-
-
-
-  ACM 提高班举办的第一场周赛
-
-
-
-
-
-  三场周赛总成绩（淡绿色为赛后补题
-
-
-
-
-
-  线上讲座...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by tLLWtG on December 21, 2022
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2022/12/19/First-Semester1/">
-        <h2 class="post-title">
-            My First Semester in XMU (Part 1)
-        </h2>
-        
-        <h3 class="post-subtitle">
-             "军训, Course, Exam and Life"
-        </h3>
-        
-        <div class="post-content-preview">
-            
-                
-  这一鸽就过去了三个月捏（逃
-
-  虽然没有及时记录下来，但这个学期还是挺充实的。
-
-
-军训
-
-第一天拿到了训练服和装备。 
-然后第二天早上五点被拉起来，赶车去思明校区参加开学典礼和军训动员大会。
-
-
-  由于前一天晚上打CF，所以我一共就睡了4个小时
-
-
-
-
-训了一天太累辣，在操场上睡大觉↓
-
-
-
-
-
-在学校后面的香山进行拉练，这是山顶(?)的鼎。
-
-
-
-太阳好大捏：(
-
-
-
-战术排的...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by tLLWtG on December 19, 2022
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2022/09/07/XMU/">
-        <h2 class="post-title">
-            Hello XMU
-        </h2>
-        
-        <h3 class="post-subtitle">
-             "XMU"
-        </h3>
-        
-        <div class="post-content-preview">
-            
-                
-  紧张刺激的大学生活开始辽
-
-
-简单记录下大学报道和开学典礼。
-
-九月六号
-
-
-  到达世界最高城——翔安！(bushi) 太美丽啦，哎呀这不厦门大学嘛，再看看远处的。。。农田？
-
-
-这是东门 ↓
-
-
-这是田 ↓
-
-
-
-  翔安校区地图（巨大）
-
-
-
-
-
-  跟着志愿者乘上摆渡巴士
-
-
-
-
-
-  信息学院迎新点
-
-
-
-
-
-  拿到学生卡
-
-
-
-
-
-  帅到模糊的宿舍
-
-
-
-
-
-  我的床...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by tLLWtG on September 7, 2022
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2022/09/03/lcContest308/">
-        <h2 class="post-title">
-            LeetCode Contest 308
-        </h2>
-        
-        <h3 class="post-subtitle">
-             "Contest308"
-        </h3>
-        
-        <div class="post-content-preview">
-            
-                
-  第一次AK力扣周赛！！！
-
-
-力扣第308场周赛
-
-2022 年 8 月 28 日，tLLWtG 第一次 AK 力扣周赛，超激动！更刺激的是，我在最后一分钟内才提交了最后一题，而且居然一次就 Pass。
-简单记录一下心路历程：
-
-
-  
-    T1: 第一眼看到 Subsequence 时，真的吓了一跳。第一题就出这么难吗:-(然后条件反射的回想起各种数列 DP 的题。结果认真读完题...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by tLLWtG on September 3, 2022
-    </p>
-</div>
-<hr>
-
-
-<!-- Pager -->
-
-<ul class="pager">
-    
-    
-    <li class="next">
-        <a href="/page2">Older Posts &rarr;</a>
-    </li>
-    
-</ul>
-
-
-    </div>
-    <!-- Sidebar Container -->
-    <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-12
-      col-xs-12 sidebar-container">
-      <!-- hitokoto -->
-      <hr />
-<h5 style="display: inline">一言（ヒトコト）</h5>
-<div style="display: inline; font-size: 1.5em; color: #a3a3a3">
-  &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</div>
-<div
-  title="redo"
-  id="redo icon"
-  style="display: inline; font-weight: 600; font-size: 1.1em; color: #a3a3a3"
->
-  next
-</div>
-<div
-  id="hitokoto_text"
-  style="margin-top: 20px; color: rgb(102, 102, 102)"
-></div>
-<div
-  style="text-align: right; margin-top: 15px; font-size: 0.9em"
-  id="hitokoto_from"
-></div>
-<style>
-  .containerload {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-  }
-
-  .itemload {
-    width: 12px;
-    height: 60px;
-    margin: 2px;
-    background-color: #ccc;
-    animation: wave 1.2s infinite ease-in-out;
-    animation-delay: var(--delay);
-  }
-
-  @keyframes wave {
-    0%,
-    40%,
-    100% {
-      transform: scale(0.4);
-    }
-    20% {
-      transform: scale(1);
-    }
-  }
-</style>
-<div class="containerload">
-  <span class="itemload item1" id="load1" style="--delay: -1.1s"></span>
-  <span class="itemload item2" id="load2" style="--delay: -1s"></span>
-  <span class="itemload item3" id="load3" style="--delay: -0.9s"></span>
-  <span class="itemload item4" id="load4" style="--delay: -0.8s"></span>
-  <span class="itemload item5" id="load5" style="--delay: -0.7s"></span>
-</div>
-<script>
-  function loading_on() {
-    const load1 = document.getElementById("load1");
-    const load2 = document.getElementById("load2");
-    const load3 = document.getElementById("load3");
-    const load4 = document.getElementById("load4");
-    const load5 = document.getElementById("load5");
-    load1.className = "itemload item1";
-    load2.className = "itemload item2";
-    load3.className = "itemload item3";
-    load4.className = "itemload item4";
-    load5.className = "itemload item5";
-  }
-  function loading_off() {
-    const load1 = document.getElementById("load1");
-    const load2 = document.getElementById("load2");
-    const load3 = document.getElementById("load3");
-    const load4 = document.getElementById("load4");
-    const load5 = document.getElementById("load5");
-    load1.className = "rand1";
-    load2.className = "rand2";
-    load3.className = "rand3";
-    load4.className = "rand4";
-    load5.className = "rand5";
-  }
-  function gethitokoto() {
-    fetch("https://v1.hitokoto.cn/?c=a&c=b&c=d&c=i&c=k")
-      .then((response) => response.json())
-      .then((data) => {
-        const hitokoto_text = document.getElementById("hitokoto_text");
-        hitokoto_text.href = "https://hitokoto.cn/?uuid=" + data.uuid;
-        hitokoto_text.innerText = data.hitokoto;
-        const hitokoto_from = document.getElementById("hitokoto_from");
-        hitokoto_from.href = "https://hitokoto.cn/?uuid=" + data.uuid;
-        hitokoto_from.innerText = "——" + data.from;
-        loading_off();
-      })
-      .catch(console.error);
-  }
-  //loading_on();
-  setTimeout(gethitokoto, 800);
-  const redo = document.getElementById("redo icon");
-  redo.addEventListener("click", (e) => {
-    const hitokoto_text = document.getElementById("hitokoto_text");
-    hitokoto_text.innerText = "";
-    const hitokoto_from = document.getElementById("hitokoto_from");
-    hitokoto_from.innerText = "";
-    // loading
-    loading_on();
-    setTimeout(gethitokoto, 800);
-  });
-  redo.addEventListener("mouseover", (e) => {
-    redo.style.cursor = "pointer";
-    redo.style.color = "rgb(100, 100, 100)";
-  });
-  redo.addEventListener("mouseout", (e) => {
-    redo.style.color = "#a3a3a3";
-  });
-</script>
-
-
-      <!-- Featured Tags -->
-      <hr>
-
-
-
-<section>
-    
-    <h5><a href="/archive/">FEATURED TAGS</a></h5>
-    <div class="tags">
-        
-            
-        
-            
-            <a data-sort="0006"
-                href="/archive/?tag=Life" title="Life"
-                rel="3">Life</a>
-            
-            
-            
-            <a data-sort="0002"
-                href="/archive/?tag=Code" title="Code"
-                rel="7">Code</a>
-            
-            <a data-sort="0002"
-                href="/archive/?tag=Study" title="Study"
-                rel="7">Study</a>
-            
-            <a data-sort="0004"
-                href="/archive/?tag=CP" title="CP"
-                rel="5">CP</a>
-            
-            <a data-sort="0007"
-                href="/archive/?tag=XMU" title="XMU"
-                rel="2">XMU</a>
-    </div>
-</section>
-
-
-      <!-- Short About -->
-      <section class="visible-md visible-lg">
-  <hr>
-  <h5><a href="/about/">ABOUT ME</a></h5>
-  <div class="short-about">
-    
-    <img src="https://avatars.githubusercontent.com/u/63890132" />
-    
-    
-    <p>要做一个有 swag 的程序员 <br> </p>
-    
-    <!-- SNS Link -->
-    
-
-
-<ul class="list-inline">
-
-
-  
-  
-  <li>
-    <a href="https://twitter.com/tLLWtG1">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
-  
-  
-  <li>
-    <a target="_blank" href="https://www.zhihu.com/people/tllwtg">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa  fa-stack-1x fa-inverse">知</i>
-      </span>
-    </a>
-  </li>
-  
-  
-  <li>
-    <a target="_blank" href="http://weibo.com/tLLWtG">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
-  
-  
-  
-  <li>
-    <a target="_blank" href="https://github.com/tLLWtG">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
-  
-  
-</ul>
-  </div>
-</section>
-
-      <!-- Friends Blog -->
-      
-<hr>
-<h5><del>单向</del>友情链接</h5>
-<ul class="list-inline">
-  
-  <li><a href="https://tllwtg.github.io/Hexo_Blog">tLLWtG Blog, but with Hexo</a></li>
-  
-  <li><a href="https://oi.wiki">OI Wiki</a></li>
-  
-  <li><a href="https://codeforces.com">Codeforces</a></li>
-  
-  <li><a href="https://www.luogu.com.cn">洛谷</a></li>
-  
-  <li><a href="https://hitokoto.cn">一言</a></li>
-  
-</ul>
-
-
-      <!-- Ads -->
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- first shot -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6487568398225121" data-ad-slot="4814308751"
-     data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-    </div>
-    
-  </div>
-</div>
-
 
 
     <!-- Footer -->
@@ -929,6 +572,18 @@ XMU ACM Advanced Class(2022)
 
 
 
+
+<!-- jquery.tagcloud.js -->
+<script>
+    async('/js/jquery.tagcloud.js', function () {
+        $.fn.tagcloud.defaults = {
+            //size: {start: 1, end: 1, unit: 'em'},
+            color: { start: '#bbbbee', end: '#2f93b4' },
+        };
+        $('#tag_cloud a').tagcloud();
+    })
+</script>
+<script src='/js/archive.js '></script>
 
 
 <!--fastClick.js -->

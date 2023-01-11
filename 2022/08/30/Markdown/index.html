@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="这里是 tLLWtG 的个人博客，与你一起发现更大的世界 | 要做一个有 swag 的程序员">
+    <meta name="keywords" content="tLLWtG, tLLWtG 的博客, tLLWtG Blog, 博客, 个人网站, 互联网, Web">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- add baidu zhanzhang !-->
+    <meta name="baidu-site-verification" content="code-HbyKSkU29Y" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title"
+        content="Markdown Notes - tLLWtG Blog | tLLWtG 的博客">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="
+  众所周知，Markdown 是世界上最为流行的轻量级标记语言之一？，它允许人们以纯文本格式编写出各种各样的文档。而本博客也是由 Markdown 语言编写。
+
+
+">
+    
+    <meta property="article:published_time" content=" 2022-08-30T14:00:00Z">
+    
+    
+    <meta property="article:author" content="tLLWtG">
+    
+    
+    <meta property="article:tag" content="Code">
+    
+    <meta property="article:tag" content="Study">
+    
+    
+    <meta property="og:image" content="http://localhost:4000https://avatars.githubusercontent.com/u/63890132">
+    <meta property="og:url" content="http://localhost:4000/2022/08/30/Markdown/">
+    <meta property="og:site_name" content="tLLWtG Blog | tLLWtG 的博客">
+
+    <title>Markdown Notes - tLLWtG Blog | tLLWtG 的博客</title>
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/pwa/manifest.json">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://localhost:4000/2022/08/30/Markdown/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href=" /css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href=" /css/hux-blog.min.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+        type="text/css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+
+    <!-- Google AdSense -->
+    <script data-ad-client="ca-pub-6487568398225121" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <!-- add baidu tongji !-->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?615ad1958f669f7f0692647f624c32f9";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">tLLWtG Blog</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div id="huxblog_navbar">
+                <div class="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        
+                        
+                        
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                        
+                        
+                        <li>
+                            <a href="/archive/">Archive</a>
+                        </li>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <li class="search-icon">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <script>
+        // Drop Bootstarp low-performance Navbar
+        // Use customize navbar with high-quality material design animation
+        // in high-perf jank-free CSS3 implementation
+        var $body = document.body;
+        var $toggle = document.querySelector('.navbar-toggle');
+        var $navbar = document.querySelector('#huxblog_navbar');
+        var $collapse = document.querySelector('.navbar-collapse');
+
+        var __HuxNav__ = {
+            close: function () {
+                $navbar.className = " ";
+                // wait until animation end.
+                setTimeout(function () {
+                    // prevent frequently toggle
+                    if ($navbar.className.indexOf('in') < 0) {
+                        $collapse.style.height = "0px"
+                    }
+                }, 400)
+            },
+            open: function () {
+                $collapse.style.height = "auto"
+                $navbar.className += " in";
+            }
+        }
+
+        // Bind Event
+        $toggle.addEventListener('click', function (e) {
+            if ($navbar.className.indexOf('in') > 0) {
+                __HuxNav__.close()
+            } else {
+                __HuxNav__.open()
+            }
+        })
+
+        /**
+         * Since Fastclick is used to delegate 'touchstart' globally
+         * to hack 300ms delay in iOS by performing a fake 'click',
+         * Using 'e.stopPropagation' to stop 'touchstart' event from 
+         * $toggle/$collapse will break global delegation.
+         * 
+         * Instead, we use a 'e.target' filter to prevent handler
+         * added to document close HuxNav.  
+         *
+         * Also, we use 'click' instead of 'touchstart' as compromise
+         */
+        document.addEventListener('click', function (e) {
+            if (e.target == $toggle) return;
+            if (e.target.className == 'icon-bar') return;
+            __HuxNav__.close();
+        })
+    </script>
+    <!-- Search -->
+<div class="search-page">
+  <div class="search-icon-close-container">
+    <span class="search-icon-close">
+      <i class="fa fa-chevron-down"></i>
+    </span>
+  </div>
+  <div class="search-main container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <form></form>
+        <input type="text" id="search-input" placeholder="$ grep...">
+        </form>
+        <div id="search-results" class="mini-post-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/md.png" width="0" height="0"> -->
+
+<!-- Post Header -->
+
+
+
+<style type="text/css">
+    header.intro-header{
+        position: relative;
+        background-image: url('/img/md.png');
+        background: ;
+    }
+
+    
+    header.intro-header .header-mask{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(0,0,0, 0.3);
+    }
+    
+</style>
+
+
+
+
+<header class="intro-header" >
+
+    <div class="header-mask"></div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/archive/?tag=Code" title="Code">Code</a>
+                        
+                        <a class="tag" href="/archive/?tag=Study" title="Study">Study</a>
+                        
+                    </div>
+                    <h1>Markdown Notes</h1>
+                    
+                    <h2 class="subheading"> "Markdown"</h2>
+                    <span class="meta">Posted by tLLWtG on August 30, 2022</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+
+
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <!-- Multi-Lingual -->
+                
+
+				<blockquote>
+  <p>众所周知，Markdown 是世界上最为流行的轻量级标记语言<del>之一？</del>，它允许人们以纯文本格式编写出各种各样的文档。而本博客也是由 Markdown 语言编写。</p>
+</blockquote>
+
+<ul>
+  <li>创始人 John Gruber 的 <a href="https://daringfireball.net/projects/markdown/">Markdown 说明文档</a>。</li>
+</ul>
+
+<p><strong>基于此文档，让我们一起来学习 Markdown 的基本语法。</strong></p>
+
+<font size="2" color="gray">注：请忽略部分语法展示使用的"+"</font>
+
+<!--[第一节](#第一节) -->
+
+<h3 id="笔记目录">笔记目录</h3>
+
+<p><a href="#1-标题"><strong>1. 标题</strong></a><br />
+<a href="#2-引用"><strong>2. 引用</strong></a><br />
+         <em>1)单层引用</em><br />
+         <em>2)多层引用</em><br />
+<a href="#3-分割线"><strong>3. 分割线</strong></a><br />
+<a href="#4-代码块"><strong>4. 代码块</strong></a><br />
+         <em>1)行内式</em><br />
+         <em>2)缩进式</em><br />
+         <em>3)多行代码</em><br />
+<a href="#5-列表"><strong>5. 列表</strong></a><br />
+         <em>1)无序列表</em><br />
+         <em>2)有序列表</em><br />
+<a href="#6-字体"><strong>6. 字体</strong></a><br />
+         <em>1)粗体与斜体</em><br />
+         <em>2)删除线</em><br />
+         <em>3)html字体变换</em><br />
+<a href="#7-换行与缩进"><strong>7. 换行与缩进</strong></a><br />
+<a href="#8-图片"><strong>8. 图片</strong></a><br />
+<a href="#9-超链接"><strong>9. 链接</strong></a><br />
+         <em>1)行内式</em><br />
+         <em>2)参考式</em><br />
+         <em>3)直接链接</em><br />
+<a href="#10-锚点"><strong>10. 锚点</strong></a><br />
+<a href="#11-自动目录"><strong>11. 目录</strong></a><br />
+<a href="#12-注脚"><strong>12. 注脚</strong></a><br />
+<a href="#13-latex公式"><strong>13. LaTeX公式</strong></a><br />
+<a href="#14-表格"><strong>14. 表格</strong></a><br />
+<a href="#15-html"><strong>15. HTML</strong></a><br />
+<a href="#16-其他"><strong>16. 其他</strong></a></p>
+
+<h3 id="1-标题">1. 标题</h3>
+<p>在 Markdown 中，标题用一个<code class="language-plaintext highlighter-rouge">#</code>加<strong>空格</strong>表示，并支持多级标题的编写。除此之外，在文字下方加上多个<code class="language-plaintext highlighter-rouge">=</code>或<code class="language-plaintext highlighter-rouge">-</code>也可表示标题。</p>
+
+<ul>
+  <li><strong>语法</strong></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre>一级标题： # aaa
+二级标题： ## aaa
+三级标题： ### aaa
+
+aaa
+===
+aaa
+---
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+<ul>
+  <li><strong>显示效果</strong></li>
+</ul>
+
+<hr />
+
+<h1 id="aaa">aaa</h1>
+<h2 id="aaa-1">aaa</h2>
+<h3 id="aaa-2">aaa</h3>
+
+<h1 id="aaa-3">aaa</h1>
+
+<h2 id="aaa-4">aaa</h2>
+
+<hr />
+
+<h3 id="2-引用">2. 引用</h3>
+<p>你可以使用一个<code class="language-plaintext highlighter-rouge">&gt;</code>来表示引用文字，多个<code class="language-plaintext highlighter-rouge">&gt;</code>嵌套可表示多层引用。</p>
+
+<ul>
+  <li><strong>语法</strong></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>单层引用： &gt; aaa
+多层引用：
+&gt;&gt;&gt; aaa
+
+&gt;&gt; bbb
+
+&gt; ccc  
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li><strong>显示效果</strong></li>
+</ul>
+
+<blockquote>
+  <p>aaa</p>
+</blockquote>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>aaa</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<blockquote>
+  <blockquote>
+    <p>bbb</p>
+  </blockquote>
+</blockquote>
+
+<blockquote>
+  <p>ccc</p>
+</blockquote>
+
+<h3 id="3-分割线">3. 分割线</h3>
+<p>使用多个<code class="language-plaintext highlighter-rouge">-</code>或<code class="language-plaintext highlighter-rouge">*</code>或<code class="language-plaintext highlighter-rouge">_</code>可形成一条分割线。<br />
+<strong>注意</strong>：多个<code class="language-plaintext highlighter-rouge">-</code>用于一行文字的下方表示加粗而不是分割线。</p>
+
+<ul>
+  <li><strong>语法</strong></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>第一种方式： ---
+第二种方式： ***
+第三种方式： ___
+</pre></td></tr></tbody></table></code></pre></div></div>
+<ul>
+  <li><strong>显示效果</strong></li>
+</ul>
+
+<hr />
+<hr />
+<hr />
+
+<h3 id="4-代码块">4. 代码块</h3>
+
+<ul>
+  <li><strong>语法</strong></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>1)行内式：`aaa`
+2)缩进式：(Tab或四个空格)aaa
+3)多行代码：
+六个`包裹 aaa
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li><strong>显示效果</strong></li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">aaa</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>aaa
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>aaa
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="5-列表">5. 列表</h3>
+<p>Markdown 本身有两种列表形式：<strong>无序列表</strong>和<strong>有序列表</strong>。其中无序列表用<code class="language-plaintext highlighter-rouge">*</code>或<code class="language-plaintext highlighter-rouge">+</code>或<code class="language-plaintext highlighter-rouge">-</code>加上空格表示，有序列表使用数字加<code class="language-plaintext highlighter-rouge">.</code>加空格表示。除此之外，部分平台还支持自定义型列表。</p>
+
+<ul>
+  <li><strong>语法</strong></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>* aaa
+- aaa
++ aaa
+
+1. aaa
+2. bbb
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li>
+    <p><strong>显示效果</strong></p>
+  </li>
+  <li>aaa</li>
+  <li>aaa</li>
+  <li>aaa</li>
+</ul>
+
+<ol>
+  <li>aaa</li>
+  <li>bbb</li>
+</ol>
+
+<h3 id="6-字体">6. 字体</h3>
+<p>原生 Markdown 仅自带<strong>斜体</strong>、<strong>粗体</strong>、<strong>删除线</strong>三种字体样式，若想要实现更多字体效果可使用 HTML 中的 font 标签。</p>
+
+<ul>
+  <li><strong>语法</strong></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre>*斜体*
+**粗体**
+***粗斜体***
+
+~~删除线~~
+
+&lt;font color=aqua size=5 face="黑体"&gt;color=aqua size=5 face="黑体"&lt;/font&gt;
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li><strong>显示效果</strong></li>
+</ul>
+
+<p><em>斜体</em><br />
+<strong>粗体</strong><br />
+<strong><em>粗斜体</em></strong></p>
+
+<p><del>删除线</del></p>
+
+<font color="aqua" size="5" face="黑体">color=aqua size=5 face="黑体"</font>
+
+<h3 id="7-换行与缩进">7. 换行与缩进</h3>
+<p>段内<strong>换行</strong>可在行末加上多个空格，而<strong>分段</strong>则需要在段间间隔一行。</p>
+
+<p>由于 Markdown 语言不注重格式的特性，正常情况下我们无法主动缩进文字，在段首加上空格或制表符也难以达到想要的效果。要解决缩进问题，我们只能使用 HTML 或 LaTeX 的语法。</p>
+
+<ul>
+  <li><strong>语法</strong></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="rouge-code"><pre>
+换行：
+aaa  
+aaa
+
+aaa
+
+缩进：
+&amp;nbsp;aaa
+&amp;emsp;aaa
+&lt;figure&gt;aaa&lt;/figure&gt;
+
+$\qquad$ aaa
+$\quad$ aaa
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li><strong>显示效果</strong></li>
+</ul>
+
+<p>换行：<br />
+aaa<br />
+aaa</p>
+
+<p>aaa</p>
+
+<p>缩进：<br />
+ aaa<br />
+ aaa</p>
+<figure>aaa</figure>
+
+<p>$\qquad$ aaa<br />
+$\quad$ aaa</p>
+
+<h3 id="8-图片">8. 图片</h3>
+
+<ul>
+  <li><strong>语法</strong></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>!+[图片说明]+(图片地址 "title")
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li><strong>显示效果</strong></li>
+</ul>
+
+<p><img src="../../../../img/md.png" alt="图片说明" title="title" /></p>
+
+<h3 id="9-超链接">9. 超链接</h3>
+<p><strong>参考式</strong>的链接可放在文本的任意位置。</p>
+
+<ul>
+  <li><strong>语法</strong></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre>
+行内式：[百度](https://www.baidu.com "title")
+
+参考式：[baidu][1]
+
+[1]:https://www.baidu.com "title"
+
+直接链接：&lt;https://www.baidu.com&gt;
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+<ul>
+  <li><strong>显示效果</strong></li>
+</ul>
+
+<p><a href="https://www.baidu.com" title="title">百度</a></p>
+
+<p><a href="https://www.baidu.com" title="title">baidu</a></p>
+
+<p><a href="https://www.baidu.com">https://www.baidu.com</a></p>
+
+<h3 id="10-锚点">10. 锚点</h3>
+<p>Markdown 只支持在<strong>标题后</strong>插入锚点，如果想在任意位置添加锚点可使用 HTML。</p>
+
+<ul>
+  <li><strong>语法</strong></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>[跳到目录](#目录)
+</pre></td></tr></tbody></table></code></pre></div></div>
+<ul>
+  <li><strong>显示效果</strong></li>
+</ul>
+
+<p><a href="#笔记目录">跳到目录</a></p>
+
+<h3 id="11-自动目录">11. 自动目录</h3>
+<p>可用<code class="language-plaintext highlighter-rouge">[toc]</code>或<code class="language-plaintext highlighter-rouge">@[toc]</code>自动生成目录，但此功能只有部分编辑器支持。</p>
+
+<h3 id="12-注脚">12. 注脚</h3>
+<p>脚注会自动后移至文末。</p>
+
+<ul>
+  <li><strong>语法</strong></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>Markdown[^1]
+[^1]:Markdown 是一种轻量级标记语言
+</pre></td></tr></tbody></table></code></pre></div></div>
+<ul>
+  <li><strong>显示效果</strong></li>
+</ul>
+
+<p>Markdown<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup></p>
+
+<h3 id="13-latex-公式">13. LaTeX 公式</h3>
+<p>部分编辑器在使用整行公式时需加上转义符号<code class="language-plaintext highlighter-rouge">\</code>。</p>
+
+<ul>
+  <li><strong>语法</strong></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>行内公式：$E=mc^2$
+整行公式：
+$$E=mc^2$$
+或
+$\$E=mc^2$\$
+</pre></td></tr></tbody></table></code></pre></div></div>
+<ul>
+  <li><strong>显示效果</strong></li>
+</ul>
+
+<p>$E=mc^2$</p>
+
+<p>$$E=mc^2$$</p>
+
+<h3 id="14-表格">14. 表格</h3>
+<p><code class="language-plaintext highlighter-rouge">:--</code>表示左对齐，同理有<code class="language-plaintext highlighter-rouge">:-:</code>和<code class="language-plaintext highlighter-rouge">--:</code></p>
+
+<ul>
+  <li><strong>语法</strong></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>| aaa  |  bbb  |  ccc |
+| :--- | :---: | ---: |
+| A    |   B   |    C |
+| AA   |  BB   |   CC |
+| AAA  |  BBB  |  CCC |
+</pre></td></tr></tbody></table></code></pre></div></div>
+<ul>
+  <li><strong>显示效果</strong></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">aaa</th>
+      <th style="text-align: center">bbb</th>
+      <th style="text-align: right">ccc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">A</td>
+      <td style="text-align: center">B</td>
+      <td style="text-align: right">C</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">AA</td>
+      <td style="text-align: center">BB</td>
+      <td style="text-align: right">CC</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">AAA</td>
+      <td style="text-align: center">BBB</td>
+      <td style="text-align: right">CCC</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="15-html">15. HTML</h3>
+<p>Markdown 文档支持HTML的语法，<code class="language-plaintext highlighter-rouge">&amp;</code>、<code class="language-plaintext highlighter-rouge">&lt;</code>和<code class="language-plaintext highlighter-rouge">&gt;</code>会自动转化成 HTML 实体。下面是几个常用的 HTML 元素。</p>
+
+<ul>
+  <li><strong>语法</strong></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>&lt;div align="right"&gt;右对齐&lt;/div&gt;
+&lt;!--注释--&gt;
+&lt;ins&gt;aaa&lt;/ins&gt;
+
+&lt;font&gt;aaa&lt;/font&gt;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li><strong>显示效果</strong></li>
+</ul>
+
+<div align="right">右对齐</div>
+<!--注释-->
+<p><ins>aaa</ins></p>
+
+<font>aaa</font>
+
+<h3 id="16-其他">16. 其他</h3>
+<p>除了先前介绍的语法外，Markdown 还能实现绘制<strong>流程图</strong>、<strong>时序图</strong>、<strong>甘特图</strong>、<strong>类图</strong>等功能，但它们并不通用于所有平台，故不在此介绍。</p>
+
+<h3 id="后记">后记</h3>
+
+<p><em>(保留)</em></p>
+
+<!-- *———      __ 后记于 __* -->
+
+<h3 id="脚注">脚注</h3>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>Markdown是一种轻量级标记语言 <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+                <hr style="visibility: hidden;">
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2022/08/26/lc518/" data-toggle="tooltip" data-placement="top" title="LC Problems' Solutions -518">
+                        Previous<br>
+                        <span>LC Problems' Solutions -518</span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2022/09/03/lcContest308/" data-toggle="tooltip" data-placement="top" title="LeetCode Contest 308">
+                        Next<br>
+                        <span>LeetCode Contest 308</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <hr style="visibility: hidden;">
+
+                
+
+                
+            </div>  
+
+    <!-- Side Catalog Container -->
+        
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+        
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                <hr>
+
+
+
+<section>
+    
+    <hr class="hidden-sm hidden-xs">
+    
+    <h5><a href="/archive/">FEATURED TAGS</a></h5>
+    <div class="tags">
+        
+            
+        
+            
+            <a data-sort="0006"
+                href="/archive/?tag=Life" title="Life"
+                rel="3">Life</a>
+            
+            
+            
+            <a data-sort="0002"
+                href="/archive/?tag=Code" title="Code"
+                rel="7">Code</a>
+            
+            <a data-sort="0002"
+                href="/archive/?tag=Study" title="Study"
+                rel="7">Study</a>
+            
+            <a data-sort="0004"
+                href="/archive/?tag=CP" title="CP"
+                rel="5">CP</a>
+            
+            <a data-sort="0007"
+                href="/archive/?tag=XMU" title="XMU"
+                rel="2">XMU</a>
+    </div>
+</section>
+
+
+                <!-- Friends Blog -->
+                
+<hr>
+<h5><del>单向</del>友情链接</h5>
+<ul class="list-inline">
+  
+  <li><a href="https://tllwtg.github.io/Hexo_Blog">tLLWtG Blog, but with Hexo</a></li>
+  
+  <li><a href="https://oi.wiki">OI Wiki</a></li>
+  
+  <li><a href="https://codeforces.com">Codeforces</a></li>
+  
+  <li><a href="https://www.luogu.com.cn">洛谷</a></li>
+  
+  <li><a href="https://hitokoto.cn">一言</a></li>
+  
+</ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- add support for mathjax by voleking-->
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    SVG: {
+      scale: 90
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    }
+  });
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG">
+</script>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- SNS Link -->
+                
+
+
+<ul class="list-inline text-center">
+
+
+  
+  
+  <li>
+    <a href="https://twitter.com/tLLWtG1">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  <li>
+    <a target="_blank" href="https://www.zhihu.com/people/tllwtg">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa  fa-stack-1x fa-inverse">知</i>
+      </span>
+    </a>
+  </li>
+  
+  
+  <li>
+    <a target="_blank" href="http://weibo.com/tLLWtG">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://github.com/tLLWtG">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+</ul>
+
+                <p class="copyright text-muted">
+                    Copyright &copy; tLLWtG Blog 2023
+                    <br>
+                    Powered by <a href="https://github.com/Huxpro/huxpro.github.io">Huxpro</a>
+                    <!--
+                        <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="100px"
+                        height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=tLLWtG&repo=tLLWtG.github.io&type=star&count=true">
+                        </iframe>
+                    -->
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="display: inline;">
+                        总访问量
+                        <span id="busuanzi_value_site_pv">11</span>
+                        次
+                    </span>
+                    <span id="busuanzi_container_site_uv" style="display: inline;">
+                        | 总访客数
+                        <span id="busuanzi_value_site_uv">1</span>
+                        人
+                    </span>
+                </p>
+                <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+                </script>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src=" /js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<!-- Currently, only navbar scroll-down effect at desktop still depends on this -->
+<script src=" /js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src=" /js/hux-blog.min.js "></script>
+
+<!-- Simple Jekyll Search -->
+<script src=" /js/simple-jekyll-search.min.js"></script>
+
+<!-- Service Worker -->
+
+<script src=" /js/snackbar.js "></script>
+<script src=" /js/sw-registration.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!--
+     Because of the native support for backtick-style fenced code blocks
+     right within the Markdown is landed in Github Pages,
+     From V1.6, There is no need for Highlight.js,
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/
+     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+
+
+
+
+
+<!--fastClick.js -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function () {
+        var $nav = document.querySelector("nav");
+        if ($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+<!-- Side Catalog -->
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        // interop with multilangual 
+        if ('' == 'true') {
+            _containerSelector = 'div.post-container.active'
+        } else {
+            _containerSelector = 'div.post-container'
+        }
+
+        // init
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        // clean
+        $(selector).html('')
+
+        // appending
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    // toggle side catalog
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    /*
+     * Doc: https://github.com/davist11/jQuery-One-Page-Nav
+     * Fork by Hux to support padding
+     */
+    async("/js/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+<!-- Multi-Lingual -->
+
+
+<!-- Simple Jekyll Search -->
+<script>
+    // https://stackoverflow.com/questions/1912501/unescape-html-entities-in-javascript
+    function htmlDecode(input) {
+        var e = document.createElement('textarea');
+        e.innerHTML = input;
+        // handle case of empty input
+        return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
+    }
+
+    SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('search-results'),
+        json: '/search.json',
+        searchResultTemplate: '<div class="post-preview item"><a href="{url}"><h2 class="post-title">{title}</h2><h3 class="post-subtitle">{subtitle}</h3><hr></a></div>',
+        noResultsText: 'No results',
+        limit: 50,
+        fuzzy: false,
+        // a hack to get escaped subtitle unescaped. for some reason, 
+        // post.subtitle w/o escape filter nuke entire search.
+        templateMiddleware: function (prop, value, template) {
+            if (prop === 'subtitle' || prop === 'title') {
+                if (value.indexOf("code")) {
+                    return htmlDecode(value);
+                } else {
+                    return value;
+                }
+            }
+        }
+    });
+
+    $(document).ready(function () {
+        var $searchPage = $('.search-page');
+        var $searchOpen = $('.search-icon');
+        var $searchClose = $('.search-icon-close');
+        var $searchInput = $('#search-input');
+        var $body = $('body');
+
+        $searchOpen.on('click', function (e) {
+            e.preventDefault();
+            $searchPage.toggleClass('search-active');
+            var prevClasses = $body.attr('class') || '';
+            setTimeout(function () {
+                $body.addClass('no-scroll');
+            }, 400)
+
+            if ($searchPage.hasClass('search-active')) {
+                $searchClose.on('click', function (e) {
+                    e.preventDefault();
+                    $searchPage.removeClass('search-active');
+                    $body.attr('class', prevClasses);  // from closure 
+                });
+                $searchInput.focus();
+            }
+        });
+    });
+</script>
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

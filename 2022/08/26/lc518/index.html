@@ -15,17 +15,33 @@
     
     <!-- Open Graph -->
     <meta property="og:title"
-        content="tLLWtG Blog | tLLWtG 的博客">
+        content="LC Problems' Solutions -518 - tLLWtG Blog | tLLWtG 的博客">
     
-    <meta property="og:type" content="website">
-    <meta property="og:description"
-        content="「version 1.0」">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="
+  Problem -518- Coin Change 2
+
+
+">
+    
+    <meta property="article:published_time" content=" 2022-08-26T22:00:00Z">
+    
+    
+    <meta property="article:author" content="tLLWtG">
+    
+    
+    <meta property="article:tag" content="Code">
+    
+    <meta property="article:tag" content="Study">
+    
+    <meta property="article:tag" content="CP">
+    
     
     <meta property="og:image" content="http://localhost:4000https://avatars.githubusercontent.com/u/63890132">
-    <meta property="og:url" content="http://localhost:4000/">
+    <meta property="og:url" content="http://localhost:4000/2022/08/26/lc518/">
     <meta property="og:site_name" content="tLLWtG Blog | tLLWtG 的博客">
 
-    <title>tLLWtG Blog | tLLWtG 的博客</title>
+    <title>LC Problems' Solutions -518 - tLLWtG Blog | tLLWtG 的博客</title>
 
     <!-- Web App Manifest -->
     <link rel="manifest" href="/pwa/manifest.json">
@@ -34,7 +50,7 @@
     <link rel="shortcut icon" href="/img/favicon.ico">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="http://localhost:4000/">
+    <link rel="canonical" href="http://localhost:4000/2022/08/26/lc518/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href=" /css/bootstrap.min.css">
@@ -213,450 +229,318 @@
   </div>
 </div>
 
-    <!-- Page Header -->
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/LeetCode.png" width="0" height="0"> -->
+
+<!-- Post Header -->
 
 
 
 <style type="text/css">
     header.intro-header{
         position: relative;
-        background-image: url('/img/home-bg.jpg');
+        background-image: url('/img/LeetCode.png');
         background: ;
     }
 
     
+    header.intro-header .header-mask{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(0,0,0, 0.3);
+    }
+    
 </style>
 
 
 
 
+<header class="intro-header" >
 
-
-
-<!--be random-->
-
-<!--
-<header class="intro-header" id="randombg" style="background-image: url('/img/home-bg.jpg')">
-!-->
-<script>
-    var x=Math.floor(Math.random() * 17)
-    var str=x.toString()
-    var bg='/img/bg/image_'+str+'.jpg'
-    document.write('<header class="intro-header" style="background-image: url('+bg+')">')
-</script>
-    <!--
-    <script>
-        var x=Math.floor(Math.random() * 1)
-        var str=x.toString()
-        var bg='/img/bg/image_'+str+'.jpg'
-        document.getElementById('randombg').style.background='url('+bg+')'
-    </script>
-    -->
- 
     <div class="header-mask"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        
-        <div class="site-heading">
-        
-          <h1>tLLWtG Blog</h1>
-          <span class="subheading">「version 1.0」</span>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/archive/?tag=Code" title="Code">Code</a>
+                        
+                        <a class="tag" href="/archive/?tag=Study" title="Study">Study</a>
+                        
+                        <a class="tag" href="/archive/?tag=CP" title="CP">CP</a>
+                        
+                    </div>
+                    <h1>LC Problems' Solutions -518</h1>
+                    
+                    <h2 class="subheading"> "LeetCode"</h2>
+                    <span class="meta">Posted by tLLWtG on August 26, 2022</span>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </header>
 
 
 
-<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    
 
-    <!-- USE SIDEBAR -->
-    <!-- PostList Container -->
-    <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12
-      col-xs-12 postlist-container">
-      
-<div class="post-preview">
-    <a href="/2023/01/10/Ordering/">
-        <h2 class="post-title">
-            Strict Weak Ordering
-        </h2>
-        
-        <h3 class="post-subtitle">
-             "Ordering"
-        </h3>
-        
-        <div class="post-content-preview">
-            
+
+
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <!-- Multi-Lingual -->
                 
-  严格弱序是个大坑 : (
 
+				<blockquote>
+  <p>Problem -518- Coin Change 2</p>
+</blockquote>
 
-我一直想总结一下 STL 中众多内含比较关系的函数和容器所用到的 Strict Weak Ordering 原则，即严格弱序。正好今天刷到 luogu 的 P2123 皇后游戏，于是就顺手整理了相关内容。
+<p>这是<a href="https://leetcode.cn/problems/coin-change-2/">原题链接</a></p>
 
-定义
-
-我们知道，STL 的任何一种内含比较关系的函数(sort, upper_bound…) 、容器(set, priority_queue…)都需...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by tLLWtG on January 10, 2023
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2022/12/21/First-Semester2/">
-        <h2 class="post-title">
-            My First Semester in XMU (Part 2)
-        </h2>
-        
-        <h3 class="post-subtitle">
-             "ACM"
-        </h3>
-        
-        <div class="post-content-preview">
-            
-                
-  书接上回（
-
-  这个学期除了有住在图书馆和学武楼的丰富多彩的校园生活，当然还少不了竞赛训练。
-(同时也通过ACM认识了好多学长和同学捏。
-
-
-XMU ACM Advanced Class(2022)
-
-学期初本人非常荣幸的被任命为厦门大学 ACM 提高班班长（其实很水捏
-
-
-
-
-  ACM 提高班举办的第一场周赛
-
-
-
-
-
-  三场周赛总成绩（淡绿色为赛后补题
-
-
-
-
-
-  线上讲座...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by tLLWtG on December 21, 2022
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2022/12/19/First-Semester1/">
-        <h2 class="post-title">
-            My First Semester in XMU (Part 1)
-        </h2>
-        
-        <h3 class="post-subtitle">
-             "军训, Course, Exam and Life"
-        </h3>
-        
-        <div class="post-content-preview">
-            
-                
-  这一鸽就过去了三个月捏（逃
-
-  虽然没有及时记录下来，但这个学期还是挺充实的。
-
-
-军训
-
-第一天拿到了训练服和装备。 
-然后第二天早上五点被拉起来，赶车去思明校区参加开学典礼和军训动员大会。
-
-
-  由于前一天晚上打CF，所以我一共就睡了4个小时
-
-
-
-
-训了一天太累辣，在操场上睡大觉↓
-
-
-
-
-
-在学校后面的香山进行拉练，这是山顶(?)的鼎。
-
-
-
-太阳好大捏：(
-
-
-
-战术排的...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by tLLWtG on December 19, 2022
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2022/09/07/XMU/">
-        <h2 class="post-title">
-            Hello XMU
-        </h2>
-        
-        <h3 class="post-subtitle">
-             "XMU"
-        </h3>
-        
-        <div class="post-content-preview">
-            
-                
-  紧张刺激的大学生活开始辽
-
-
-简单记录下大学报道和开学典礼。
-
-九月六号
-
-
-  到达世界最高城——翔安！(bushi) 太美丽啦，哎呀这不厦门大学嘛，再看看远处的。。。农田？
-
-
-这是东门 ↓
-
-
-这是田 ↓
-
-
-
-  翔安校区地图（巨大）
-
-
-
-
-
-  跟着志愿者乘上摆渡巴士
-
-
-
-
-
-  信息学院迎新点
-
-
-
-
-
-  拿到学生卡
-
-
-
-
-
-  帅到模糊的宿舍
-
-
-
-
-
-  我的床...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by tLLWtG on September 7, 2022
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2022/09/03/lcContest308/">
-        <h2 class="post-title">
-            LeetCode Contest 308
-        </h2>
-        
-        <h3 class="post-subtitle">
-             "Contest308"
-        </h3>
-        
-        <div class="post-content-preview">
-            
-                
-  第一次AK力扣周赛！！！
-
-
-力扣第308场周赛
-
-2022 年 8 月 28 日，tLLWtG 第一次 AK 力扣周赛，超激动！更刺激的是，我在最后一分钟内才提交了最后一题，而且居然一次就 Pass。
-简单记录一下心路历程：
-
-
-  
-    T1: 第一眼看到 Subsequence 时，真的吓了一跳。第一题就出这么难吗:-(然后条件反射的回想起各种数列 DP 的题。结果认真读完题...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by tLLWtG on September 3, 2022
-    </p>
-</div>
-<hr>
-
-
-<!-- Pager -->
-
-<ul class="pager">
-    
-    
-    <li class="next">
-        <a href="/page2">Older Posts &rarr;</a>
-    </li>
-    
+<h2 id="description">Description</h2>
+<ul>
+  <li>Coin Change 2</li>
 </ul>
 
+<p>You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money.</p>
 
-    </div>
+<p>Return the number of combinations that make up that amount. If that amount of money cannot be made up by any combination of the coins, return 0.</p>
+
+<p>You may assume that you have an infinite number of each kind of coin.The answer is guaranteed to fit into a signed 32-bit integer.</p>
+
+<hr />
+
+<ul>
+  <li><strong>Example 1:</strong></li>
+</ul>
+
+<p>Input: amount = 5, coins = [1,2,5]<br />
+Output: 4<br />
+Explanation: there are four ways to make up the amount:</p>
+
+<p>5=5<br />
+5=2+2+1<br />
+5=2+1+1+1<br />
+5=1+1+1+1+1</p>
+
+<ul>
+  <li><strong>Example 2:</strong></li>
+</ul>
+
+<p>Input: amount = 3, coins = [2]<br />
+Output: 0<br />
+Explanation: the amount of 3 cannot be made up just with coins of 2.</p>
+<ul>
+  <li><strong>Example 3:</strong></li>
+</ul>
+
+<p>Input: amount = 10, coins = [10]<br />
+Output: 1
+ </p>
+
+<ul>
+  <li><strong>Constraints:</strong></li>
+</ul>
+
+<p>1 &lt;= coins.length &lt;= 300<br />
+1 &lt;= coins[i] &lt;= 5000<br />
+All the values of coins are unique.<br />
+0 &lt;= amount &lt;= 5000</p>
+
+<h2 id="tanslation">Tanslation</h2>
+<ul>
+  <li>零钱兑换 II</li>
+</ul>
+
+<p>给你一个整数数组 coins 表示不同面额的硬币，另给一个整数 amount 表示总金额。</p>
+
+<p>请你计算并返回可以凑成总金额的硬币组合数。如果任何硬币组合都无法凑出总金额，返回 0 。</p>
+
+<p>假设每一种面额的硬币有无限个。 题目数据保证结果符合 32 位带符号整数。</p>
+
+<hr />
+
+<ul>
+  <li><strong>示例 1：</strong></li>
+</ul>
+
+<p>输入：amount = 5, coins = [1, 2, 5]<br />
+输出：4<br />
+解释：有四种方式可以凑成总金额：</p>
+
+<p>5=5<br />
+5=2+2+1<br />
+5=2+1+1+1<br />
+5=1+1+1+1+1</p>
+
+<ul>
+  <li><strong>示例 2：</strong></li>
+</ul>
+
+<p>输入：amount = 3, coins = [2]<br />
+输出：0<br />
+解释：只用面额 2 的硬币不能凑成总金额 3 。</p>
+
+<ul>
+  <li><strong>示例 3：</strong></li>
+</ul>
+
+<p>输入：amount = 10, coins = [10]<br />
+输出：1
+ </p>
+
+<ul>
+  <li><strong>提示：</strong></li>
+</ul>
+
+<p>1 &lt;= coins.length &lt;= 300<br />
+1 &lt;= coins[i] &lt;= 5000<br />
+coins 中的所有值 互不相同<br />
+0 &lt;= amount &lt;= 5000</p>
+
+<h2 id="题解">题解</h2>
+
+<p>显然，这是一道涉及排列组合的完全背包问题。背包问题的 dp 解法不再赘述，我们重点关注 dp 中<strong>排列数与组合数</strong>的问题。</p>
+
+<ol>
+  <li>先来找找下面两个代码块的不同
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre>class Solution:
+ def change(self, amount: int, coins: List[int]) -&gt; int:
+     if amount==0:   return 1
+     while coins[len(coins)-1]&gt;amount:
+         coins.pop()
+         if not coins:   return 0
+     dp=[0]*(amount+1)
+     dp[0]=1
+     for x in coins:
+         for i in range(1,amount+1):
+             if i-x&gt;=0:
+                 dp[i]+=dp[i-x]
+     return dp[amount]
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre>class Solution:
+ def change(self, amount: int, coins: List[int]) -&gt; int:
+     if amount==0:   return 1
+     while coins[len(coins)-1]&gt;amount:
+         coins.pop()
+         if not coins:   return 0
+     dp=[0]*(amount+1)
+     dp[0]=1
+     for i in range(1,amount+1):
+         for x in coins:
+             if i-x&gt;=0:
+                 dp[i]+=dp[i-x]
+     return dp[amount]
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>没错，很明显这两块代码的循环嵌套顺序不同。用本题的测试用例1跑一遍后我们得到两个结果：4 和 9。由<del>答案</del>题意可知，4 是我们想要的结果。那么循环顺序的交换是怎么对结果产生影响的呢？</li>
+  <li>我们依次来枚举一下。在 dp 的过程中，以<strong>硬币种类</strong>作为外循环时，我们是按 1–&gt;2–&gt;5 的顺序使用硬币。而以<strong>钱的总额</strong>作为外循环时，我们是按 1–&gt;2–&gt;3–&gt;4–&gt;5 的顺序累计方案的数目。举其中一种方案 {1，2，2} 为例，前者将同种硬币放在一起处理，对于此方案只计入一次，即数学中的组合数，而后者则没有限制，对于此方案重复记录了三次 {1，2，2}，{2，1，2}，{2，2，1}，即数学中的排列数。</li>
+  <li>综上，对于完全背包问题，dp 过程中循环嵌套的顺序将决定我们求得的解是排列数还是组合数。</li>
+</ol>
+
+<h2 id="后记">后记</h2>
+
+<p><em>(保留)</em></p>
+
+<!-- *———      __ 后记于 __* -->
+
+
+                <hr style="visibility: hidden;">
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2022/08/26/My-LeetCode-Journey/" data-toggle="tooltip" data-placement="top" title="My LeetCode Journey">
+                        Previous<br>
+                        <span>My LeetCode Journey</span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2022/08/30/Markdown/" data-toggle="tooltip" data-placement="top" title="Markdown Notes">
+                        Next<br>
+                        <span>Markdown Notes</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <hr style="visibility: hidden;">
+
+                
+
+                
+            </div>  
+
+    <!-- Side Catalog Container -->
+        
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+        
+
     <!-- Sidebar Container -->
-    <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-12
-      col-xs-12 sidebar-container">
-      <!-- hitokoto -->
-      <hr />
-<h5 style="display: inline">一言（ヒトコト）</h5>
-<div style="display: inline; font-size: 1.5em; color: #a3a3a3">
-  &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</div>
-<div
-  title="redo"
-  id="redo icon"
-  style="display: inline; font-weight: 600; font-size: 1.1em; color: #a3a3a3"
->
-  next
-</div>
-<div
-  id="hitokoto_text"
-  style="margin-top: 20px; color: rgb(102, 102, 102)"
-></div>
-<div
-  style="text-align: right; margin-top: 15px; font-size: 0.9em"
-  id="hitokoto_from"
-></div>
-<style>
-  .containerload {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-  }
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
 
-  .itemload {
-    width: 12px;
-    height: 60px;
-    margin: 2px;
-    background-color: #ccc;
-    animation: wave 1.2s infinite ease-in-out;
-    animation-delay: var(--delay);
-  }
-
-  @keyframes wave {
-    0%,
-    40%,
-    100% {
-      transform: scale(0.4);
-    }
-    20% {
-      transform: scale(1);
-    }
-  }
-</style>
-<div class="containerload">
-  <span class="itemload item1" id="load1" style="--delay: -1.1s"></span>
-  <span class="itemload item2" id="load2" style="--delay: -1s"></span>
-  <span class="itemload item3" id="load3" style="--delay: -0.9s"></span>
-  <span class="itemload item4" id="load4" style="--delay: -0.8s"></span>
-  <span class="itemload item5" id="load5" style="--delay: -0.7s"></span>
-</div>
-<script>
-  function loading_on() {
-    const load1 = document.getElementById("load1");
-    const load2 = document.getElementById("load2");
-    const load3 = document.getElementById("load3");
-    const load4 = document.getElementById("load4");
-    const load5 = document.getElementById("load5");
-    load1.className = "itemload item1";
-    load2.className = "itemload item2";
-    load3.className = "itemload item3";
-    load4.className = "itemload item4";
-    load5.className = "itemload item5";
-  }
-  function loading_off() {
-    const load1 = document.getElementById("load1");
-    const load2 = document.getElementById("load2");
-    const load3 = document.getElementById("load3");
-    const load4 = document.getElementById("load4");
-    const load5 = document.getElementById("load5");
-    load1.className = "rand1";
-    load2.className = "rand2";
-    load3.className = "rand3";
-    load4.className = "rand4";
-    load5.className = "rand5";
-  }
-  function gethitokoto() {
-    fetch("https://v1.hitokoto.cn/?c=a&c=b&c=d&c=i&c=k")
-      .then((response) => response.json())
-      .then((data) => {
-        const hitokoto_text = document.getElementById("hitokoto_text");
-        hitokoto_text.href = "https://hitokoto.cn/?uuid=" + data.uuid;
-        hitokoto_text.innerText = data.hitokoto;
-        const hitokoto_from = document.getElementById("hitokoto_from");
-        hitokoto_from.href = "https://hitokoto.cn/?uuid=" + data.uuid;
-        hitokoto_from.innerText = "——" + data.from;
-        loading_off();
-      })
-      .catch(console.error);
-  }
-  //loading_on();
-  setTimeout(gethitokoto, 800);
-  const redo = document.getElementById("redo icon");
-  redo.addEventListener("click", (e) => {
-    const hitokoto_text = document.getElementById("hitokoto_text");
-    hitokoto_text.innerText = "";
-    const hitokoto_from = document.getElementById("hitokoto_from");
-    hitokoto_from.innerText = "";
-    // loading
-    loading_on();
-    setTimeout(gethitokoto, 800);
-  });
-  redo.addEventListener("mouseover", (e) => {
-    redo.style.cursor = "pointer";
-    redo.style.color = "rgb(100, 100, 100)";
-  });
-  redo.addEventListener("mouseout", (e) => {
-    redo.style.color = "#a3a3a3";
-  });
-</script>
-
-
-      <!-- Featured Tags -->
-      <hr>
+                <!-- Featured Tags -->
+                <hr>
 
 
 
 <section>
+    
+    <hr class="hidden-sm hidden-xs">
     
     <h5><a href="/archive/">FEATURED TAGS</a></h5>
     <div class="tags">
@@ -689,73 +573,8 @@ XMU ACM Advanced Class(2022)
 </section>
 
 
-      <!-- Short About -->
-      <section class="visible-md visible-lg">
-  <hr>
-  <h5><a href="/about/">ABOUT ME</a></h5>
-  <div class="short-about">
-    
-    <img src="https://avatars.githubusercontent.com/u/63890132" />
-    
-    
-    <p>要做一个有 swag 的程序员 <br> </p>
-    
-    <!-- SNS Link -->
-    
-
-
-<ul class="list-inline">
-
-
-  
-  
-  <li>
-    <a href="https://twitter.com/tLLWtG1">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
-  
-  
-  <li>
-    <a target="_blank" href="https://www.zhihu.com/people/tllwtg">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa  fa-stack-1x fa-inverse">知</i>
-      </span>
-    </a>
-  </li>
-  
-  
-  <li>
-    <a target="_blank" href="http://weibo.com/tLLWtG">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
-  
-  
-  
-  <li>
-    <a target="_blank" href="https://github.com/tLLWtG">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
-  
-  
-</ul>
-  </div>
-</section>
-
-      <!-- Friends Blog -->
-      
+                <!-- Friends Blog -->
+                
 <hr>
 <h5><del>单向</del>友情链接</h5>
 <ul class="list-inline">
@@ -772,20 +591,20 @@ XMU ACM Advanced Class(2022)
   
 </ul>
 
-
-      <!-- Ads -->
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- first shot -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6487568398225121" data-ad-slot="4814308751"
-     data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
+            </div>
+        </div>
     </div>
-    
-  </div>
-</div>
+</article>
+
+<!-- add support for mathjax by voleking-->
+
+
+
+
+
+
+
+
 
 
 

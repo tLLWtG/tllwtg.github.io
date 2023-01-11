@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="这里是 tLLWtG 的个人博客，与你一起发现更大的世界 | 要做一个有 swag 的程序员">
+    <meta name="keywords" content="tLLWtG, tLLWtG 的博客, tLLWtG Blog, 博客, 个人网站, 互联网, Web">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- add baidu zhanzhang !-->
+    <meta name="baidu-site-verification" content="code-HbyKSkU29Y" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title"
+        content="LeetCode Contest 308 - tLLWtG Blog | tLLWtG 的博客">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="
+  第一次AK力扣周赛！！！
+
+
+">
+    
+    <meta property="article:published_time" content=" 2022-09-03T10:00:00Z">
+    
+    
+    <meta property="article:author" content="tLLWtG">
+    
+    
+    <meta property="article:tag" content="Code">
+    
+    <meta property="article:tag" content="Study">
+    
+    <meta property="article:tag" content="CP">
+    
+    
+    <meta property="og:image" content="http://localhost:4000https://avatars.githubusercontent.com/u/63890132">
+    <meta property="og:url" content="http://localhost:4000/2022/09/03/lcContest308/">
+    <meta property="og:site_name" content="tLLWtG Blog | tLLWtG 的博客">
+
+    <title>LeetCode Contest 308 - tLLWtG Blog | tLLWtG 的博客</title>
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/pwa/manifest.json">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://localhost:4000/2022/09/03/lcContest308/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href=" /css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href=" /css/hux-blog.min.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+        type="text/css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+
+    <!-- Google AdSense -->
+    <script data-ad-client="ca-pub-6487568398225121" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <!-- add baidu tongji !-->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?615ad1958f669f7f0692647f624c32f9";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">tLLWtG Blog</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div id="huxblog_navbar">
+                <div class="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        
+                        
+                        
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                        
+                        
+                        <li>
+                            <a href="/archive/">Archive</a>
+                        </li>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <li class="search-icon">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <script>
+        // Drop Bootstarp low-performance Navbar
+        // Use customize navbar with high-quality material design animation
+        // in high-perf jank-free CSS3 implementation
+        var $body = document.body;
+        var $toggle = document.querySelector('.navbar-toggle');
+        var $navbar = document.querySelector('#huxblog_navbar');
+        var $collapse = document.querySelector('.navbar-collapse');
+
+        var __HuxNav__ = {
+            close: function () {
+                $navbar.className = " ";
+                // wait until animation end.
+                setTimeout(function () {
+                    // prevent frequently toggle
+                    if ($navbar.className.indexOf('in') < 0) {
+                        $collapse.style.height = "0px"
+                    }
+                }, 400)
+            },
+            open: function () {
+                $collapse.style.height = "auto"
+                $navbar.className += " in";
+            }
+        }
+
+        // Bind Event
+        $toggle.addEventListener('click', function (e) {
+            if ($navbar.className.indexOf('in') > 0) {
+                __HuxNav__.close()
+            } else {
+                __HuxNav__.open()
+            }
+        })
+
+        /**
+         * Since Fastclick is used to delegate 'touchstart' globally
+         * to hack 300ms delay in iOS by performing a fake 'click',
+         * Using 'e.stopPropagation' to stop 'touchstart' event from 
+         * $toggle/$collapse will break global delegation.
+         * 
+         * Instead, we use a 'e.target' filter to prevent handler
+         * added to document close HuxNav.  
+         *
+         * Also, we use 'click' instead of 'touchstart' as compromise
+         */
+        document.addEventListener('click', function (e) {
+            if (e.target == $toggle) return;
+            if (e.target.className == 'icon-bar') return;
+            __HuxNav__.close();
+        })
+    </script>
+    <!-- Search -->
+<div class="search-page">
+  <div class="search-icon-close-container">
+    <span class="search-icon-close">
+      <i class="fa fa-chevron-down"></i>
+    </span>
+  </div>
+  <div class="search-main container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <form></form>
+        <input type="text" id="search-input" placeholder="$ grep...">
+        </form>
+        <div id="search-results" class="mini-post-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/LeetCodeContest.png" width="0" height="0"> -->
+
+<!-- Post Header -->
+
+
+
+<style type="text/css">
+    header.intro-header{
+        position: relative;
+        background-image: url('/img/LeetCodeContest.png');
+        background: ;
+    }
+
+    
+    header.intro-header .header-mask{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(0,0,0, 0.3);
+    }
+    
+</style>
+
+
+
+
+<header class="intro-header" >
+
+    <div class="header-mask"></div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/archive/?tag=Code" title="Code">Code</a>
+                        
+                        <a class="tag" href="/archive/?tag=Study" title="Study">Study</a>
+                        
+                        <a class="tag" href="/archive/?tag=CP" title="CP">CP</a>
+                        
+                    </div>
+                    <h1>LeetCode Contest 308</h1>
+                    
+                    <h2 class="subheading"> "Contest308"</h2>
+                    <span class="meta">Posted by tLLWtG on September 3, 2022</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+
+
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <!-- Multi-Lingual -->
+                
+
+				<blockquote>
+  <p>第一次AK力扣周赛！！！</p>
+</blockquote>
+
+<h2 id="力扣第308场周赛">力扣第308场周赛</h2>
+
+<p>2022 年 8 月 28 日，tLLWtG 第一次 AK 力扣周赛，超激动！更刺激的是，我在<strong>最后一分钟</strong>内才提交了<strong>最后一题</strong>，而且居然一次就 Pass。<br />
+简单记录一下心路历程：</p>
+
+<ul>
+  <li>
+    <p><strong>T1</strong>: 第一眼看到 Subsequence 时，真的吓了一跳。第一题就出这么难吗:-(然后条件反射的回想起各种数列 DP 的题。结果认真读完题后发现只是个套壳的排序+前缀和。（因为数据范围小甚至可以用暴力解法）</p>
+  </li>
+  <li>
+    <p><strong>T2</strong>: 大概读完题后，觉得栈应该是最优解，但既然用的是 Python3，不妨试试它的 Slice 特性。</p>
+  </li>
+  <li>
+    <p><strong>T3</strong>: 看到各种各样的选择分支然后心想，“终于，终于轮到 DP 了吗。。。不枉我刚刷完 21 天的 DP 专项。”但令人失望的是，这又是个模拟题（感觉最近周赛把把都出模拟）。写完后调了一会才提交，最后还是因为欠考虑 WA 了两次。</p>
+  </li>
+  <li>
+    <p><strong>T4</strong>: 读完题目后没什么思路，又被 Special Judge 唬到了，想了一会，更加坚定了三题跑路的想法。于是就跑一边玩去了。。。剩二十分钟的时候回来，一看排名 2000+。这么多人AK的嘛？不行不行，再玩下去说不定要掉大分。又读了一遍题。诶这，这，这不就是个拓扑排序吗？！最终在巨紧张的情况下压线提交了。</p>
+  </li>
+</ul>
+
+<p><strong>总结下来</strong>，这次有惊有险的完成了个人的第一次周赛 AK，稍微上了点分。只是在完成时间上有点遗憾。</p>
+
+<p><img src="../../../../img/0903Contest308.png" alt="xunzhang" title="周赛308" /></p>
+
+<p><img src="../../../../img/Contest308.png" alt="Contest308" title="周赛308" /></p>
+
+<h2 id="周赛题">周赛题</h2>
+
+<h4 id="t1">T1</h4>
+
+<p><strong>2389. Longest Subsequence With Limited Sum</strong></p>
+
+<ul>
+  <li>Difficulty: Easy</li>
+</ul>
+
+<p>You are given an integer array nums of length n, and an integer array queries of length m.<br />
+Return an array answer of length m where answer[i] is the maximum size of a subsequence that you can take from nums such that the sum of its elements is less than or equal to queries[i].<br />
+A subsequence is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.</p>
+
+<ul>
+  <li>Example 1:</li>
+</ul>
+
+<p>Input: nums = [4,5,2,1], queries = [3,10,21]<br />
+Output: [2,3,4]<br />
+Explanation:We answer the queries as follows:<br />
+The subsequence [2,1] has a sum less than or equal to 3. It can be proven that 2 is the maximum size of such a subsequence, so answer[0] = 2.<br />
+The subsequence [4,5,1] has a sum less than or equal to 10. It can be proven that 3 is the maximum size of such a subsequence, so answer[1] = 3.<br />
+The subsequence [4,5,2,1] has a sum less than or equal to 21. It can be proven that 4 is the maximum size of such a subsequence, so answer[2] = 4.</p>
+
+<ul>
+  <li>Example 2:</li>
+</ul>
+
+<p>Input: nums = [2,3,4,5], queries = [1]<br />
+Output: [0]<br />
+Explanation: The empty subsequence is the only subsequence that has a sum less than or equal to 1, so answer[0] = 0.</p>
+
+<ul>
+  <li>Constraints:</li>
+</ul>
+
+<p>n == nums.length<br />
+m == queries.length<br />
+1 &lt;= n, m &lt;= 1000<br />
+1 &lt;= nums[i], queries[i] &lt;= 106</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre>class Solution:
+    def answerQueries(self, nums: List[int], queries: List[int]) -&gt; List[int]:
+        n,m=len(nums),len(queries)
+        ans=[0]*m
+        nums.sort()
+        he=[nums[0]]+[0]*(n-1)
+        for i in range(1,n):
+            he[i]=he[i-1]+nums[i]
+        for i in range(m):
+            x=0
+            while x&lt;n and he[x]&lt;=queries[i]:
+                x+=1
+            ans[i]=x
+        return ans
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="t2">T2</h4>
+
+<p><strong>2390.Removing Stars From a String</strong></p>
+
+<ul>
+  <li>Difficulty: Medium</li>
+</ul>
+
+<p>You are given a string s, which contains stars *.<br />
+In one operation, you can:<br />
+Choose a star in s.
+Remove the closest non-star character to its left, as well as remove the star itself.
+Return the string after all stars have been removed.</p>
+
+<p>Note:<br />
+The input will be generated such that the operation is always possible.<br />
+It can be shown that the resulting string will always be unique.</p>
+
+<ul>
+  <li>Example 1:</li>
+</ul>
+
+<p>Input: s = “leet<em>*cod</em>e”<br />
+Output: “lecoe”<br />
+Explanation: Performing the removals from left to right:<br />
+The closest character to the 1st star is ‘t’ in “leet<em>*cod</em>e”. s becomes “lee<em>cod</em>e”.<br />
+The closest character to the 2nd star is ‘e’ in “lee<em>cod</em>e”. s becomes “lecod<em>e”.<br />
+The closest character to the 3rd star is ‘d’ in “lecod</em>e”. s becomes “lecoe”.<br />
+There are no more stars, so we return “lecoe”.</p>
+
+<ul>
+  <li>Example 2:</li>
+</ul>
+
+<p>Input: s = “erase*****”<br />
+Output: “”<br />
+Explanation: The entire string is removed, so we return an empty string.</p>
+
+<ul>
+  <li>Constraints:</li>
+</ul>
+
+<p>1 &lt;= s.length &lt;= 105<br />
+s consists of lowercase English letters and stars *.<br />
+The operation above can be performed on s.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre>class Solution:
+    def removeStars(self, s: str) -&gt; str:
+        n=len(s)
+        x=0
+        while x&lt;len(s):
+            if s[x]=="*":
+                s=s[:x-1]+s[x+1:]
+                x-=2
+            x+=1
+        return s
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="t3">T3</h4>
+
+<p><strong>2391. Minimum Amount of Time to Collect Garbage</strong></p>
+
+<ul>
+  <li>Difficulty: Medium</li>
+</ul>
+
+<p>You are given a 0-indexed array of strings garbage where garbage[i] represents the assortment of garbage at the ith house. garbage[i] consists only of the characters ‘M’, ‘P’ and ‘G’ representing one unit of metal, paper and glass garbage respectively. Picking up one unit of any type of garbage takes 1 minute.<br />
+You are also given a 0-indexed integer array travel where travel[i] is the number of minutes needed to go from house i to house i + 1.<br />
+There are three garbage trucks in the city, each responsible for picking up one type of garbage. Each garbage truck starts at house 0 and must visit each house in order; however, they do not need to visit every house.<br />
+Only one garbage truck may be used at any given moment. While one truck is driving or picking up garbage, the other two trucks cannot do anything.<br />
+Return the minimum number of minutes needed to pick up all the garbage.</p>
+
+<ul>
+  <li>Example 1:</li>
+</ul>
+
+<p>Input: garbage = [“G”,”P”,”GP”,”GG”], travel = [2,4,3]<br />
+Output: 21<br />
+Explanation:<br />
+The paper garbage truck:<br />
+1.Travels from house 0 to house 1<br />
+2.Collects the paper garbage at house 1<br />
+3.Travels from house 1 to house 2<br />
+4.Collects the paper garbage at house 2<br />
+Altogether, it takes 8 minutes to pick up all the paper garbage.
+The glass garbage truck:<br />
+1.Collects the glass garbage at house 0<br />
+2.Travels from house 0 to house 1<br />
+3.Travels from house 1 to house 2<br />
+4.Collects the glass garbage at house 2<br />
+5.Travels from house 2 to house 3<br />
+6.Collects the glass garbage at house 3<br />
+Altogether, it takes 13 minutes to pick up all the glass garbage.
+Since there is no metal garbage, we do not need to consider the metal garbage truck.<br />
+Therefore, it takes a total of 8 + 13 = 21 minutes to collect all the garbage.</p>
+
+<ul>
+  <li>Example 2:</li>
+</ul>
+
+<p>Input: garbage = [“MMM”,”PGM”,”GP”], travel = [3,10]<br />
+Output: 37<br />
+Explanation:<br />
+The metal garbage truck takes 7 minutes to pick up all the metal garbage.<br />
+The paper garbage truck takes 15 minutes to pick up all the paper garbage.<br />
+The glass garbage truck takes 15 minutes to pick up all the glass garbage.<br />
+It takes a total of 7 + 15 + 15 = 37 minutes to collect all the garbage.</p>
+
+<ul>
+  <li>Constraints:</li>
+</ul>
+
+<p>2 &lt;= garbage.length &lt;= 105<br />
+garbage[i] consists of only the letters ‘M’, ‘P’, and ‘G’.<br />
+1 &lt;= garbage[i].length &lt;= 10<br />
+travel.length == garbage.length - 1<br />
+1 &lt;= travel[i] &lt;= 100</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+</pre></td><td class="rouge-code"><pre>class Solution:
+    def garbageCollection(self, garbage: List[str], travel: List[int]) -&gt; int:
+        ment,pla,gla=0,0,0
+        mentzhan,plazhan,glazhan=0,0,0
+        n=len(garbage)
+        for i in range(n):
+            temp=[0,0,0]
+            for x in garbage[i]:
+                if x=="M":
+                    temp[0]+=1
+                elif x=="P":
+                    temp[1]+=1
+                elif x=="G":
+                    temp[2]+=1
+            if temp[0]:
+                mentzhan=i
+                ment+=temp[0]
+            if temp[1]:
+                plazhan=i
+                pla+=temp[1]
+            if temp[2]:
+                glazhan=i
+                gla+=temp[2]
+        for i in range(1,n-1):
+            travel[i]=travel[i-1]+travel[i]
+        time=ment+pla+gla
+        if mentzhan:
+            time+=travel[mentzhan-1]
+        if plazhan:
+            time+=travel[plazhan-1]
+        if glazhan:
+            time+=travel[glazhan-1]
+        return time
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="t4">T4</h4>
+
+<p><strong>2392. Build a Matrix With Conditions</strong></p>
+
+<ul>
+  <li>Difficulty:Hard</li>
+</ul>
+
+<p>You are given a positive integer k. You are also given:<br />
+a 2D integer array rowConditions of size n where rowConditions[i] = [abovei, belowi], and a 2D integer array colConditions of size m where colConditions[i] = [lefti, righti].<br />
+The two arrays contain integers from 1 to k.<br />
+You have to build a k x k matrix that contains each of the numbers from 1 to k exactly once. The remaining cells should have the value 0.<br />
+The matrix should also satisfy the following conditions:<br />
+The number abovei should appear in a row that is strictly above the row at which the number belowi appears for all i from 0 to n - 1.<br />
+The number lefti should appear in a column that is strictly left of the column at which the number righti appears for all i from 0 to m - 1.<br />
+Return any matrix that satisfies the conditions. If no answer exists, return an empty matrix.</p>
+
+<ul>
+  <li>Example 1:</li>
+</ul>
+
+<p>Input: k = 3, rowConditions = [[1,2],[3,2]], colConditions = [[2,1],[3,2]]<br />
+Output: [[3,0,0],[0,0,1],[0,2,0]]<br />
+Explanation: The diagram above shows a valid example of a matrix that satisfies all the conditions.<br />
+The row conditions are the following:<br />
+Number 1 is in row 1, and number 2 is in row 2, so 1 is above 2 in the matrix.<br />
+Number 3 is in row 0, and number 2 is in row 2, so 3 is above 2 in the matrix.<br />
+The column conditions are the following:<br />
+Number 2 is in column 1, and number 1 is in column 2, so 2 is left of 1 in the matrix.<br />
+Number 3 is in column 0, and number 2 is in column 1, so 3 is left of 2 in the matrix.<br />
+Note that there may be multiple correct answers.</p>
+
+<ul>
+  <li>Example 2:</li>
+</ul>
+
+<p>Input: k = 3, rowConditions = [[1,2],[2,3],[3,1],[2,3]], colConditions = [[2,1]]<br />
+Output: []<br />
+Explanation: From the first two conditions, 3 has to be below 1 but the third conditions needs 3 to be above 1 to be satisfied.
+No matrix can satisfy all the conditions, so we return the empty matrix.</p>
+
+<ul>
+  <li>Constraints:</li>
+</ul>
+
+<p>2 &lt;= k &lt;= 400<br />
+1 &lt;= rowConditions.length, colConditions.length &lt;= 104<br />
+rowConditions[i].length == colConditions[i].length == 2<br />
+1 &lt;= abovei, belowi, lefti, righti &lt;= k<br />
+abovei != belowi<br />
+lefti != righti</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+</pre></td><td class="rouge-code"><pre>class Solution:
+    def buildMatrix(self, k: int, rowConditions: List[List[int]], colConditions: List[List[int]]) -&gt; List[List[int]]:
+        def fun(condi):
+            id=defaultdict(int)
+            od=defaultdict(list)
+            for i,j in condi:
+                id[j] +=1
+                od[i].append(j)
+            que=deque()
+            for i in range(1,k+1):
+                if id[i]==0:
+                    que.append(i)
+            ans=list()
+            while que:
+                n= que.pop()
+                ans.append(n)
+                for x in od[n]:
+                    id[x]-=1
+                    if id[x]==0:
+                        que.appendleft(x)
+            return ans if len(ans) ==k else None
+        row= fun(rowConditions)
+        col= fun(colConditions)
+        if row is None or col is None:
+            return list()
+        rowid={val:i for i,val in enumerate(row)}
+        colid={val:i for i,val in enumerate(col)}
+        ans=[[0 for c in range(k)] for r in range(k)]
+        for i in range(1,1+k):
+            r=rowid[i]
+            c=colid[i]
+            ans[r][c]=i
+        return ans
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="新勋章">新勋章</h2>
+
+<p><img src="../../../../img/xunzhang0903.png" alt="xunzhang" title="勋章" /></p>
+
+<h2 id="后记">后记</h2>
+
+<p><em>(保留)</em></p>
+
+<!-- *———      __ 后记于 __* -->
+
+
+                <hr style="visibility: hidden;">
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2022/08/30/Markdown/" data-toggle="tooltip" data-placement="top" title="Markdown Notes">
+                        Previous<br>
+                        <span>Markdown Notes</span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2022/09/07/XMU/" data-toggle="tooltip" data-placement="top" title="Hello XMU">
+                        Next<br>
+                        <span>Hello XMU</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <hr style="visibility: hidden;">
+
+                
+
+                
+            </div>  
+
+    <!-- Side Catalog Container -->
+        
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+        
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                <hr>
+
+
+
+<section>
+    
+    <hr class="hidden-sm hidden-xs">
+    
+    <h5><a href="/archive/">FEATURED TAGS</a></h5>
+    <div class="tags">
+        
+            
+        
+            
+            <a data-sort="0006"
+                href="/archive/?tag=Life" title="Life"
+                rel="3">Life</a>
+            
+            
+            
+            <a data-sort="0002"
+                href="/archive/?tag=Code" title="Code"
+                rel="7">Code</a>
+            
+            <a data-sort="0002"
+                href="/archive/?tag=Study" title="Study"
+                rel="7">Study</a>
+            
+            <a data-sort="0004"
+                href="/archive/?tag=CP" title="CP"
+                rel="5">CP</a>
+            
+            <a data-sort="0007"
+                href="/archive/?tag=XMU" title="XMU"
+                rel="2">XMU</a>
+    </div>
+</section>
+
+
+                <!-- Friends Blog -->
+                
+<hr>
+<h5><del>单向</del>友情链接</h5>
+<ul class="list-inline">
+  
+  <li><a href="https://tllwtg.github.io/Hexo_Blog">tLLWtG Blog, but with Hexo</a></li>
+  
+  <li><a href="https://oi.wiki">OI Wiki</a></li>
+  
+  <li><a href="https://codeforces.com">Codeforces</a></li>
+  
+  <li><a href="https://www.luogu.com.cn">洛谷</a></li>
+  
+  <li><a href="https://hitokoto.cn">一言</a></li>
+  
+</ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- add support for mathjax by voleking-->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- SNS Link -->
+                
+
+
+<ul class="list-inline text-center">
+
+
+  
+  
+  <li>
+    <a href="https://twitter.com/tLLWtG1">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  <li>
+    <a target="_blank" href="https://www.zhihu.com/people/tllwtg">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa  fa-stack-1x fa-inverse">知</i>
+      </span>
+    </a>
+  </li>
+  
+  
+  <li>
+    <a target="_blank" href="http://weibo.com/tLLWtG">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://github.com/tLLWtG">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+</ul>
+
+                <p class="copyright text-muted">
+                    Copyright &copy; tLLWtG Blog 2023
+                    <br>
+                    Powered by <a href="https://github.com/Huxpro/huxpro.github.io">Huxpro</a>
+                    <!--
+                        <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="100px"
+                        height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=tLLWtG&repo=tLLWtG.github.io&type=star&count=true">
+                        </iframe>
+                    -->
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="display: inline;">
+                        总访问量
+                        <span id="busuanzi_value_site_pv">11</span>
+                        次
+                    </span>
+                    <span id="busuanzi_container_site_uv" style="display: inline;">
+                        | 总访客数
+                        <span id="busuanzi_value_site_uv">1</span>
+                        人
+                    </span>
+                </p>
+                <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+                </script>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src=" /js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<!-- Currently, only navbar scroll-down effect at desktop still depends on this -->
+<script src=" /js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src=" /js/hux-blog.min.js "></script>
+
+<!-- Simple Jekyll Search -->
+<script src=" /js/simple-jekyll-search.min.js"></script>
+
+<!-- Service Worker -->
+
+<script src=" /js/snackbar.js "></script>
+<script src=" /js/sw-registration.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!--
+     Because of the native support for backtick-style fenced code blocks
+     right within the Markdown is landed in Github Pages,
+     From V1.6, There is no need for Highlight.js,
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/
+     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+
+
+
+
+
+<!--fastClick.js -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function () {
+        var $nav = document.querySelector("nav");
+        if ($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+<!-- Side Catalog -->
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        // interop with multilangual 
+        if ('' == 'true') {
+            _containerSelector = 'div.post-container.active'
+        } else {
+            _containerSelector = 'div.post-container'
+        }
+
+        // init
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        // clean
+        $(selector).html('')
+
+        // appending
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    // toggle side catalog
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    /*
+     * Doc: https://github.com/davist11/jQuery-One-Page-Nav
+     * Fork by Hux to support padding
+     */
+    async("/js/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+<!-- Multi-Lingual -->
+
+
+<!-- Simple Jekyll Search -->
+<script>
+    // https://stackoverflow.com/questions/1912501/unescape-html-entities-in-javascript
+    function htmlDecode(input) {
+        var e = document.createElement('textarea');
+        e.innerHTML = input;
+        // handle case of empty input
+        return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
+    }
+
+    SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('search-results'),
+        json: '/search.json',
+        searchResultTemplate: '<div class="post-preview item"><a href="{url}"><h2 class="post-title">{title}</h2><h3 class="post-subtitle">{subtitle}</h3><hr></a></div>',
+        noResultsText: 'No results',
+        limit: 50,
+        fuzzy: false,
+        // a hack to get escaped subtitle unescaped. for some reason, 
+        // post.subtitle w/o escape filter nuke entire search.
+        templateMiddleware: function (prop, value, template) {
+            if (prop === 'subtitle' || prop === 'title') {
+                if (value.indexOf("code")) {
+                    return htmlDecode(value);
+                } else {
+                    return value;
+                }
+            }
+        }
+    });
+
+    $(document).ready(function () {
+        var $searchPage = $('.search-page');
+        var $searchOpen = $('.search-icon');
+        var $searchClose = $('.search-icon-close');
+        var $searchInput = $('#search-input');
+        var $body = $('body');
+
+        $searchOpen.on('click', function (e) {
+            e.preventDefault();
+            $searchPage.toggleClass('search-active');
+            var prevClasses = $body.attr('class') || '';
+            setTimeout(function () {
+                $body.addClass('no-scroll');
+            }, 400)
+
+            if ($searchPage.hasClass('search-active')) {
+                $searchClose.on('click', function (e) {
+                    e.preventDefault();
+                    $searchPage.removeClass('search-active');
+                    $body.attr('class', prevClasses);  // from closure 
+                });
+                $searchInput.focus();
+            }
+        });
+    });
+</script>
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
