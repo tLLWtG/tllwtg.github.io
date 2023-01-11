@@ -11,6 +11,7 @@ tags:
     - Code
     - Study
     - CP
+    - XMU
 ---
 
 > 书接上回（
@@ -21,7 +22,7 @@ tags:
 
 ## XMU ACM Advanced Class(2022)
 
-学期初本人非常荣幸的被任命为厦门大学 ACM 提高班班长（其实很水捏
+学期初非常荣幸被任命为厦门大学 ACM 提高班班长（水分 <<= 64)
 
 ![acmclass3](../../../../img/FirstSemester2/acmclass3.png "acmclass3")
 

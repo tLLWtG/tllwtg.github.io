@@ -47,6 +47,11 @@ $ bundle exec jekyll serve  # alternatively, npm start
 
 1. 加入busuanzi的访客统计功能
 
+* 2022.01.08
+
+1. 给**一言**模块添加刷新按钮
+2. 加入动画效果
+
 ## License
 
 This project is licensed under the [Apache License 2.0](https://github.com/tLLWtG/tLLWtG.github.io/blob/main/LICENSE).
