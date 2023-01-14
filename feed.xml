@@ -5,8 +5,8 @@
     <description>这里是 tLLWtG 的个人博客，与你一起发现更大的世界 | 要做一个有 swag 的程序员</description>
     <link>https://tllwtg.github.io/</link>
     <atom:link href="https://tllwtg.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 14 Jan 2023 13:51:27 +0000</pubDate>
-    <lastBuildDate>Sat, 14 Jan 2023 13:51:27 +0000</lastBuildDate>
+    <pubDate>Sat, 14 Jan 2023 13:59:01 +0000</pubDate>
+    <lastBuildDate>Sat, 14 Jan 2023 13:59:01 +0000</lastBuildDate>
     <generator>Jekyll v3.9.2</generator>
     
       <item>
@@ -1981,24 +1981,7 @@ coins 中的所有值 互不相同&lt;br /&gt;
 
 &lt;h2 id=&quot;upd&quot;&gt;UPD&lt;/h2&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;2022.12.22&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Sidebar 中添加了&lt;strong&gt;一言&lt;/strong&gt;模块。&lt;/li&gt;
-  &lt;li&gt;引入了&lt;strong&gt;百度统计&lt;/strong&gt;的脚本用于分析访问数据。&lt;/li&gt;
-  &lt;li&gt;使用&lt;strong&gt;百度搜索资源平台&lt;/strong&gt;方便进行 SEO。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;2022.12.23&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;增加了 &lt;strong&gt;robots.txt&lt;/strong&gt; 文件以禁止不必要的内容爬取。&lt;/li&gt;
-  &lt;li&gt;安装了 &lt;strong&gt;jekyll-sitemap&lt;/strong&gt; 插件用于自动生成 sitemap.xml，方便搜索引擎抓取内容。&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;见 &lt;a href=&quot;https://github.com/tLLWtG/tllwtg.github.io&quot;&gt;README.md&lt;/a&gt; 的 UPD 部分&lt;/p&gt;
 
 &lt;h2 id=&quot;后记&quot;&gt;后记&lt;/h2&gt;
 
