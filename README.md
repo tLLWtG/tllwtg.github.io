@@ -31,7 +31,7 @@ $ git clone https://gitee.com/tllwtg/tllwtg.github.io.git
 #### Offline version
 
 1. You can simply build a static website with the content of `gh-pages` branch.
-> Besides, it's also a good choice to just download "tLLWtG_Blog.zip" in Releases.
+> Besides, it's also a good choice to just download "tLLWtG_Blog.zip" in Releases(usually out of date though).
 
 ```sh
 $ git clone https://github.com/tLLWtG/tllwtg.github.io.git -b gh-pages

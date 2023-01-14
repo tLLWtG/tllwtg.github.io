@@ -97,6 +97,7 @@
 <!--be random-->
 {% if page.header-img %}
 <header class="intro-header" style="background-image: url('{{ site.baseurl }}/{{ page.header-img }}')">
+  <div class="header-mask"></div>
 {% else %}
 <!--
 <header class="intro-header" id="randombg" style="background-image: url('{{ site.baseurl }}/{{ site.header-img }}')">
@@ -107,6 +108,7 @@
     var bg='/img/bg/image_'+str+'.jpg'
     document.write('<header class="intro-header" style="background-image: url('+bg+')">')
 </script>
+<div class="header-mask" style="width: 100%; height: 100%; position: absolute; background: rgba(0,0,0, 0.1);"></div>
     <!--
     <script>
         var x=Math.floor(Math.random() * 1)
@@ -116,7 +118,6 @@
     </script>
     -->
 {% endif %} 
-    <div class="header-mask"></div>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
