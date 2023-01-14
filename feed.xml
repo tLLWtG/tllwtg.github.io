@@ -5,8 +5,8 @@
     <description>这里是 tLLWtG 的个人博客，与你一起发现更大的世界 | 要做一个有 swag 的程序员</description>
     <link>https://tllwtg.github.io/</link>
     <atom:link href="https://tllwtg.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 14 Jan 2023 13:38:37 +0000</pubDate>
-    <lastBuildDate>Sat, 14 Jan 2023 13:38:37 +0000</lastBuildDate>
+    <pubDate>Sat, 14 Jan 2023 13:51:27 +0000</pubDate>
+    <lastBuildDate>Sat, 14 Jan 2023 13:51:27 +0000</lastBuildDate>
     <generator>Jekyll v3.9.2</generator>
     
       <item>
@@ -1704,10 +1704,10 @@ $\$E=mc^2$\$
 Output: 4&lt;br /&gt;
 Explanation: there are four ways to make up the amount:&lt;/p&gt;
 
-&lt;p&gt;5=5&lt;br /&gt;
-5=2+2+1&lt;br /&gt;
-5=2+1+1+1&lt;br /&gt;
-5=1+1+1+1+1&lt;/p&gt;
+&lt;p&gt;5 = 5&lt;br /&gt;
+5 = 2 + 2 + 1&lt;br /&gt;
+5 = 2 + 1 + 1 + 1&lt;br /&gt;
+5 = 1 + 1 + 1 + 1 + 1&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/li&gt;
@@ -1754,10 +1754,10 @@ All the values of coins are unique.&lt;br /&gt;
 输出：4&lt;br /&gt;
 解释：有四种方式可以凑成总金额：&lt;/p&gt;
 
-&lt;p&gt;5=5&lt;br /&gt;
-5=2+2+1&lt;br /&gt;
-5=2+1+1+1&lt;br /&gt;
-5=1+1+1+1+1&lt;/p&gt;
+&lt;p&gt;5 = 5&lt;br /&gt;
+5 = 2 + 2 + 1&lt;br /&gt;
+5 = 2 + 1 + 1 + 1&lt;br /&gt;
+5 = 1 + 1 + 1 + 1 + 1&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/li&gt;
@@ -1845,7 +1845,7 @@ coins 中的所有值 互不相同&lt;br /&gt;
      return dp[amount]
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;没错，很明显这两块代码的循环嵌套顺序不同。用本题的测试用例1跑一遍后我们得到两个结果：4 和 9。由&lt;del&gt;答案&lt;/del&gt;题意可知，4 是我们想要的结果。那么循环顺序的交换是怎么对结果产生影响的呢？&lt;/li&gt;
+  &lt;li&gt;没错，很明显这两块代码的循环嵌套顺序不同。用本题的测试用例 1 跑一遍后我们得到两个结果：4 和 9。由&lt;del&gt;答案&lt;/del&gt;题意可知，4 是我们想要的结果。那么循环顺序的交换是怎么对结果产生影响的呢？&lt;/li&gt;
   &lt;li&gt;我们依次来枚举一下。在 dp 的过程中，以&lt;strong&gt;硬币种类&lt;/strong&gt;作为外循环时，我们是按 1–&amp;gt;2–&amp;gt;5 的顺序使用硬币。而以&lt;strong&gt;钱的总额&lt;/strong&gt;作为外循环时，我们是按 1–&amp;gt;2–&amp;gt;3–&amp;gt;4–&amp;gt;5 的顺序累计方案的数目。举其中一种方案 {1，2，2} 为例，前者将同种硬币放在一起处理，对于此方案只计入一次，即数学中的组合数，而后者则没有限制，对于此方案重复记录了三次 {1，2，2}，{2，1，2}，{2，2，1}，即数学中的排列数。&lt;/li&gt;
   &lt;li&gt;综上，对于完全背包问题，dp 过程中循环嵌套的顺序将决定我们求得的解是排列数还是组合数。&lt;/li&gt;
 &lt;/ol&gt;
