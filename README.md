@@ -58,6 +58,11 @@ Now you can visit tLLWtG_Blog through the url shown in your terminal.
 
 **[User Manual of Blog](_doc/Manual.md)**
 
+#### GitHub Action
+
+Since tLLWtG Blog uses [**action-build-deploy-ghpages**](https://github.com/EdricChan03/action-build-deploy-ghpages) to **build and deploy** on GitHub Pages, you have to fork that repo, and modify `.github/workflows/main.yml`, where you are supposed to substitute `- uses: tLLWtG/action-build-deploy-ghpages@main` with `- uses: <yourusername>/action-build-deploy-ghpages@main`.  
+Otherwise, you should delete the folder `.github`, and deploy according to the normal steps suggested by GitHub Pages.
+
 ## UPD
 
 * 2022.12.22
@@ -79,12 +84,17 @@ Now you can visit tLLWtG_Blog through the url shown in your terminal.
 
 * 2022.12.26
 
-1. 加入busuanzi的访客统计功能
+1. 加入 busuanzi 的访客统计功能
 
-* 2022.01.08
+* 2023.01.08
 
 1. 给**一言**模块添加刷新按钮
 2. 加入动画效果
+
+* 2023.01.14
+
+1. 取消 GitHub Pages 的默认 Jekyll-Build-Pages action
+2. 使用 action-build-deploy-ghpages 自动构建 gh-pages 分支，并在 gh-pages 分支上直接部署静态网站(方便后续添加不在 GitHub 白名单上的插件，同时能自动更新 gh-pages)
 
 ## License
 
