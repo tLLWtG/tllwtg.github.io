@@ -1,0 +1,12 @@
+name: Jekyll Deploy
+
+on: [push]
+
+jobs: 
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: tLLWtG/action-build-deploy-ghpages@main
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
