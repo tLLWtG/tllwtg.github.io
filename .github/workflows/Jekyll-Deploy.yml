@@ -1,0 +1,29 @@
+name: Jekyll Deploy
+
+on:
+  push:
+    branches: ["dev"]
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: tLLWtG/action-build-deploy-ghpages@main
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # The GitHub installation token. Note: You can also use ${{ github.token }}
+          # gh_pages_token: ${{ secrets.GH_PAGES_TOKEN }} # Note: You have to create this yourself - see the "Secrets used" section above for more info (This input does not have a default value - you have to supply this yourself) (As of 15 Feb 2020, this is no longer needed - see https://github.community/t5/GitHub-Actions/Github-action-not-triggering-gh-pages-upon-push/m-p/46519/highlight/true#M6551)
+          gh_pages_branch: "gh-pages" # The GitHub Pages branch to deploy the site to
+          gh_pages_dist_folder: "_site" # The folder to build the site to
+          #(bug?)gh_pages_commit_message: 'Deploy commit $GITHUB_SHA\n\nAutodeployed using $GITHUB_ACTION in $GITHUB_WORKFLOW' # The commit message to use when deploying the site
+          jekyll_build_opts: "" # Options to pass to the Jekyll build command.
+          #(bug?)remote_repo: "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" # The repository to deploy the site to
+          #(bug?)committer_username: "$GITHUB_ACTOR" # The username to use for the committer of the commit
+          #(bug?)committer_email: "${GITHUB_ACTOR}@users.noreply.github.com" # The email to use for the committer of the commit
+          git_force: "true" # Whether to use the --force flag when pushing the commit
+          override_gh_pages_branch: "false" # Whether to override the gh-pages branch on push
+          gh_pages_add_no_jekyll: "true" # Whether to add the .nojekyll file to the deployed site
+          skip_deploy: "false" # Whether to skip deployment after a successful build.
+          show_bundle_log: "false" # Whether to show detailed logs from bundle install command. Useful for debugging broken builds.
+          bundler_version: "" # A specific version of Bundler to be used.
+          jekyll_env: "production" # The Jekyll environment to use when building the site. (See https://jekyllrb.com/docs/configuration/environments/)
