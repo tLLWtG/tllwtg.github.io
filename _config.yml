@@ -25,7 +25,7 @@ twitter_username: tLLWtG1
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
 permalink: pretty
-paginate: 5
+paginate: 7
 exclude:
   [
     "less",
@@ -75,7 +75,7 @@ netease_comment: false
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "要做一个有 swag 的程序员 <br> "
+sidebar-about-description: "要做一个有 swag 的程序员 <br>"
 sidebar-avatar: https://avatars.githubusercontent.com/u/63890132 # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
