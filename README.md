@@ -79,7 +79,7 @@ Otherwise, you should delete the folder `.github`, and deploy according to the n
 
 * 2022.12.24
 
-1. 修复主页 intro-header 随机背景图显示不完全的 Bug (主页自适应背景图
+1. 修复主页 intro-header 随机背景图显示不完全的 Bug (主页自适应背景图)
 
 
 * 2022.12.26
@@ -99,7 +99,7 @@ Otherwise, you should delete the folder `.github`, and deploy according to the n
 * 2023.01.16
 
 1. 引入 **Google Analytics** 的脚本用于分析访问数据
-2. 引入 **Google Search Console** 进行SEO
+2. 引入 **Google Search Console** 进行 SEO
 3. 添加 **Google Adsense**
 
 ## License
