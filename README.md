@@ -84,7 +84,7 @@ Otherwise, you should delete the folder `.github`, and deploy according to the n
 
 * 2022.12.26
 
-1. 加入 busuanzi 的访客统计功能
+1. 加入 **busuanzi** 的访客统计功能
 
 * 2023.01.08
 
@@ -94,7 +94,13 @@ Otherwise, you should delete the folder `.github`, and deploy according to the n
 * 2023.01.14
 
 1. 取消 GitHub Pages 的默认 Jekyll-Build-Pages action
-2. 使用 action-build-deploy-ghpages 自动构建 gh-pages 分支，并在 gh-pages 分支上直接部署静态网站(方便后续添加不在 GitHub 白名单上的插件，同时能自动更新 gh-pages)
+2. 使用 **action-build-deploy-ghpages** 自动构建 gh-pages 分支，并在 gh-pages 分支上直接部署静态网站(方便后续添加不在 GitHub 白名单上的插件，同时能自动更新 gh-pages)
+
+* 2023.01.16
+
+1. 引入 **Google Analytics** 的脚本用于分析访问数据
+2. 引入 **Google Search Console** 进行SEO
+3. 添加 **Google Adsense**
 
 ## License
 
