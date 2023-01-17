@@ -4,7 +4,7 @@ title:      "Strict Weak Ordering"
 subtitle:   " \"Ordering\""
 date:       2023-01-10 20:00:00
 author:     "tLLWtG"
-header-img: "img/STL.png"
+header-img: "img/post-bg-STL.png"
 header-mask: 0.3
 catalog: true
 tags:

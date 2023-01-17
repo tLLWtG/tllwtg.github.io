@@ -4,7 +4,7 @@ title:      "Hello XMU"
 subtitle:   " \"XMU\""
 date:       2022-09-07 21:00:00
 author:     "tLLWtG"
-header-img: "img/HelloXMU/XMUBG.png"
+header-img: "img/post-bg-XMU.png"
 header-mask: 0.3
 catalog: true
 tags:

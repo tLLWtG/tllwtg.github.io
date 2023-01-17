@@ -4,7 +4,7 @@ title:      "Markdown Notes"
 subtitle:   " \"Markdown\""
 date:       2022-08-30 14:00:00
 author:     "tLLWtG"
-header-img: "img/md.png"
+header-img: "img/post-bg-MD.png"
 header-mask: 0.3
 mathjax: true
 catalog: true
@@ -256,7 +256,7 @@ $\quad$ aaa
 
 * **显示效果**
 
-![图片说明](../../../../img/md.png "title")
+![图片说明](../../../../img/post-bg-MD.png "title")
 
 ### 9. 超链接
 **参考式**的链接可放在文本的任意位置。

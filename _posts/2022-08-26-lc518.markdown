@@ -4,7 +4,7 @@ title:      "LC Problems' Solutions -518"
 subtitle:   " \"LeetCode\""
 date:       2022-08-26 22:00:00
 author:     "tLLWtG"
-header-img: "img/LeetCode.png"
+header-img: "img/post-bg-LeetCode.png"
 header-mask: 0.3
 catalog: true
 tags:
