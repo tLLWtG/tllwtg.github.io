@@ -3,10 +3,10 @@
   <channel>
     <title>tLLWtG Blog</title>
     <description>这里是 tLLWtG 的个人博客，与你一起发现更大的世界 | 要做一个有 swag 的程序员</description>
-    <link>https://tllwtg.github.io/</link>
-    <atom:link href="https://tllwtg.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 26 Jan 2023 13:01:05 +0000</pubDate>
-    <lastBuildDate>Thu, 26 Jan 2023 13:01:05 +0000</lastBuildDate>
+    <link>https://tllwtg.top/</link>
+    <atom:link href="https://tllwtg.top/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Thu, 26 Jan 2023 13:16:51 +0000</pubDate>
+    <lastBuildDate>Thu, 26 Jan 2023 13:16:51 +0000</lastBuildDate>
     <generator>Jekyll v3.9.2</generator>
     
       <item>
@@ -164,8 +164,8 @@
 &lt;p&gt;在把奇奇怪怪的式子用作比较规则之前，请先检查它是否符合严格弱序。&lt;/p&gt;
 </description>
         <pubDate>Tue, 10 Jan 2023 20:00:00 +0000</pubDate>
-        <link>https://tllwtg.github.io/2023/01/10/Ordering/</link>
-        <guid isPermaLink="true">https://tllwtg.github.io/2023/01/10/Ordering/</guid>
+        <link>https://tllwtg.top/2023/01/10/Ordering/</link>
+        <guid isPermaLink="true">https://tllwtg.top/2023/01/10/Ordering/</guid>
         
         <category>Code</category>
         
@@ -328,8 +328,8 @@
 &lt;p&gt;&lt;em&gt;(保留)&lt;/em&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 21 Dec 2022 09:00:00 +0000</pubDate>
-        <link>https://tllwtg.github.io/2022/12/21/First-Semester2/</link>
-        <guid isPermaLink="true">https://tllwtg.github.io/2022/12/21/First-Semester2/</guid>
+        <link>https://tllwtg.top/2022/12/21/First-Semester2/</link>
+        <guid isPermaLink="true">https://tllwtg.top/2022/12/21/First-Semester2/</guid>
         
         <category>Code</category>
         
@@ -545,8 +545,8 @@
 &lt;/blockquote&gt;
 </description>
         <pubDate>Mon, 19 Dec 2022 21:00:00 +0000</pubDate>
-        <link>https://tllwtg.github.io/2022/12/19/First-Semester1/</link>
-        <guid isPermaLink="true">https://tllwtg.github.io/2022/12/19/First-Semester1/</guid>
+        <link>https://tllwtg.top/2022/12/19/First-Semester1/</link>
+        <guid isPermaLink="true">https://tllwtg.top/2022/12/19/First-Semester1/</guid>
         
         <category>XMU</category>
         
@@ -675,8 +675,8 @@
 &lt;!-- *———      __ 后记于 __* --&gt;
 </description>
         <pubDate>Wed, 07 Sep 2022 21:00:00 +0000</pubDate>
-        <link>https://tllwtg.github.io/2022/09/07/XMU/</link>
-        <guid isPermaLink="true">https://tllwtg.github.io/2022/09/07/XMU/</guid>
+        <link>https://tllwtg.top/2022/09/07/XMU/</link>
+        <guid isPermaLink="true">https://tllwtg.top/2022/09/07/XMU/</guid>
         
         <category>XMU</category>
         
@@ -1116,8 +1116,8 @@ lefti != righti&lt;/p&gt;
 &lt;!-- *———      __ 后记于 __* --&gt;
 </description>
         <pubDate>Sat, 03 Sep 2022 10:00:00 +0000</pubDate>
-        <link>https://tllwtg.github.io/2022/09/03/lcContest308/</link>
-        <guid isPermaLink="true">https://tllwtg.github.io/2022/09/03/lcContest308/</guid>
+        <link>https://tllwtg.top/2022/09/03/lcContest308/</link>
+        <guid isPermaLink="true">https://tllwtg.top/2022/09/03/lcContest308/</guid>
         
         <category>Code</category>
         
@@ -1665,8 +1665,8 @@ $\$E=mc^2$\$
 &lt;/div&gt;
 </description>
         <pubDate>Tue, 30 Aug 2022 14:00:00 +0000</pubDate>
-        <link>https://tllwtg.github.io/2022/08/30/Markdown/</link>
-        <guid isPermaLink="true">https://tllwtg.github.io/2022/08/30/Markdown/</guid>
+        <link>https://tllwtg.top/2022/08/30/Markdown/</link>
+        <guid isPermaLink="true">https://tllwtg.top/2022/08/30/Markdown/</guid>
         
         <category>Code</category>
         
@@ -1857,8 +1857,8 @@ coins 中的所有值 互不相同&lt;br /&gt;
 &lt;!-- *———      __ 后记于 __* --&gt;
 </description>
         <pubDate>Fri, 26 Aug 2022 22:00:00 +0000</pubDate>
-        <link>https://tllwtg.github.io/2022/08/26/lc518/</link>
-        <guid isPermaLink="true">https://tllwtg.github.io/2022/08/26/lc518/</guid>
+        <link>https://tllwtg.top/2022/08/26/lc518/</link>
+        <guid isPermaLink="true">https://tllwtg.top/2022/08/26/lc518/</guid>
         
         <category>Code</category>
         
@@ -1928,8 +1928,8 @@ coins 中的所有值 互不相同&lt;br /&gt;
 &lt;!-- *———      __ 后记于 __* --&gt;
 </description>
         <pubDate>Fri, 26 Aug 2022 20:00:00 +0000</pubDate>
-        <link>https://tllwtg.github.io/2022/08/26/My-LeetCode-Journey/</link>
-        <guid isPermaLink="true">https://tllwtg.github.io/2022/08/26/My-LeetCode-Journey/</guid>
+        <link>https://tllwtg.top/2022/08/26/My-LeetCode-Journey/</link>
+        <guid isPermaLink="true">https://tllwtg.top/2022/08/26/My-LeetCode-Journey/</guid>
         
         <category>Code</category>
         
@@ -1990,8 +1990,8 @@ coins 中的所有值 互不相同&lt;br /&gt;
 &lt;!-- *———      __ 后记于 __* --&gt;
 </description>
         <pubDate>Thu, 25 Aug 2022 17:00:00 +0000</pubDate>
-        <link>https://tllwtg.github.io/2022/08/25/Hello-2022/</link>
-        <guid isPermaLink="true">https://tllwtg.github.io/2022/08/25/Hello-2022/</guid>
+        <link>https://tllwtg.top/2022/08/25/Hello-2022/</link>
+        <guid isPermaLink="true">https://tllwtg.top/2022/08/25/Hello-2022/</guid>
         
         <category>Life</category>
         
