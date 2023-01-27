@@ -4,7 +4,7 @@ title:      "My LeetCode Journey"
 subtitle:   " \"LeetCode\""
 date:       2022-08-26 20:00:00
 author:     "tLLWtG"
-header-img: "img/LeetCode.png"
+header-img: "img/post-bg-LeetCode.png"
 header-mask: 0.3
 catalog: true
 tags:
@@ -37,17 +37,17 @@ tLLWtG 的 LeetCode 学习之旅也将展示在此博客上。
 ## 简单记录一下目前的成果
 
 * 刷的题
-![ti](../../../../img/2022-08-26-ti.png)
+![ti](../../../../img/LeetCodeJourney/2022-08-26-ti.png)
 * 力扣周赛
-![cmp](../../../../img/2022-08-26-cmp.png)
+![cmp](../../../../img/LeetCodeJourney/2022-08-26-cmp.png)
 * 我的题解
-![tijie](../../../../img/2022-08-26-tijie.png)
+![tijie](../../../../img/LeetCodeJourney/2022-08-26-tijie.png)
 * 全勤记录
-![quanqin](../../../../img/2022-08-26-quanqin.png)
+![quanqin](../../../../img/LeetCodeJourney/2022-08-26-quanqin.png)
 * 力扣勋章
-![xunzhang](../../../../img/2022-08-26-xunzhang.png)
+![xunzhang](../../../../img/LeetCodeJourney/2022-08-26-xunzhang.png)
 * 技能点
-![jineng](../../../../img/2022-08-26-jineng.png)
+![jineng](../../../../img/LeetCodeJourney/2022-08-26-jineng.png)
 
 ## 后记
   

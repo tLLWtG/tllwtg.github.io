@@ -4,7 +4,7 @@ title:      "LeetCode Contest 308"
 subtitle:   " \"Contest308\""
 date:       2022-09-03 10:00:00
 author:     "tLLWtG"
-header-img: "img/LeetCodeContest.png"
+header-img: "img/post-bg-LeetCodeContest.png"
 header-mask: 0.3
 catalog: true
 tags:
@@ -30,10 +30,10 @@ tags:
 
 **总结下来**，这次有惊有险的完成了个人的第一次周赛 AK，稍微上了点分。只是在完成时间上有点遗憾。
 
-![xunzhang](../../../../img/0903Contest308.png "周赛308")
+![xunzhang](../../../../img/LCContest/0903Contest308.png "周赛308")
 
 
-![Contest308](../../../../img/Contest308.png "周赛308")
+![Contest308](../../../../img/LCContest/Contest308.png "周赛308")
 
 
 ## 周赛题
@@ -310,7 +310,7 @@ class Solution:
 
 ## 新勋章
 
-![xunzhang](../../../../img/xunzhang0903.png "勋章")
+![xunzhang](../../../../img/LCContest/xunzhang0903.png "勋章")
 
 ## 后记
 

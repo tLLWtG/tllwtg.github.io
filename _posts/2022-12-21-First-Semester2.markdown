@@ -4,7 +4,7 @@ title:      "My First Semester in XMU (Part 2)"
 subtitle:   " \"ACM\""
 date:       2022-12-21 9:00:00
 author:     "tLLWtG"
-header-img: "img/FirstSemester2/CF.png"
+header-img: "img/post-bg-CF.png"
 header-mask: 0.4
 catalog: true
 tags:

@@ -4,7 +4,7 @@ title:      "My First Semester in XMU (Part 1)"
 subtitle:   " \"军训, Course, Exam and Life\""
 date:       2022-12-19 21:00:00
 author:     "tLLWtG"
-header-img: "img/HelloXMU/XMUBG.png"
+header-img: "img/post-bg-XMU.png"
 header-mask: 0.3
 catalog: true
 tags:
