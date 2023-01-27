@@ -65,42 +65,46 @@ Otherwise, you should delete the folder `.github`, and deploy according to the n
 
 ## UPD
 
-* 2022.12.22
+* 2023.01.27
 
-1. Sidebar 中添加了**一言**模块。
-2. 引入了**百度统计**的脚本用于分析访问数据。
-3. 使用**百度搜索资源平台**方便进行 SEO。
-   
-* 2022.12.23
-  
-1. 增加了 **robots.txt** 文件以禁止不必要的内容爬取。
-2. 安装了 **jekyll-sitemap** 插件用于自动生成 sitemap.xml，方便搜索引擎抓取内容。
-3. 增加主页 intro-header 随机选择背景图的脚本
-
-* 2022.12.24
-
-1. 修复主页 intro-header 随机背景图显示不完全的 Bug (主页自适应背景图)
-
-
-* 2022.12.26
-
-1. 加入 **busuanzi** 的访客统计功能
-
-* 2023.01.08
-
-1. 给**一言**模块添加刷新按钮
-2. 加入动画效果
-
-* 2023.01.14
-
-1. 取消 GitHub Pages 的默认 Jekyll-Build-Pages action
-2. 使用 **action-build-deploy-ghpages** 自动构建 gh-pages 分支，并在 gh-pages 分支上直接部署静态网站(方便后续添加不在 GitHub 白名单上的插件，同时能自动更新 gh-pages)
+1. URL 由 tllwtg.github.io 更改为 **tllwtg.top**
+2. 更新 Google 和百度的网站工具设置
 
 * 2023.01.16
 
 1. 引入 **Google Analytics** 的脚本用于分析访问数据
 2. 引入 **Google Search Console** 进行 SEO
 3. 添加 **Google Adsense**
+
+* 2023.01.14
+
+1. 取消 GitHub Pages 的默认 Jekyll-Build-Pages action
+2. 使用 **action-build-deploy-ghpages** 自动构建 gh-pages 分支，并在 gh-pages 分支上直接部署静态网站(方便后续添加不在 GitHub 白名单上的插件，同时能自动更新 gh-pages)
+
+* 2023.01.08
+
+1. 给**一言**模块添加刷新按钮
+2. 加入动画效果
+
+* 2022.12.26
+
+1. 加入 **busuanzi** 的访客统计功能
+
+* 2022.12.24
+
+1. 修复主页 intro-header 随机背景图显示不完全的 Bug (主页自适应背景图)
+
+* 2022.12.23
+  
+1. 增加了 **robots.txt** 文件以禁止不必要的内容爬取。
+2. 安装了 **jekyll-sitemap** 插件用于自动生成 sitemap.xml，方便搜索引擎抓取内容。
+3. 增加主页 intro-header 随机选择背景图的脚本
+
+* 2022.12.22
+
+1. Sidebar 中添加了**一言**模块。
+2. 引入了**百度统计**的脚本用于分析访问数据。
+3. 使用**百度搜索资源平台**方便进行 SEO。
 
 ## License
 
