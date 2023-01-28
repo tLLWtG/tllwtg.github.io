@@ -62,6 +62,9 @@ kramdown:
 # Disqus settings edited
 #disqus_username: hux
 
+# giscus
+giscus: true
+
 # Netease settings
 netease_comment: false
 
