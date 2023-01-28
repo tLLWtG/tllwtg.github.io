@@ -2,7 +2,7 @@
 layout: page
 title: "About"
 description: "「me」"
-header-img: "img/post-bg-2022.jpg"
+header-img: "img/about.jpg"
 header-mask: 0.3
 multilingual: true
 ---
@@ -20,6 +20,27 @@ multilingual: true
   {% capture about_en %}{% include about/en.md %}{% endcapture %} {{ about_en |
   markdownify }}
 </div>
+
+{% if site.giscus %}
+<script
+  src="https://giscus.app/client.js"
+  data-repo="tLLWtG/tllwtg.github.io"
+  data-repo-id="R_kgDOH3yTZg"
+  data-category="Announcements"
+  data-category-id="DIC_kwDOH3yTZs4CT2g1"
+  data-mapping="title"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="top"
+  data-theme="light"
+  data-lang="zh-CN"
+  data-loading="lazy"
+  crossorigin="anonymous"
+  async
+></script>
+{% endif %}
+<!---->
 
 {% if site.disqus_username %}
 <!-- disqus 评论框 start -->

@@ -13,8 +13,8 @@ baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 future: true
 
 # SNS settings
-RSS: false
-weibo_username: tLLWtG
+RSS: true
+# weibo_username: tLLWtG
 zhihu_username: tllwtg
 github_username: tLLWtG
 twitter_username: tLLWtG1
@@ -61,6 +61,9 @@ kramdown:
 
 # Disqus settings edited
 #disqus_username: hux
+
+# giscus
+giscus: true
 
 # Netease settings
 netease_comment: false
