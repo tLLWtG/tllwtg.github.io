@@ -65,6 +65,11 @@ Otherwise, you should delete the folder `.github`, and deploy according to the n
 
 ## UPD
 
+* 2023.01.28
+
+1. 打开 **RSS** 订阅
+2. 开通 **giscus** 的评论系统
+
 * 2023.01.27
 
 1. URL 由 tllwtg.github.io 更改为 **tllwtg.top**
