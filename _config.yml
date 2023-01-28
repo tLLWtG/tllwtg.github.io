@@ -14,7 +14,7 @@ future: true
 
 # SNS settings
 RSS: true
-weibo_username: tLLWtG
+# weibo_username: tLLWtG
 zhihu_username: tllwtg
 github_username: tLLWtG
 twitter_username: tLLWtG1
