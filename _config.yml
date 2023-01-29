@@ -96,10 +96,8 @@ page-mathjax: false
 # Friends
 friends:
   [
-    {
-      title: "tLLWtG Blog, but with Hexo",
-      href: "https://tllwtg.top/Hexo_Blog",
-    },
+    { title: "tLLWtG Blog, but with Hexo", href: "https://hexo.tllwtg.top" },
+    { title: "镜像站", href: "https://mirror.tllwtg.top" },
     { title: "OI Wiki", href: "https://oi.wiki" },
     { title: "Codeforces", href: "https://codeforces.com" },
     { title: "洛谷", href: "https://www.luogu.com.cn" },
