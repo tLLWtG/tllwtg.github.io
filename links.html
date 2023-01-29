@@ -1,0 +1,99 @@
+---
+title: Links
+layout: default
+description: "「<del>单向</del>友情链接」"
+header-img: "img/links.jpg"
+header-mask: 0.3
+---
+
+<!-- Page Header -->
+{% include intro-header.html type='page' %}
+
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <p style="text-align: center; font-size: xx-large; font-weight: bold">
+        Hellooooooooooo~ 👋, this is tLLWtG Blog, and the below are my friends
+      </p>
+      <h4></h4>
+
+      <ul>
+        {% for friend in site.friends %}
+        <a
+          class="friend_tag"
+          href="{{friend.href}}"
+          title="{{friend.title}}"
+          style="
+            box-sizing: border-box;
+            background-color: transparent;
+            color: #8f8f8f;
+            display: inline-block;
+            border: 2px solid #bfbfbf;
+            border-radius: 999em;
+            padding: 0 20px 0 20px;
+            line-height: 70px;
+            font-size: xx-large;
+            text-decoration: none;
+            margin: 0 1px;
+            margin-bottom: 15px;
+            margin-top: 30px;
+            cursor: pointer;
+            margin-right: 5px;
+          "
+          >{{friend.title}}</a
+        >
+        {% endfor %}
+      </ul>
+      <hr />
+      <p>欢迎在下方留言申请加入我的友链，请按如下格式提供信息：</p>
+      <ul>
+        <li>
+          <p><strong>博客名</strong>: tLLWtG Blog</p>
+        </li>
+        <li>
+          <p><strong>链接</strong>: tllwtg.top</p>
+        </li>
+        <li>
+          <p><strong>邮箱</strong>: tllwtg@gmail.com</p>
+        </li>
+      </ul>
+      <!---->
+
+      {% if site.giscus %}
+      <script
+        src="https://giscus.app/client.js"
+        data-repo="tLLWtG/tllwtg.github.io"
+        data-repo-id="R_kgDOH3yTZg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOH3yTZs4CT2g1"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async
+      ></script>
+      {% endif %}
+      <!---->
+    </div>
+  </div>
+</div>
+<script>
+  const tags = document.querySelectorAll(".friend_tag");
+  for (let x of tags) {
+    x.addEventListener("mouseover", (e) => {
+      x.style.border = "2px solid #0085a1";
+      x.style.color = "#0085a1";
+    });
+    x.addEventListener("mouseout", (e) => {
+      x.style.border = "2px solid #bfbfbf";
+      x.style.color = "#8f8f8f";
+    });
+  }
+</script>
+<!--  color: #fff; text-shadow: none; background: #0085a1;  -->
