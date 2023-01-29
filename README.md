@@ -65,6 +65,10 @@ Otherwise, you should delete the folder `.github`, and deploy according to the n
 
 ## UPD
 
+* 2023.01..29
+
+1. 添加基于 Vercel 的镜像站 mirror.tllwtg.top
+
 * 2023.01.28
 
 1. 打开 **RSS** 订阅
