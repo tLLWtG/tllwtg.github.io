@@ -8,5 +8,5 @@
         "http://localhost:[0-9]+",
         "https://tllwtg-github-([A-z0-9]|-)*tllwtg\\.vercel\\.app"
     ],
-    "defaultCommentOrder": "newest"
+    "defaultCommentOrder": "oldest"
 }
