@@ -1,0 +1,12 @@
+{
+    "origins": [
+        "https://tllwtg.top",
+        "https://mirror.tllwtg.top",
+        "https://tllwtg-github-io.vercel.app"
+    ],
+    "originsRegex": [
+        "http://localhost:[0-9]+",
+        "https://tllwtg-github-([A-z0-9]|-)*tllwtg\\.vercel\\.app"
+    ],
+    "defaultCommentOrder": "newest"
+}
