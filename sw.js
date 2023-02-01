@@ -6,6 +6,12 @@
  * service worker scripting
  * ========================================================== */
 
+/**
+ * add img/bg/* in PRECACHE_LIST
+ *
+ * Modified by tLLWtG
+ */
+
 // CACHE_NAMESPACE
 // CacheStorage is shared between all sites under same domain.
 // A namespace can prevent potential name conflicts and mis-deletion.
