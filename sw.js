@@ -8,6 +8,7 @@
 
 /**
  * add img/bg/* in PRECACHE_LIST
+ * change some name to match package.json
  *
  * Modified by tLLWtG
  */
@@ -23,7 +24,7 @@ const PRECACHE_LIST = [
   "./offline.html",
   "./js/jquery.min.js",
   "./js/bootstrap.min.js",
-  "./js/hux-blog.min.js",
+  "./js/tllwtg-blog.min.js",
   "./js/snackbar.js",
   "./img/icon_wechat.png",
   "./img/bg/image_0.jpg",
@@ -44,7 +45,7 @@ const PRECACHE_LIST = [
   "./img/bg/image_15.jpg",
   "./img/bg/image_16.jpg",
   "./img/404-bg.jpg",
-  "./css/hux-blog.min.css",
+  "./css/tllwtg-blog.min.css",
   "./css/bootstrap.min.css",
   // "//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css",
   // "//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/fonts/fontawesome-webfont.woff2?v=4.6.3",
