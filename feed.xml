@@ -5,8 +5,8 @@
     <description>这里是 tLLWtG 的个人博客，与你一起发现更大的世界 | 要做一个有 swag 的程序员</description>
     <link>https://tllwtg.top/</link>
     <atom:link href="https://tllwtg.top/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 02 Feb 2023 12:25:54 +0000</pubDate>
-    <lastBuildDate>Thu, 02 Feb 2023 12:25:54 +0000</lastBuildDate>
+    <pubDate>Thu, 09 Feb 2023 05:41:07 +0000</pubDate>
+    <lastBuildDate>Thu, 09 Feb 2023 05:41:07 +0000</lastBuildDate>
     <generator>Jekyll v3.9.3</generator>
     
       <item>
@@ -1956,9 +1956,9 @@ coins 中的所有值 互不相同&lt;br /&gt;
 
 &lt;h2 id=&quot;正文&quot;&gt;正文&lt;/h2&gt;
 
-&lt;p&gt;接下来说说搭建这个博客的技术细节(forked from Huxpro)。&lt;/p&gt;
+&lt;p&gt;接下来说说搭建这个博客的技术细节。&lt;/p&gt;
 
-&lt;p&gt;简单来说就是 &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt; + &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; 快速 Building Blog 的技术方案，非常轻松时尚。&lt;/p&gt;
+&lt;p&gt;简单来说就是 &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt; + &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; 快速 Building Blog 的技术方案。&lt;/p&gt;
 
 &lt;p&gt;其优点非常明显：&lt;/p&gt;
 
@@ -1977,7 +1977,8 @@ coins 中的所有值 互不相同&lt;br /&gt;
 
 &lt;p&gt;配置的过程中也没遇到什么坑，基本就是 Git 的流程，相当顺手&lt;/p&gt;
 
-&lt;p&gt;大的 Jekyll 主题上直接 fork 了 Huxpro&lt;/p&gt;
+&lt;p&gt;大的 Jekyll 主题上直接 fork 了 Huxpro
+并在此基础上增添了一些小组件和特性，打算找个时间封装成一个 tLLWtG Jekyll 主题&lt;/p&gt;
 
 &lt;h2 id=&quot;upd&quot;&gt;UPD&lt;/h2&gt;
 

@@ -8,7 +8,8 @@
   google adsense
   baidu tongji
   baidu sousuoziyuanpingtai
-
+  my-face.css
+  
   Modified by tLLWtG
 -->
 
@@ -97,6 +98,9 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href=" /css/tllwtg-blog.min.css">
+
+  <!-- my-face CSS -->
+  <link rel="stylesheet" href=" /css/my-face.css">
 
   <!-- Custom Fonts -->
   <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
@@ -549,7 +553,7 @@
 <!--
     change some name to match package.json
     add busuanzi
-    update copyright
+    update footer text
 
     Modified by tLLWtG
 -->
@@ -617,33 +621,73 @@
 </ul>
 
                 <p class="copyright text-muted">
-                    Copyright &copy; tLLWtG Blog 2022-2023
+                    &copy; tLLWtG Blog 2022-2023
                     <br>
-                    Based on <a href="https://github.com/Huxpro/huxpro.github.io">Huxpro</a>
-                    <!--
-                        <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="100px"
-                        height="20px"
-                        src="https://ghbtns.com/github-btn.html?user=tLLWtG&repo=tLLWtG.github.io&type=star&count=true">
-                        </iframe>
-                    -->
-                    <br>
-                    <span id="busuanzi_container_site_pv" style="display: inline;">
-                        总访问量
-                        <span id="busuanzi_value_site_pv">11</span>
-                        次
-                    </span>
-                    <span id="busuanzi_container_site_uv" style="display: inline;">
-                        | 总访客数
-                        <span id="busuanzi_value_site_uv">1</span>
-                        人
-                    </span>
+                    Powered by 「<a href="https://github.com/tLLWtG/tllwtg.github.io">tLLWtG Blog</a>」
+                    
+                    <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="70px"
+                    height="20px"
+                    src="https://ghbtns.com/github-btn.html?user=tLLWtG&repo=tllwtg.github.io&type=star&count=true">
+                    </iframe>
                 </p>
+
                 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
                 </script>
             </div>
         </div>
     </div>
 </footer>
+<div style="color:#ddd;font-size: 14px; text-align: center; margin-bottom: 0">
+    「
+    <span id="blogRunTimeSpan"></span>
+    <span class="my-face">ღゝ◡╹)ノ♡</span>
+    <span id="busuanzi_container_site_uv" style="display: inline;">
+        PV:
+        <span id="busuanzi_value_site_uv">NaN</span>
+    </span>
+    |
+    <span id="busuanzi_container_site_pv" style="display: inline;">
+        UV:
+        <span id="busuanzi_value_site_pv">NaN</span>
+    </span>
+    」
+</div>
+
+<!--start_time-->
+
+<script>
+    function getRunDate(dateString){
+        dateString = (dateString).toString().split('-');
+        let date = new Date();
+        date.setUTCFullYear(dateString[0], dateString[1] - 1, dateString[2]);
+        date.setUTCHours(0, 0, 0, 0);
+        let birthDay = date;
+        let today = new Date();
+        let timeold = today.getTime() - birthDay.getTime();
+        let sectimeold = timeold / 1000;
+        let secondsold = Math.floor(sectimeold);
+        let msPerDay = 24 * 60 * 60 * 1000;
+        let e_daysold = timeold / msPerDay;
+        let daysold = Math.floor(e_daysold);
+        let e_hrsold = (daysold - e_daysold) * -24;
+        let hrsold = Math.floor(e_hrsold);
+        let e_minsold = (hrsold - e_hrsold) * -60;
+        let minsold = Math.floor((hrsold - e_hrsold) * -60);
+        let seconds = Math.floor((minsold - e_minsold) * -60).toString();
+        return {
+            daysold: daysold,
+            hrsold: hrsold,
+            minsold: minsold,
+            seconds: seconds
+        };
+    };
+    (() => {
+        window.setInterval( () => {
+            let runDate = getRunDate("2022-08-24");
+            $('#blogRunTimeSpan').text('This blog has running: '+runDate.daysold+' d '+runDate.hrsold+' h '+runDate.minsold+' m '+runDate.seconds+' s');
+        }, 500 );
+    })();
+</script>
 
 <!-- jQuery -->
 <script src=" /js/jquery.min.js "></script>
