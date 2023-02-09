@@ -25,9 +25,9 @@ tLLWtG 的 Blog 开通了。
 
 ## 正文
 
-接下来说说搭建这个博客的技术细节(forked from Huxpro)。  
+接下来说说搭建这个博客的技术细节。  
 
-简单来说就是 [GitHub Pages](https://pages.github.com/) + [Jekyll](http://jekyllrb.com/) 快速 Building Blog 的技术方案，非常轻松时尚。
+简单来说就是 [GitHub Pages](https://pages.github.com/) + [Jekyll](http://jekyllrb.com/) 快速 Building Blog 的技术方案。
 
 其优点非常明显：
 
@@ -43,6 +43,9 @@ tLLWtG 的 Blog 开通了。
 配置的过程中也没遇到什么坑，基本就是 Git 的流程，相当顺手
 
 大的 Jekyll 主题上直接 fork 了 Huxpro
+并在此基础上增添了一些小组件和特性，打算找个时间封装成一个 tLLWtG Jekyll 主题
+
+
 
 ## UPD
 
