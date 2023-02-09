@@ -14,6 +14,9 @@ keyword: "tLLWtG, tLLWtG 的博客, tLLWtG Blog, 博客, 个人网站, 互联网
 url: "https://tllwtg.top" # your host, for absolute URL
 baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 
+# start-time (yyyy-mm-dd)
+start_time: "2022-08-24"
+
 # Publish posts or collection documents with a future date.
 future: true
 
