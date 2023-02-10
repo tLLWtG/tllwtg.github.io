@@ -15,7 +15,7 @@ tags:
 
 > 严格弱序是个大坑 : (
 
-我一直想总结一下 STL 中众多内含比较关系的函数和容器所用到的 **Strict Weak Ordering** 原则，即**严格弱序**。正好今天刷到 luogu 的 [P2123 皇后游戏](https://www.luogu.com.cn/problem/P2123)，于是就顺手整理了相关内容。
+一直想总结一下 STL 中众多内含比较关系的函数和容器所用到的 **Strict Weak Ordering** 原则，即**严格弱序**。正好今天刷到 luogu 的 [P2123 皇后游戏](https://www.luogu.com.cn/problem/P2123)，于是就顺手整理了相关内容。
 
 ## 定义
 
