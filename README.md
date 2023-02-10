@@ -2,7 +2,7 @@
 
 Hi! This is my personal website **[tLLWtG Blog](https://tllwtg.github.io)**.
 
-> The Jekyll theme is based on Hux Blog.
+> The Jekyll theme is derived from [Hux Blog](https://github.com/Huxpro/huxpro.github.io).
 
 ## Deploy
 
