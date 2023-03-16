@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "ACM Template",
+      "subtitle" : " &quot;a repo for snippets&quot;",
+      "tags"     : "Code, CP",
+      "url"      : "/2023/03/16/ACM-Template/",
+      "date"     : "2023-03-16 13:00:00 +0000"
+    } ,
+  
+    {
       "title"    : "Strict Weak Ordering",
       "subtitle" : " &quot;Ordering&quot;",
       "tags"     : "Code, Study, CP",
