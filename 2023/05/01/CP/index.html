@@ -64,21 +64,29 @@
   <!-- Open Graph -->
   <meta
     property="og:title"
-    content="Archive - tLLWtG Blog | tLLWtG 的博客"
+    content="Competitive Programming - tLLWtG Blog | tLLWtG 的博客"
   />
   
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
   <meta
     property="og:description"
-    content="「我干了什么 究竟拿了时间换了什么」"
+    content="
+  一段奇妙的算法竞赛之旅就此展开……
+
+
+"
   />
-  
+   <meta property="article:published_time" content=" 2023-05-01T00:00:00Z">  
+  <meta property="article:author" content="tLLWtG" />
+   
+  <meta property="article:tag" content="CP" />
+   
   <meta property="og:image" content="https://tllwtg.tophttps://avatars.githubusercontent.com/u/63890132" />
-  <meta property="og:url" content="https://tllwtg.top/archive/" />
+  <meta property="og:url" content="https://tllwtg.top/2023/05/01/CP/" />
   <meta property="og:site_name" content="tLLWtG Blog | tLLWtG 的博客" />
 
   <title>
-    Archive - tLLWtG Blog | tLLWtG 的博客
+    Competitive Programming - tLLWtG Blog | tLLWtG 的博客
   </title>
 
   <!-- Web App Manifest -->
@@ -90,7 +98,7 @@
   <!-- Canonical URL -->
   <link
     rel="canonical"
-    href="https://tllwtg.top/archive/"
+    href="https://tllwtg.top/2023/05/01/CP/"
   />
 
   <!-- Bootstrap Core CSS -->
@@ -267,10 +275,17 @@
 </div>
 
     <!--
-Credits: this page shamelessly borrowed a lot from:
-https://github.com/kitian616/jekyll-TeXt-theme
+  add giscus
+  rm Friends Blog, Featured Tags
+
+  Modified by tLLWtG
 -->
-<!-- Page Header -->
+
+<!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/ICPC-bg.png" width="0" height="0"> -->
+
+<!-- Post Header -->
 <!--
     add header-mask
     set random background
@@ -284,236 +299,176 @@ https://github.com/kitian616/jekyll-TeXt-theme
 <style type="text/css">
     header.intro-header{
         position: relative;
-        background-image: url('/img/bg-little-universe.jpg');
+        background-image: url('/img/ICPC-bg.png');
         background: ;
     }
 
+    
+    header.intro-header .header-mask{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(0,0,0, 0.3);
+    }
     
 </style>
 
 
 
 
+<header class="intro-header" >
 
-
-
-<!--be random-->
-
-<header class="intro-header" style="background-image: url('/img/bg-little-universe.jpg')">
-  <div class="header-mask"></div>
- 
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        
-        <div class="site-heading" id="tag-heading">
-        
-          <h1>Archive</h1>
-          <span class="subheading">「我干了什么 究竟拿了时间换了什么」</span>
+    <div class="header-mask"></div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/archive/?tag=CP" title="CP">CP</a>
+                        
+                    </div>
+                    <h1>Competitive Programming</h1>
+                    
+                    <h2 class="subheading"> "Start of My CP Road"</h2>
+                    <span class="meta">Posted by tLLWtG on May 1, 2023</span>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </header>
 
 
 
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			<!-- Tags (as filter) -->
-			<div id='tag_cloud' class="tags tags-sup js-tags">
-				<a class="tag-button--all" data-encode="">
-					Show All
-					<sup>11</sup>
-				</a>
 
-				
-				
-				
-				
-				
-				<a data-sort="0003"
-					data-encode="Code" class="tag-button" title="Code"
-					rel="8">
-					Code
-					<sup>8</sup>
-				</a>
-				
-				<a data-sort="0004"
-					data-encode="CP" class="tag-button" title="CP"
-					rel="7">
-					CP
-					<sup>7</sup>
-				</a>
-				
-				<a data-sort="0004"
-					data-encode="Study" class="tag-button" title="Study"
-					rel="7">
-					Study
-					<sup>7</sup>
-				</a>
-				
-				<a data-sort="0008"
-					data-encode="Life" class="tag-button" title="Life"
-					rel="3">
-					Life
-					<sup>3</sup>
-				</a>
-				
-				<a data-sort="0008"
-					data-encode="XMU" class="tag-button" title="XMU"
-					rel="3">
-					XMU
-					<sup>3</sup>
-				</a>
-			</div>
 
-			<!-- Article List -->
-			<div class="mini-post-list js-result d-none"><section>
-					<span class="fa listing-seperator">
-						<span class="tag-text">2023</span>
-					</span><div class="post-preview item" data-tags="CP">
-						<a href="/2023/05/01/CP/">
-							<h2 class="post-title">
-								Competitive Programming
-							</h2>
-							
-							<h3 class="post-subtitle">
-								 "Start of My CP Road"
-							</h3>
-							
-						</a>
-						<hr>
-					</div><div class="post-preview item" data-tags="Code,CP">
-						<a href="/2023/03/16/ACM-Template/">
-							<h2 class="post-title">
-								ACM Template
-							</h2>
-							
-							<h3 class="post-subtitle">
-								 "a Repo for Snippets"
-							</h3>
-							
-						</a>
-						<hr>
-					</div><div class="post-preview item" data-tags="Code,Study,CP">
-						<a href="/2023/01/10/Ordering/">
-							<h2 class="post-title">
-								Strict Weak Ordering
-							</h2>
-							
-							<h3 class="post-subtitle">
-								 "Ordering"
-							</h3>
-							
-						</a>
-						<hr>
-					</div></section><section>
-					<span class="fa listing-seperator">
-						<span class="tag-text">2022</span>
-					</span><div class="post-preview item" data-tags="Code,Study,CP,XMU">
-						<a href="/2022/12/21/First-Semester2/">
-							<h2 class="post-title">
-								My First Semester in XMU (Part 2)
-							</h2>
-							
-							<h3 class="post-subtitle">
-								 "ACM"
-							</h3>
-							
-						</a>
-						<hr>
-					</div><div class="post-preview item" data-tags="XMU,Life,Study">
-						<a href="/2022/12/19/First-Semester1/">
-							<h2 class="post-title">
-								My First Semester in XMU (Part 1)
-							</h2>
-							
-							<h3 class="post-subtitle">
-								 "军训, Course, Exam and Life"
-							</h3>
-							
-						</a>
-						<hr>
-					</div><div class="post-preview item" data-tags="XMU,Life">
-						<a href="/2022/09/07/XMU/">
-							<h2 class="post-title">
-								Hello XMU
-							</h2>
-							
-							<h3 class="post-subtitle">
-								 "XMU"
-							</h3>
-							
-						</a>
-						<hr>
-					</div><div class="post-preview item" data-tags="Code,Study,CP">
-						<a href="/2022/09/03/lcContest308/">
-							<h2 class="post-title">
-								LeetCode Contest 308
-							</h2>
-							
-							<h3 class="post-subtitle">
-								 "Contest308"
-							</h3>
-							
-						</a>
-						<hr>
-					</div><div class="post-preview item" data-tags="Code,Study">
-						<a href="/2022/08/30/Markdown/">
-							<h2 class="post-title">
-								Markdown Notes
-							</h2>
-							
-							<h3 class="post-subtitle">
-								 "Markdown"
-							</h3>
-							
-						</a>
-						<hr>
-					</div><div class="post-preview item" data-tags="Code,Study,CP">
-						<a href="/2022/08/26/lc518/">
-							<h2 class="post-title">
-								LC Problems' Solutions -518
-							</h2>
-							
-							<h3 class="post-subtitle">
-								 "LeetCode"
-							</h3>
-							
-						</a>
-						<hr>
-					</div><div class="post-preview item" data-tags="Code,Study,CP">
-						<a href="/2022/08/26/My-LeetCode-Journey/">
-							<h2 class="post-title">
-								My LeetCode Journey
-							</h2>
-							
-							<h3 class="post-subtitle">
-								 "LeetCode"
-							</h3>
-							
-						</a>
-						<hr>
-					</div><div class="post-preview item" data-tags="Life,Code">
-						<a href="/2022/08/25/Hello-2022/">
-							<h2 class="post-title">
-								Hello 2022
-							</h2>
-							
-							<h3 class="post-subtitle">
-								 "Hello World, Hello Blog"
-							</h3>
-							
-						</a>
-						<hr>
-					</div></section>
-			</div>
-		</div>
-	</div>
-</div>
+
+
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div
+        class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container"
+      >
+        <!-- Multi-Lingual -->
+         <blockquote>
+  <p>一段奇妙的算法竞赛之旅就此展开……</p>
+</blockquote>
+
+<h3 id="xcpc">XCPC</h3>
+
+<p>芜湖，经过层层选拔，还有最后的面试——历时半年，tLLWtG 终于进入了 XMU 的 XCPC 团队，可喜可贺可喜可贺。虽然没能在校内选拔赛中打到邀请赛的名额有点遗憾，但是总算迈出了我在 XCPC 上的第一步：）</p>
+
+<blockquote>
+  <p>零基础蒟蒻类目了</p>
+</blockquote>
+
+<p><img src="../../../../img/CP/XCPC.jpg" alt="XCPC" title="XCPC" /></p>
+
+<p>这是我<del>目前</del>所在的 ACM 小队（别问我为什么变成青名了）。队伍名“为美好的世界献上代码”的由来非常明显，没错，就是那部十分清奇的异世界番，《为美好的世界献上祝福》（素晴）。正好最近又在播素晴的前传，《为美好的的世界献上爆炎》（听说第三季也会在今年播出，好耶），于是就顺理成章的蹭个热度，用了这样的队名 XD</p>
+
+<p><img src="../../../../img/CP/team.png" alt="team" title="team" /></p>
+
+<h3 id="天梯赛">天梯赛</h3>
+
+<p>各种因缘巧合的促使下，我进入了 XMU 的天梯赛二队，在上上周代表虾大参加了比赛。原本以为自己的分数会在队内垫底，没想到最后打的还可以，压线摸了一个个人三等奖，好好好。</p>
+
+<p>赛中出乎意料的被 l1-6 的字符串操作卡住，接着又被 l2-1，l2-2 的模拟封死，一度以为我就要止步于此了，但是经过一番殊死搏斗，还是打完了 l2，其中只跳了 l2-3 的构造。这个时候只剩下十几分钟的时间，已经来不及写构造题了，但是离国三又只差几分而已。hihihi，那就上点不讲武德的东西。通过直接输出”No Solution”和”0”，我又骗到了关键的 3 分，刚好凑到国三线的 175 分。（赛后听人说，l3 的某道题输出 20 可以白拿 15 分 ？。？）</p>
+
+<p><img src="../../../../img/CP/tiantisai.png" alt="tiantisai" title="tiantisai" /></p>
+
+<h3 id="蓝桥杯">蓝桥杯</h3>
+
+<p>最近蓝桥杯的成绩也出来了，虽然早有耳闻蓝桥杯的含金量（），但是在 C 题爆 0 的情况下，我居然还能拿省一耶。奇怪的是好多佬只有省二。那我只能说，暴力骗分真香（）期待 6 月的国赛，同时球球不要让我拿国优。</p>
+
+<p><img src="../../../../img/CP/lanqiaobei.png" alt="lanqiaobei" title="lanqiaobei" /></p>
+
+<h3 id="之后的计划">之后的计划</h3>
+
+<p>目前我在算法和数据结构的认识上，应该已经到了入门水准（）。再往后学大概就是二分神所说的“useless algorithm”，当然往后的算法一点也不 useless。只是考虑到我现在的水平，那些东西的优先级没有那么高，写题看到了新算法积累一下就好。优先级比较高的任务是思维训练和对已掌握算法的运用，训练方式主要是打 CF 和 ATC，成效大概会体现在 CF 的 rating 上。</p>
+
+<p>现在的目标是从蓝名起步，到九月份打上紫名。冲冲冲。只要做到比较快的写出 A,B,C,D，应该就能“轻松”达成目标吧（</p>
+
+
+        <hr style="visibility: hidden" />
+        <ul class="pager">
+          
+          <li class="previous">
+            <a
+              href="/2023/03/16/ACM-Template/"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="ACM Template"
+            >
+              Previous<br />
+              <span>ACM Template</span>
+            </a>
+          </li>
+           
+        </ul>
+        <hr style="visibility: hidden" />
+
+        
+        <script
+          src="https://giscus.app/client.js"
+          data-repo="tLLWtG/tllwtg.github.io"
+          data-repo-id="R_kgDOH3yTZg"
+          data-category="Announcements"
+          data-category-id="DIC_kwDOH3yTZs4CT2g1"
+          data-mapping="title"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="light"
+          data-lang="zh-CN"
+          data-loading="lazy"
+          data-strict="1"
+          crossorigin="anonymous"
+          async
+        ></script>
+        
+        <!---->
+
+         
+      </div>
+
+      <!-- Side Catalog Container -->
+      
+      <div
+        class="col-lg-2 col-lg-offset-0 visible-lg-block sidebar-container catalog-container"
+      >
+        <div class="side-catalog">
+          <hr class="hidden-sm hidden-xs" />
+          <h5>
+            <a class="catalog-toggle" href="#">CATALOG</a>
+          </h5>
+          <ul class="catalog-body"></ul>
+        </div>
+      </div>
+      
+
+      <!-- Sidebar Container -->
+      <div
+        class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container"
+      >
+        <!-- Featured Tags -->
+        <!-- rm "%" -->
+        <!-- { include featured-tags.html bottom=true } -->
+
+        <!-- Friends Blog -->
+        <!-- rm "%" -->
+        <!-- { include friends.html } -->
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- add support for mathjax by voleking-->
+   
 
 
     <!-- Footer -->
@@ -711,18 +666,6 @@ https://github.com/kitian616/jekyll-TeXt-theme
 
 
 
-
-<!-- jquery.tagcloud.js -->
-<script>
-    async('/js/jquery.tagcloud.js', function () {
-        $.fn.tagcloud.defaults = {
-            //size: {start: 1, end: 1, unit: 'em'},
-            color: { start: '#bbbbee', end: '#2f93b4' },
-        };
-        $('#tag_cloud a').tagcloud();
-    })
-</script>
-<script src='/js/archive.js '></script>
 
 
 <!--fastClick.js -->

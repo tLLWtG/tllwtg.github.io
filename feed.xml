@@ -5,9 +5,58 @@
     <description>这里是 tLLWtG 的个人博客，与你一起发现更大的世界 | 要做一个有 swag 的程序员</description>
     <link>https://tllwtg.top/</link>
     <atom:link href="https://tllwtg.top/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 30 Apr 2023 16:07:07 +0000</pubDate>
-    <lastBuildDate>Sun, 30 Apr 2023 16:07:07 +0000</lastBuildDate>
+    <pubDate>Sun, 30 Apr 2023 16:09:20 +0000</pubDate>
+    <lastBuildDate>Sun, 30 Apr 2023 16:09:20 +0000</lastBuildDate>
     <generator>Jekyll v3.9.3</generator>
+    
+      <item>
+        <title>Competitive Programming</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;一段奇妙的算法竞赛之旅就此展开……&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;xcpc&quot;&gt;XCPC&lt;/h3&gt;
+
+&lt;p&gt;芜湖，经过层层选拔，还有最后的面试——历时半年，tLLWtG 终于进入了 XMU 的 XCPC 团队，可喜可贺可喜可贺。虽然没能在校内选拔赛中打到邀请赛的名额有点遗憾，但是总算迈出了我在 XCPC 上的第一步：）&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;零基础蒟蒻类目了&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../../img/CP/XCPC.jpg&quot; alt=&quot;XCPC&quot; title=&quot;XCPC&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;这是我&lt;del&gt;目前&lt;/del&gt;所在的 ACM 小队（别问我为什么变成青名了）。队伍名“为美好的世界献上代码”的由来非常明显，没错，就是那部十分清奇的异世界番，《为美好的世界献上祝福》（素晴）。正好最近又在播素晴的前传，《为美好的的世界献上爆炎》（听说第三季也会在今年播出，好耶），于是就顺理成章的蹭个热度，用了这样的队名 XD&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../../img/CP/team.png&quot; alt=&quot;team&quot; title=&quot;team&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;天梯赛&quot;&gt;天梯赛&lt;/h3&gt;
+
+&lt;p&gt;各种因缘巧合的促使下，我进入了 XMU 的天梯赛二队，在上上周代表虾大参加了比赛。原本以为自己的分数会在队内垫底，没想到最后打的还可以，压线摸了一个个人三等奖，好好好。&lt;/p&gt;
+
+&lt;p&gt;赛中出乎意料的被 l1-6 的字符串操作卡住，接着又被 l2-1，l2-2 的模拟封死，一度以为我就要止步于此了，但是经过一番殊死搏斗，还是打完了 l2，其中只跳了 l2-3 的构造。这个时候只剩下十几分钟的时间，已经来不及写构造题了，但是离国三又只差几分而已。hihihi，那就上点不讲武德的东西。通过直接输出”No Solution”和”0”，我又骗到了关键的 3 分，刚好凑到国三线的 175 分。（赛后听人说，l3 的某道题输出 20 可以白拿 15 分 ？。？）&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../../img/CP/tiantisai.png&quot; alt=&quot;tiantisai&quot; title=&quot;tiantisai&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;蓝桥杯&quot;&gt;蓝桥杯&lt;/h3&gt;
+
+&lt;p&gt;最近蓝桥杯的成绩也出来了，虽然早有耳闻蓝桥杯的含金量（），但是在 C 题爆 0 的情况下，我居然还能拿省一耶。奇怪的是好多佬只有省二。那我只能说，暴力骗分真香（）期待 6 月的国赛，同时球球不要让我拿国优。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../../../img/CP/lanqiaobei.png&quot; alt=&quot;lanqiaobei&quot; title=&quot;lanqiaobei&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;之后的计划&quot;&gt;之后的计划&lt;/h3&gt;
+
+&lt;p&gt;目前我在算法和数据结构的认识上，应该已经到了入门水准（）。再往后学大概就是二分神所说的“useless algorithm”，当然往后的算法一点也不 useless。只是考虑到我现在的水平，那些东西的优先级没有那么高，写题看到了新算法积累一下就好。优先级比较高的任务是思维训练和对已掌握算法的运用，训练方式主要是打 CF 和 ATC，成效大概会体现在 CF 的 rating 上。&lt;/p&gt;
+
+&lt;p&gt;现在的目标是从蓝名起步，到九月份打上紫名。冲冲冲。只要做到比较快的写出 A,B,C,D，应该就能“轻松”达成目标吧（&lt;/p&gt;
+</description>
+        <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
+        <link>https://tllwtg.top/2023/05/01/CP/</link>
+        <guid isPermaLink="true">https://tllwtg.top/2023/05/01/CP/</guid>
+        
+        <category>CP</category>
+        
+        
+      </item>
     
       <item>
         <title>ACM Template</title>
@@ -1978,67 +2027,6 @@ coins 中的所有值 互不相同&lt;br /&gt;
         <category>Study</category>
         
         <category>CP</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Hello 2022</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;“Yeah It’s on. ”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;tLLWtG 的 Blog 开通了。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;#build&quot;&gt;看技术实现 &lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;2022 年，tLLWtG 总算有个地方可以好好写点东西了。&lt;/p&gt;
-
-&lt;p id=&quot;build&quot;&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;正文&quot;&gt;正文&lt;/h2&gt;
-
-&lt;p&gt;接下来说说搭建这个博客的技术细节。&lt;/p&gt;
-
-&lt;p&gt;简单来说就是 &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt; + &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; 快速 Building Blog 的技术方案。&lt;/p&gt;
-
-&lt;p&gt;其优点非常明显：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Markdown&lt;/strong&gt; 带来的优雅写作体验&lt;/li&gt;
-  &lt;li&gt;非常熟悉的 Git workflow ，&lt;strong&gt;Git Commit 即 Blog Post&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;利用 GitHub Pages 的域名和免费空间，不用自己折腾主机
-    &lt;ul&gt;
-      &lt;li&gt;如果需要自定义域名，也只需要简单改改 DNS 加个 CNAME 就好了&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Jekyll 的自定制非常容易，基本就是个模版引擎&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;配置的过程中也没遇到什么坑，基本就是 Git 的流程，相当顺手&lt;/p&gt;
-
-&lt;p&gt;大的 Jekyll 主题上直接 fork 了 Huxpro
-并在此基础上增添了一些小组件和特性，打算找个时间封装成一个 tLLWtG Jekyll 主题&lt;/p&gt;
-
-&lt;h2 id=&quot;upd&quot;&gt;UPD&lt;/h2&gt;
-
-&lt;p&gt;见 &lt;a href=&quot;https://github.com/tLLWtG/tllwtg.github.io&quot;&gt;README.md&lt;/a&gt; 的 UPD 部分&lt;/p&gt;
-
-&lt;h2 id=&quot;后记&quot;&gt;后记&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;(保留)&lt;/em&gt;&lt;/p&gt;
-
-&lt;!-- *———      __ 后记于 __* --&gt;
-</description>
-        <pubDate>Thu, 25 Aug 2022 17:00:00 +0000</pubDate>
-        <link>https://tllwtg.top/2022/08/25/Hello-2022/</link>
-        <guid isPermaLink="true">https://tllwtg.top/2022/08/25/Hello-2022/</guid>
-        
-        <category>Life</category>
-        
-        <category>Code</category>
         
         
       </item>

@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Competitive Programming",
+      "subtitle" : " &quot;Start of My CP Road&quot;",
+      "tags"     : "CP",
+      "url"      : "/2023/05/01/CP/",
+      "date"     : "2023-05-01 00:00:00 +0000"
+    } ,
+  
+    {
       "title"    : "ACM Template",
       "subtitle" : " &quot;a Repo for Snippets&quot;",
       "tags"     : "Code, CP",
