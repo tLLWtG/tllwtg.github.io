@@ -1,6 +1,6 @@
 # tllwtg.github.io
 
-Hi! This is my personal website **[tLLWtG Blog](https://tllwtg.github.io)**.
+Hi! This is my personal website **[tLLWtG Blog](https://tllwtg.top)**.
 
 > The Jekyll theme is derived from [Hux Blog](https://github.com/Huxpro/huxpro.github.io).
 
