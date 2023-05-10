@@ -119,4 +119,4 @@ Otherwise, you should delete the folder `.github`, and deploy according to the n
 
 ## License
 
-This project is licensed under the [Apache License 2.0](https://github.com/tLLWtG/tLLWtG.github.io/blob/main/LICENSE).
+This project is licensed under the [Apache License 2.0](https://github.com/tLLWtG/tllwtg.github.io/blob/main/LICENSE).
