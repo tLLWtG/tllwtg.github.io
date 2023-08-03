@@ -27,4 +27,4 @@ At present, my physical activity scope is mainly in Xiamen, and on Internet I'm 
 
 ---
 
-Email: [tllwtg@gmail.com](tllwtg@gmail.com)
+Email: <tllwtg@gmail.com>
