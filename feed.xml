@@ -5,8 +5,8 @@
     <description>这里是 tLLWtG 的个人博客，与你一起发现更大的世界 | 要做一个有 swag 的程序员</description>
     <link>https://tllwtg.top/</link>
     <atom:link href="https://tllwtg.top/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 03 Aug 2023 08:37:13 +0000</pubDate>
-    <lastBuildDate>Thu, 03 Aug 2023 08:37:13 +0000</lastBuildDate>
+    <pubDate>Mon, 04 Sep 2023 10:02:19 +0000</pubDate>
+    <lastBuildDate>Mon, 04 Sep 2023 10:02:19 +0000</lastBuildDate>
     <generator>Jekyll v3.9.3</generator>
     
       <item>
@@ -260,8 +260,6 @@
         
         <category>Code</category>
         
-        <category>Study</category>
-        
         <category>CP</category>
         
         
@@ -423,8 +421,6 @@
         <guid isPermaLink="true">https://tllwtg.top/2022/12/21/First-Semester2/</guid>
         
         <category>Code</category>
-        
-        <category>Study</category>
         
         <category>CP</category>
         
@@ -643,8 +639,6 @@
         
         <category>Life</category>
         
-        <category>Study</category>
-        
         
       </item>
     
@@ -769,9 +763,9 @@
         <link>https://tllwtg.top/2022/09/07/XMU/</link>
         <guid isPermaLink="true">https://tllwtg.top/2022/09/07/XMU/</guid>
         
-        <category>XMU</category>
-        
         <category>Life</category>
+        
+        <category>XMU</category>
         
         
       </item>
@@ -1211,8 +1205,6 @@ lefti != righti&lt;/p&gt;
         <guid isPermaLink="true">https://tllwtg.top/2022/09/03/lcContest308/</guid>
         
         <category>Code</category>
-        
-        <category>Study</category>
         
         <category>CP</category>
         
@@ -1953,8 +1945,6 @@ coins 中的所有值 互不相同&lt;br /&gt;
         
         <category>Code</category>
         
-        <category>Study</category>
-        
         <category>CP</category>
         
         
@@ -2023,8 +2013,6 @@ coins 中的所有值 互不相同&lt;br /&gt;
         <guid isPermaLink="true">https://tllwtg.top/2022/08/26/My-LeetCode-Journey/</guid>
         
         <category>Code</category>
-        
-        <category>Study</category>
         
         <category>CP</category>
         

@@ -19,7 +19,7 @@
     {
       "title"    : "Strict Weak Ordering",
       "subtitle" : " &quot;Ordering&quot;",
-      "tags"     : "Code, Study, CP",
+      "tags"     : "Code, CP",
       "url"      : "/2023/01/10/Ordering/",
       "date"     : "2023-01-10 20:00:00 +0000"
     } ,
@@ -27,7 +27,7 @@
     {
       "title"    : "My First Semester in XMU (Part 2)",
       "subtitle" : " &quot;ACM&quot;",
-      "tags"     : "Code, Study, CP, XMU",
+      "tags"     : "Code, CP, XMU",
       "url"      : "/2022/12/21/First-Semester2/",
       "date"     : "2022-12-21 09:00:00 +0000"
     } ,
@@ -35,7 +35,7 @@
     {
       "title"    : "My First Semester in XMU (Part 1)",
       "subtitle" : " &quot;军训, Course, Exam and Life&quot;",
-      "tags"     : "XMU, Life, Study",
+      "tags"     : "XMU, Life",
       "url"      : "/2022/12/19/First-Semester1/",
       "date"     : "2022-12-19 21:00:00 +0000"
     } ,
@@ -43,7 +43,7 @@
     {
       "title"    : "Hello XMU",
       "subtitle" : " &quot;XMU&quot;",
-      "tags"     : "XMU, Life",
+      "tags"     : "Life, XMU",
       "url"      : "/2022/09/07/XMU/",
       "date"     : "2022-09-07 21:00:00 +0000"
     } ,
@@ -51,7 +51,7 @@
     {
       "title"    : "LeetCode Contest 308",
       "subtitle" : " &quot;Contest308&quot;",
-      "tags"     : "Code, Study, CP",
+      "tags"     : "Code, CP",
       "url"      : "/2022/09/03/lcContest308/",
       "date"     : "2022-09-03 10:00:00 +0000"
     } ,
@@ -67,7 +67,7 @@
     {
       "title"    : "LC Problems&#39; Solutions -518",
       "subtitle" : " &quot;LeetCode&quot;",
-      "tags"     : "Code, Study, CP",
+      "tags"     : "Code, CP",
       "url"      : "/2022/08/26/lc518/",
       "date"     : "2022-08-26 22:00:00 +0000"
     } ,
@@ -75,7 +75,7 @@
     {
       "title"    : "My LeetCode Journey",
       "subtitle" : " &quot;LeetCode&quot;",
-      "tags"     : "Code, Study, CP",
+      "tags"     : "Code, CP",
       "url"      : "/2022/08/26/My-LeetCode-Journey/",
       "date"     : "2022-08-26 20:00:00 +0000"
     } ,
@@ -83,7 +83,7 @@
     {
       "title"    : "Hello 2022",
       "subtitle" : " &quot;Hello World, Hello Blog&quot;",
-      "tags"     : "Life, Code",
+      "tags"     : "Code, Life",
       "url"      : "/2022/08/25/Hello-2022/",
       "date"     : "2022-08-25 17:00:00 +0000"
     } 
