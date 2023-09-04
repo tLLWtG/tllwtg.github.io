@@ -7,8 +7,8 @@ author:     "tLLWtG"
 header-img: "img/post-bg-2022.jpg"
 catalog: true
 tags:
-    - Life
     - Code
+    - Life
 ---
 
 > “Yeah It's on. ”
