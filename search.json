@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "First Year in XMU",
+      "subtitle" : " &quot;Ambitious&quot;",
+      "tags"     : "Code, CP, Life, XMU",
+      "url"      : "/2023/09/05/First-Year/",
+      "date"     : "2023-09-05 23:00:00 +0000"
+    } ,
+  
+    {
       "title"    : "Competitive Programming",
       "subtitle" : " &quot;Start of My CP Road&quot;",
       "tags"     : "CP",
