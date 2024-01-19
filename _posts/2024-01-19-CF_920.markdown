@@ -1,0 +1,266 @@
+---
+layout:     post
+title:      "Codeforces Round 920 (Div. 3)"
+subtitle:   " \"Solution of problem A-F\""
+date:       2024-01-19 17:30:00
+author:     "tLLWtG"
+header-style: text
+catalog: true
+tags:
+    - Code
+    - CP
+---
+
+> 题目链接[点这里](https://codeforces.com/contest/1921)
+
+这场 div3 F 题的算法很基础，但是我此前居然完全没接触过。（芙莉莲震惊.jpg）
+![FrierenShock](../../../../img/emoji/FrierenShock.png)
+不过这下能够`算法沙漠面积--`了。
+
+### CF1921A Square
+
+```cpp
+void solve()
+{
+    int x1 = 1e9, y1 = 1e9, x2 = -1e9, y2 = -1e9, x, y;
+    for (int i = 1; i <= 4; ++i)
+    {
+        cin >> x >> y;
+        x1 = min(x, x1);
+        y1 = min(y, y1);
+        x2 = max(x, x2);
+        y2 = max(y, y2);
+    }
+    cout << (x2 - x1) * (y2 - y1) << endl;
+}
+```
+
+### CF1921B Arranging Cats
+
+```cpp
+void solve()
+{
+    int n;
+    cin >> n;
+    string s1, s2;
+    cin >> s1 >> s2;
+    int diff = 0, ans = 0;
+    for (int i = 0; i < n; ++i)
+    {
+        if (s1[i] == '0' && s2[i] == '1')
+        {
+            if (diff < 0)
+            {
+                ++ans;
+                ++diff;
+            }
+            else
+            {
+                ++diff;
+            }
+        }
+        else if (s1[i] == '1' && s2[i] == '0')
+        {
+            if (diff > 0)
+            {
+                ++ans;
+                --diff;
+            }
+            else
+            {
+                --diff;
+            }
+        }
+    }
+    cout << ans + abs(diff) << endl;
+}
+```
+
+### CF1921C Sending Messages
+
+每次发信息前都贪心的进行抉择，选最优的方案。若最优的方案都无法满足则 NO，否则 YES。注意数数数清楚。
+
+```cpp
+void solve()
+{
+    ll n, f, a, b, m;
+    cin >> n >> f >> a >> b;
+    ll last = 0, sumi = 0;
+    for (int i = 1; i <= n; ++i)
+    {
+        cin >> m;
+        if (i == 1)
+        {
+            if ((m - last) * a >= b)
+                sumi += b;
+            else
+                sumi += (m - last) * a;
+            last = m;
+            continue;
+        }
+        if ((m - last) * a >= b)
+            sumi += b;
+        else
+            sumi += (m - last) * a;
+        last = m;
+    }
+    if (sumi < f)
+        cout << "YES" << endl;
+    else
+        cout << "NO" << endl;
+}
+```
+
+### CF1921D  Very Different Array
+
+容易想到将数组排序并翻转，从而尽量将大数和小数匹配。接着贪心的从 brr 的两端选出绝对值之差更大的数，直到已选了出 n 个数。
+
+```cpp
+void solve()
+{
+    ll n, m, ans = 0;
+    cin >> n >> m;
+    vector<ll> arr(n), brr(m);
+    for (int i = 0; i < n; ++i)
+        cin >> arr[i];
+    for (int i = 0; i < m; ++i)
+        cin >> brr[i];
+    sort(all(arr));
+    sort(all(brr));
+    reverse(all(brr));
+    int l = 0, r = m - 1, cl = 0, cr = n - 1, cnt = 0;
+    while (cl <= cr && cnt <= n)
+    {
+        if (abs(brr[l] - arr[cl]) >= abs(brr[r] - arr[cr]))
+        {
+            ans += abs(brr[l] - arr[cl]);
+            ++l, ++cl;
+        }
+        else
+        {
+            ans += abs(brr[r] - arr[cr]);
+            --r, --cr;
+        }
+    }
+    cout << ans << endl;
+}
+```
+
+### CF1921E Eat the Chip
+
+x1 >= x2 的时候不会发生相遇，是平局。然后考虑 x1 < x2。当 step 为偶数时，只会发生 Alice 赢或平局的情况。因为数据范围不大，这时可以暴力模拟每一步，并令 Bob 逃离 Alice，Alice 追赶 Bob。最后看是否追上即可判断结果。step 为奇数的讨论同上。
+
+```cpp
+void solve()
+{
+    ll h, w, x1, y1, x2, y2;
+    cin >> h >> w >> x1 >> y1 >> x2 >> y2;
+    ll step = abs(x2 - x1 - 1);
+    if (x1 >= x2)
+    {
+        cout << "Draw" << endl;
+    }
+    else if (step % 2 == 0)
+    {
+        for (int i = 1; i <= step; ++i)
+        {
+            if (i % 2 == 1)
+            {
+                if (y2 > y1)
+                    ++y1;
+                else if (y2 < y1)
+                    --y1;
+            }
+            else if (i % 2 == 0)
+            {
+                if (y2 > y1 && y2 < w)
+                    ++y2;
+                else if (y2 < y1 && y2 > 1)
+                    --y2;
+            }
+        }
+        if (abs(y2 - y1) <= 1)
+            cout << "Alice" << endl;
+        else
+            cout << "Draw" << endl;
+    }
+    else
+    {
+        for (int i = 1; i <= step; ++i)
+        {
+            if (i % 2 == 1)
+            {
+                if (y2 > y1 && y1 > 1)
+                    --y1;
+                else if (y2 < y1 && y1 < w)
+                    ++y1;
+            }
+            else if (i % 2 == 0)
+            {
+                if (y2 > y1)
+                    --y2;
+                else if (y2 < y1)
+                    ++y2;
+            }
+        }
+        if (abs(y2 - y1) <= 1)
+            cout << "Bob" << endl;
+        else
+            cout << "Draw" << endl;
+    }
+}
+```
+
+### CF1921F Sum of Progression
+
+这题用到下面两个算法。
+1. 带权前缀和
+   ```
+   sum(l-1) = a1 + 2*a2 + 3*a3 + ... + (l-1)*a(l-1)
+   sum(r) = a1 + 2*a2 + 3*a3 + ... + l*al + ... + r*ar
+   sum(r) - sum(l-1) = l*al + ... + r*ar = (l - 1)*(al + ... + ar) + al + ... + ar
+   ```
+2. 根号分治
+   
+   找到两种算法，复杂度分别为 O(D) 与 O(n/D) (或者类似的复杂度)。每次根据数据大小选取具体使用的算法。取分界点 D=sqrt(n)，可将复杂度降至 O(q*sqrt(n))。
+
+这题的带权前缀和按公差分为 lim 组，分别进行预处理。分界点可取 200，大于两百的数据暴力求解，小于两百的数据用带权前缀和直接计算答案。
+
+```cpp
+int n, q, lim = 200;
+vector<vector<ll>> pre(lim, vector<ll>(1e5 + lim * 2 + 1));
+vector<vector<ll>> sumi(lim, vector<ll>(1e5 + lim * 2 + 1));
+ 
+void solve()
+{
+    cin >> n >> q;
+    vector<ll> arr(n + 1);
+    
+    for (int i = 0; i < n; ++i)
+        cin >> arr[i];
+    for (int d = 1; d < lim; ++d)
+        for (int i = 0; i < n; ++i)
+        {
+            pre[d][i + d] = pre[d][i] + arr[i];
+            sumi[d][i + d] = sumi[d][i] + arr[i] * (i / d + 1);
+        }
+    while (q--)
+    {
+        ll s, d, k;
+        cin >> s >> d >> k;
+        --s;
+        if (d < lim)
+        {
+            int r = s + d * k, l = s;
+            cout << sumi[d][r] - sumi[d][l] - (l / d) * (pre[d][r] - pre[d][l]) << " ";
+        }
+        else
+        {
+            ll ans = 0;
+            for (int i = 0; i < k; ++i)
+                ans += arr[i * d + s] * (i + 1);
+            cout << ans << " ";
+        }
+    }
+}
+```
