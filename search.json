@@ -1,8 +1,16 @@
 [
   
     {
-      "title"    : "Codeforces Round 920 (Div. 3)",
-      "subtitle" : " &quot;Solution of problem A-F&quot;",
+      "title"    : "Educational Codeforces Round 161",
+      "subtitle" : " &quot;Solutions of problem A-E&quot;",
+      "tags"     : "Code, CP",
+      "url"      : "/2024/01/20/CF_Edu161/",
+      "date"     : "2024-01-20 13:00:00 +0000"
+    } ,
+  
+    {
+      "title"    : "Codeforces Round 920 (Div.3)",
+      "subtitle" : " &quot;Solutions of problem A-F&quot;",
       "tags"     : "Code, CP",
       "url"      : "/2024/01/19/CF_920/",
       "date"     : "2024-01-19 17:30:00 +0000"
