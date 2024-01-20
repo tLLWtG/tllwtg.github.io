@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "Codeforces Round 920 (Div. 3)"
-subtitle:   " \"Solution of problem A-F\""
+title:      "Codeforces Round 920 (Div.3)"
+subtitle:   " \"Solutions of problem A-F\""
 date:       2024-01-19 17:30:00
 author:     "tLLWtG"
 header-style: text
