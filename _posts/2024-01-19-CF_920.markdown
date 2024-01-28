@@ -5,6 +5,7 @@ subtitle:   " \"Solutions of problem A-F\""
 date:       2024-01-19 17:30:00
 author:     "tLLWtG"
 header-style: text
+mathjax: true
 catalog: true
 tags:
     - Code
@@ -78,7 +79,7 @@ void solve()
 
 ### CF1921C Sending Messages
 
-每次发信息前都贪心的进行抉择，选最优的方案。若最优的方案都无法满足则 NO，否则 YES。注意数数数清楚。
+每次发信息前都贪心的进行抉择，选最优的方案。若最优的方案都无法满足则 `NO`，否则 `YES`。注意数数数清楚。
 
 ```cpp
 void solve()
@@ -113,7 +114,7 @@ void solve()
 
 ### CF1921D  Very Different Array
 
-容易想到将数组排序并翻转，从而尽量将大数和小数匹配。接着贪心的从 brr 的两端选出绝对值之差更大的数，直到已选了出 n 个数。
+容易想到将数组排序并翻转，从而尽量将大数和小数匹配。接着贪心的从 $brr$ 的两端选出绝对值之差更大的数，直到已选了出 $n$ 个数。
 
 ```cpp
 void solve()
@@ -148,7 +149,7 @@ void solve()
 
 ### CF1921E Eat the Chip
 
-x1 >= x2 的时候不会发生相遇，是平局。然后考虑 x1 < x2。当 step 为偶数时，只会发生 Alice 赢或平局的情况。因为数据范围不大，这时可以暴力模拟每一步，并令 Bob 逃离 Alice，Alice 追赶 Bob。最后看是否追上即可判断结果。step 为奇数的讨论同上。
+$x_1 \ge x_2$ 的时候不会发生相遇，是平局。然后考虑 $x_1 \le x_2$。当 $step$ 为偶数时，只会发生 Alice 赢或平局的情况。因为数据范围不大，这时可以暴力模拟每一步，并令 Bob 逃离 Alice，Alice 追赶 Bob。最后看是否追上即可判断结果。$step$ 为奇数的讨论同上。
 
 ```cpp
 void solve()
@@ -215,16 +216,17 @@ void solve()
 
 这题用到下面两个算法。
 1. 带权前缀和
-   ```
-   sum(l-1) = a1 + 2*a2 + 3*a3 + ... + (l-1)*a(l-1)
-   sum(r) = a1 + 2*a2 + 3*a3 + ... + l*al + ... + r*ar
-   sum(r) - sum(l-1) = l*al + ... + r*ar = (l - 1)*(al + ... + ar) + al + ... + ar
-   ```
+   
+   $sum_{l-1}=a_1+2 \times a_2+3 \times a_3+...+(l-1) \times a_{l-1}$
+
+   $sum_{r}=a_1+2 \times a_2+3\times a_3+...+l \times a_l+...+r \times a_r$
+
+   $sum_{r}-sum_{l-1}=l \times a_l+...+r \times a_r=(l-1) \times (a_l+...+a_r)+a_l+...+a_r$
 2. 根号分治
    
-   找到两种算法，复杂度分别为 O(D) 与 O(n/D) (或者类似的复杂度)。每次根据数据大小选取具体使用的算法。取分界点 D=sqrt(n)，可将复杂度降至 O(q*sqrt(n))。
+   找到两种算法，复杂度分别为 $O(D)$ 与 $O(\frac{n}{D})$ (或者类似的复杂度)。每次根据数据大小选取具体使用的算法。取分界点 $D=\sqrt{n}$，可将复杂度降至 $O(q \times \sqrt{n})$。
 
-这题的带权前缀和按公差分为 lim 组，分别进行预处理。分界点可取 200，大于两百的数据暴力求解，小于两百的数据用带权前缀和直接计算答案。
+这题的带权前缀和按公差分为 $lim$ 组，分别进行预处理。分界点可取 $200$，大于两百的数据暴力求解，小于两百的数据用带权前缀和直接计算答案。
 
 ```cpp
 int n, q, lim = 200;

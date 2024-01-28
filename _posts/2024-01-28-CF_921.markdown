@@ -34,7 +34,7 @@ void solve()
 
 ### CF1925B A Balanced Problemset?
 
-写出题意中的表达式：$d \times (a_1+a_2+...+a_{n})=x$。则容易想到枚举 $x$ 的因数 $d$，当 $x \div d$ 大于等于 $n$ 时可以作为一个可行解，所有解中的最大值即为答案。
+写出题意中的表达式：$d \times (a_1+a_2+...+a_{n})=x$。则容易想到枚举 $x$ 的因数 $d$，当 $\frac{x}{d}$ 大于等于 $n$ 时可以作为一个可行解，所有解中的最大值即为答案。
 
 ```cpp
 void solve()
@@ -140,7 +140,7 @@ void solve()
 
 再将每条边的贡献度相加得到总贡献度 $S=\sum_{i = 1}^{k}(s+s+m+...+s+m \times (i-1)) \times C_{k}^{i} \times (p-1)^{k-i}$
 
-最后计算数学期望，用总贡献度除以所有可能的结果数 $E=S \div p^k$
+最后计算数学期望，用总贡献度除以所有可能的结果数 $E= \frac{S}{p^k}$
 
 ```cpp
 void solve()
