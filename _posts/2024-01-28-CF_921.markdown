@@ -1,0 +1,252 @@
+---
+layout:     post
+title:      "Codeforces Round 921 (Div.2)"
+subtitle:   " \"Solutions of problem A-D\""
+date:       2024-01-28 21:30:00
+author:     "tLLWtG"
+header-style: text
+mathjax: true
+catalog: true
+tags:
+    - Code
+    - CP
+---
+
+> 题目链接[点这里](https://codeforces.com/contest/1925)
+
+赛时 D 题题意读假了 :(
+
+### CF1925A We Got Everything Covered!
+
+前 $k$ 个字母按顺序排序 $n$ 次是一种解。
+
+```cpp
+void solve()
+{
+    int n, k;
+    cin >> n >> k;
+    for (int i = 1; i <= n; ++i)
+        for (int j = 1; j <= k; ++j)
+            cout << char('a' + j - 1);
+    cout << endl;
+}
+```
+
+### CF1925B A Balanced Problemset?
+
+写出题意中的表达式：$d \times (a_1+a_2+...+a_{n})=x$。则容易想到枚举 $x$ 的因数 $d$，当 $x \div d$ 大于等于 $n$ 时可以作为一个可行解，所有解中的最大值即为答案。
+
+```cpp
+void solve()
+{
+    int x, n, ans = 1;
+    cin >> x >> n;
+    int lim = sqrt(x);
+    for (int i = 1; i <= lim; ++i)
+    {
+        if (x % i)
+            continue;
+        int d1 = i;
+        int d2 = x / i;
+        if (d2 >= n)
+            ans = max(ans, d1);
+        if (d1 >= n)
+            ans = max(ans, d2);
+    }
+    cout << ans << endl;
+}
+```
+
+### CF1925C Did We Get Everything Covered?
+
+首先判断必要条件：前 $k$ 个字母出现次数均大于等于 $n$。然后试几个样例可以发现，可行的字符串都能分割成若干子序列，每一个子序列里前 $k$ 个字母都至少出现过一次。若字符串 $s$ 可以分割成大于等于 $n$ 个这样子序列（从前往后遍历，每次形成符合条件的子序列时就开始统计下一个子序列），答案为 `YES`。
+
+答案为 `NO` 时需要输出一个反例。可以贪心的取每个子序列的末端字符拼接在一起，剩下的空位用最后一段残缺子序列中没有的字符补全。
+
+```cpp
+void solve()
+{
+    int n, k, m;
+    string s;
+    cin >> n >> k >> m;
+    cin >> s;
+    map<char, int> cnt;
+    for (char ch: s)
+        cnt[ch]++;
+    for (char ch = 'a'; ch < 'a' + k; ++ch)
+    {
+        if (cnt[ch] < n)
+        {
+            cout << "NO" << endl;
+            for (int i = 1; i <= n; ++i)
+                cout << ch;
+            cout << endl;
+            return;
+        }
+    }
+    int sumi = 0;
+    vector<int> book(30, 0);
+    string ans;
+    for (char ch: s)
+    {
+        book[ch - 'a']++;
+        bool flag = true;
+        for (char c = 'a'; c < 'a' + k; ++c)
+        {
+            if (!book[c - 'a'])
+                flag = false;
+        }
+        if (flag)
+        {
+            ans.pb(ch);
+            fill(all(book), 0);
+            ++sumi;
+        }
+    }
+    if (sumi < n)
+    {
+        cout << "NO" << endl;
+        int ind = 0;
+        for (int i = 0; i < k; ++i)
+        {
+            if (book[i] == 0)
+                ind = i;
+        }
+        for (int i = 1; i <= n - sumi; ++i)
+            ans.pb('a' + ind);
+        cout << ans << endl;
+        return;
+    }
+    cout << "YES" << endl;
+}
+```
+
+### CF1925D Good Trip
+
+> 代码用到的模板在文末。
+
+先理解一下加分规则（赛时这个地方没仔细看 TT）：某条边权值为 $f$，则第一次被选中后答案加上 $f$，第二次被选中后答案再加上 $f+1$ ...
+
+每轮有 $C_{n}^{2}$ 种选择，记为 $p$，则 $k$ 轮共有 $p^k$ 种可能结果。另外记 $s$ 为所有边的权值之和。
+
+然后计算单条边的贡献：
+1. 只选择一次这条边时，贡献度为 $f \times C_{k}^{1} \times (p-1)^{k-1}$ 
+2. 只选择两次这条边时，贡献度为 $(f+f+1) \times C_{k}^{2} \times (p-1)^{k-2}$
+3. ...
+
+归纳得到选择了 $i$ 次这条边时的贡献度为 $(f+f+1+...+f+i-1) \times C_{k}^{i} \times (p-1)^{k-i}$
+
+然后求和得到这条边总的贡献度 $\sum_{i = 1}^{k}(f+f+1+...+f+i-1) \times C_{k}^{i} \times (p-1)^{k-i}$
+
+再将每条边的贡献度相加得到总贡献度 $S=\sum_{i = 1}^{k}(s+s+m+...+s+m \times (i-1)) \times C_{k}^{i} \times (p-1)^{k-i}$
+
+最后计算数学期望，用总贡献度除以所有可能的结果数 $E=S \div p^k$
+
+```cpp
+void solve()
+{
+    int n, m, k, f, x, y;
+    cin >> n >> m >> k;
+    mint sumi = 0, ans = 0, d, p = comb::C(n, 2);
+    for (int i = 1; i <= m; ++i)
+    {
+        cin >> x >> y >> f;
+        sumi += f;
+    }
+    d = p.pow(k);
+    mint tsumi = 0;
+    for (int i = 1; i <= k; ++i)
+    {
+        tsumi += sumi + ll(m) * (i - 1);
+        ans += tsumi * comb::C(k, i) * (p - 1).pow(k - i);
+    }
+    cout << ans / d << endl;
+}
+```
+
+### 模板
+
+##### 1. 自动取模的整数类
+
+```cpp
+template<const int T>
+class ModInt {
+    const static int mod = T;
+    int x;
+ 
+    public:
+        ModInt(int x = 0) : x(x % mod) {}
+        ModInt(long long x) : x(int(x % mod)) {} 
+        int val() { return x; }
+        ModInt operator + (const ModInt &a) const { int x0 = x + a.x; return ModInt(x0 < mod ? x0 : x0 - mod); }
+        ModInt operator - (const ModInt &a) const { int x0 = x - a.x; return ModInt(x0 < 0 ? x0 + mod : x0); }
+        ModInt operator * (const ModInt &a) const { return ModInt(1LL * x * a.x % mod); }
+        ModInt operator / (const ModInt &a) const { return *this * a.inv(); }
+        bool operator == (const ModInt &a) const { return x == a.x; };
+        bool operator != (const ModInt &a) const { return x != a.x; };
+        void operator += (const ModInt &a) { x += a.x; if (x >= mod) x -= mod; }
+        void operator -= (const ModInt &a) { x -= a.x; if (x < 0) x += mod; }
+        void operator *= (const ModInt &a) { x = 1LL * x * a.x % mod; }
+        void operator /= (const ModInt &a) { *this = *this / a; }
+        friend ModInt operator + (int y, const ModInt &a){ int x0 = y + a.x; return ModInt(x0 < mod ? x0 : x0 - mod); }
+        friend ModInt operator - (int y, const ModInt &a){ int x0 = y - a.x; return ModInt(x0 < 0 ? x0 + mod : x0); }
+        friend ModInt operator * (int y, const ModInt &a){ return ModInt(1LL * y * a.x % mod);}
+        friend ModInt operator / (int y, const ModInt &a){ return ModInt(y) / a;}
+        friend ostream &operator<<(ostream &os, const ModInt &a) { return os << a.x;}
+        friend istream &operator>>(istream& is, ModInt& t){return is >> t.x;}
+ 
+        ModInt pow(int64_t n) const {
+            ModInt res(1), mul(x);
+            while(n){
+                if (n & 1) res *= mul;
+                mul *= mul;
+                n >>= 1;
+            }
+            return res;
+        }
+        ModInt inv() const {
+            int a = x, b = mod, u = 1, v = 0;
+            while (b) {
+                int t = a / b;
+                a -= t * b; swap(a, b);
+                u -= t * v; swap(u, v);
+            }
+            if (u < 0) u += mod;
+            return u;
+        }
+};
+ 
+const int MOD = 1e9 + 7;
+ 
+using mint = ModInt<MOD>;
+```
+
+##### 2. 带模数的组合数模板
+
+> 使用前需要用 Preprocess 函数进行预处理。
+
+```cpp
+namespace comb
+{
+    int n, p;
+    vector<int> inv, fac, finv;
+    void Preprocess(int _n, int _p)
+    {
+        n = _n;
+        p = _p;
+        inv.resize(n + 5);
+        fac.resize(n + 5);
+        finv.resize(n + 5);
+        inv[1] = 1;
+        for (int i = 2; i <= n + 1; ++i)
+            inv[i] = (ll)(p - p / i) * inv[p % i] % p;
+        fac[0] = 1;
+        for (int i = 1; i <= n + 1; ++i)
+            fac[i] = (ll)fac[i - 1] * i % p;
+        finv[0] = 1;
+        for (int i = 1; i <= n + 1; ++i)
+            finv[i] = (ll)finv[i - 1] * inv[i] % p;
+    }
+    int C(int x, int y) { return (ll)fac[x] * finv[y] % p * finv[x - y] % p; }
+}
+```
