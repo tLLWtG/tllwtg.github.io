@@ -64,21 +64,21 @@
   <!-- Open Graph -->
   <meta
     property="og:title"
-    content="Archive - tLLWtG Blog | tLLWtG 的博客"
+    content="tLLWtG Blog | tLLWtG 的博客"
   />
   
   <meta property="og:type" content="website" />
   <meta
     property="og:description"
-    content="「我干了什么 究竟拿了时间换了什么」"
+    content="「version 1.0」"
   />
   
   <meta property="og:image" content="https://tllwtg.tophttps://avatars.githubusercontent.com/u/63890132" />
-  <meta property="og:url" content="https://tllwtg.top/archive/" />
+  <meta property="og:url" content="https://tllwtg.top/page3/" />
   <meta property="og:site_name" content="tLLWtG Blog | tLLWtG 的博客" />
 
   <title>
-    Archive - tLLWtG Blog | tLLWtG 的博客
+    tLLWtG Blog | tLLWtG 的博客
   </title>
 
   <!-- Web App Manifest -->
@@ -90,7 +90,7 @@
   <!-- Canonical URL -->
   <link
     rel="canonical"
-    href="https://tllwtg.top/archive/"
+    href="https://tllwtg.top/page3/"
   />
 
   <!-- Bootstrap Core CSS -->
@@ -269,9 +269,12 @@
 </div>
 
     <!--
-Credits: this page shamelessly borrowed a lot from:
-https://github.com/kitian616/jekyll-TeXt-theme
+  add hitokoto
+  rm Friends Blog, Ads
+
+  Modified by tLLWtG
 -->
+
 <!-- Page Header -->
 <!--
     add header-mask
@@ -286,7 +289,7 @@ https://github.com/kitian616/jekyll-TeXt-theme
 <style type="text/css">
     header.intro-header{
         position: relative;
-        background-image: url('/img/bg-little-universe.jpg');
+        background-image: url('/img/home-bg.jpg');
         background: ;
     }
 
@@ -301,17 +304,33 @@ https://github.com/kitian616/jekyll-TeXt-theme
 
 <!--be random-->
 
-<header class="intro-header" style="background-image: url('/img/bg-little-universe.jpg')">
-  <div class="header-mask"></div>
+<!--
+<header class="intro-header" id="randombg" style="background-image: url('/img/home-bg.jpg')">
+!-->
+<script>
+    var x=Math.floor(Math.random() * 17)
+    var str=x.toString()
+    var bg='/img/bg/image_'+str+'.jpg'
+    document.write('<header class="intro-header" style="background-image: url('+bg+')">')
+</script>
+<div class="header-mask" style="width: 100%; height: 100%; position: absolute; background: rgba(0,0,0, 0.1);"></div>
+    <!--
+    <script>
+        var x=Math.floor(Math.random() * 1)
+        var str=x.toString()
+        var bg='/img/bg/image_'+str+'.jpg'
+        document.getElementById('randombg').style.background='url('+bg+')'
+    </script>
+    -->
  
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
-        <div class="site-heading" id="tag-heading">
+        <div class="site-heading">
         
-          <h1>Archive</h1>
-          <span class="subheading">「我干了什么 究竟拿了时间换了什么」</span>
+          <h1>tLLWtG Blog</h1>
+          <span class="subheading">「version 1.0」</span>
         </div>
       </div>
     </div>
@@ -322,251 +341,325 @@ https://github.com/kitian616/jekyll-TeXt-theme
 
 <!-- Main Content -->
 <div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			<!-- Tags (as filter) -->
-			<div id='tag_cloud' class="tags tags-sup js-tags">
-				<a class="tag-button--all" data-encode="">
-					Show All
-					<sup>15</sup>
-				</a>
+  <div class="row">
+    
 
-				
-				
-				
-				
-				
-				<a data-sort="0003"
-					data-encode="Code" class="tag-button" title="Code"
-					rel="12">
-					Code
-					<sup>12</sup>
-				</a>
-				
-				<a data-sort="0004"
-					data-encode="CP" class="tag-button" title="CP"
-					rel="11">
-					CP
-					<sup>11</sup>
-				</a>
-				
-				<a data-sort="0011"
-					data-encode="Life" class="tag-button" title="Life"
-					rel="4">
-					Life
-					<sup>4</sup>
-				</a>
-				
-				<a data-sort="0011"
-					data-encode="XMU" class="tag-button" title="XMU"
-					rel="4">
-					XMU
-					<sup>4</sup>
-				</a>
-				
-				<a data-sort="0014"
-					data-encode="Study" class="tag-button" title="Study"
-					rel="1">
-					Study
-					<sup>1</sup>
-				</a>
-			</div>
+    <!-- USE SIDEBAR -->
+    <!-- PostList Container -->
+    <div
+      class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 postlist-container"
+    >
+      
+<div class="post-preview">
+    <a href="/2022/08/25/Hello-2022/">
+        <h2 class="post-title">
+            Hello 2022
+        </h2>
+        
+        <h3 class="post-subtitle">
+             "Hello World, Hello Blog"
+        </h3>
+        
+        <div class="post-content-preview">
+            
+                
+  “Yeah It’s on. ”
 
-			<!-- Article List -->
-			<div class="mini-post-list js-result d-none"><section>
-					<span class="fa listing-seperator">
-						<span class="tag-text">2024</span>
-					</span><div class="post-preview item" data-tags="Code,CP">
-						<a href="/2024/01/28/CF_921/">
-							<h2 class="post-title">
-								Codeforces Round 921 (Div.2)
-							</h2>
-							
-							<h3 class="post-subtitle">
-								 "Solutions of problem A-D"
-							</h3>
-							
-						</a>
-						<hr>
-					</div><div class="post-preview item" data-tags="Code,CP">
-						<a href="/2024/01/20/CF_Edu161/">
-							<h2 class="post-title">
-								Educational Codeforces Round 161
-							</h2>
-							
-							<h3 class="post-subtitle">
-								 "Solutions of problem A-E"
-							</h3>
-							
-						</a>
-						<hr>
-					</div><div class="post-preview item" data-tags="Code,CP">
-						<a href="/2024/01/19/CF_920/">
-							<h2 class="post-title">
-								Codeforces Round 920 (Div.3)
-							</h2>
-							
-							<h3 class="post-subtitle">
-								 "Solutions of problem A-F"
-							</h3>
-							
-						</a>
-						<hr>
-					</div></section><section>
-					<span class="fa listing-seperator">
-						<span class="tag-text">2023</span>
-					</span><div class="post-preview item" data-tags="Code,CP,Life,XMU">
-						<a href="/2023/09/05/First-Year/">
-							<h2 class="post-title">
-								First Year in XMU
-							</h2>
-							
-							<h3 class="post-subtitle">
-								 "Ambitious"
-							</h3>
-							
-						</a>
-						<hr>
-					</div><div class="post-preview item" data-tags="CP">
-						<a href="/2023/05/01/CP/">
-							<h2 class="post-title">
-								Competitive Programming
-							</h2>
-							
-							<h3 class="post-subtitle">
-								 "Start of My CP Road"
-							</h3>
-							
-						</a>
-						<hr>
-					</div><div class="post-preview item" data-tags="Code,CP">
-						<a href="/2023/03/16/ACM-Template/">
-							<h2 class="post-title">
-								ACM Template
-							</h2>
-							
-							<h3 class="post-subtitle">
-								 "a Repo for Snippets"
-							</h3>
-							
-						</a>
-						<hr>
-					</div><div class="post-preview item" data-tags="Code,CP">
-						<a href="/2023/01/10/Ordering/">
-							<h2 class="post-title">
-								Strict Weak Ordering
-							</h2>
-							
-							<h3 class="post-subtitle">
-								 "Ordering"
-							</h3>
-							
-						</a>
-						<hr>
-					</div></section><section>
-					<span class="fa listing-seperator">
-						<span class="tag-text">2022</span>
-					</span><div class="post-preview item" data-tags="Code,CP,XMU">
-						<a href="/2022/12/21/First-Semester2/">
-							<h2 class="post-title">
-								My First Semester in XMU (Part 2)
-							</h2>
-							
-							<h3 class="post-subtitle">
-								 "ACM"
-							</h3>
-							
-						</a>
-						<hr>
-					</div><div class="post-preview item" data-tags="XMU,Life">
-						<a href="/2022/12/19/First-Semester1/">
-							<h2 class="post-title">
-								My First Semester in XMU (Part 1)
-							</h2>
-							
-							<h3 class="post-subtitle">
-								 "军训, Course, Exam and Life"
-							</h3>
-							
-						</a>
-						<hr>
-					</div><div class="post-preview item" data-tags="Life,XMU">
-						<a href="/2022/09/07/XMU/">
-							<h2 class="post-title">
-								Hello XMU
-							</h2>
-							
-							<h3 class="post-subtitle">
-								 "XMU"
-							</h3>
-							
-						</a>
-						<hr>
-					</div><div class="post-preview item" data-tags="Code,CP">
-						<a href="/2022/09/03/lcContest308/">
-							<h2 class="post-title">
-								LeetCode Contest 308
-							</h2>
-							
-							<h3 class="post-subtitle">
-								 "Contest308"
-							</h3>
-							
-						</a>
-						<hr>
-					</div><div class="post-preview item" data-tags="Code,Study">
-						<a href="/2022/08/30/Markdown/">
-							<h2 class="post-title">
-								Markdown Notes
-							</h2>
-							
-							<h3 class="post-subtitle">
-								 "Markdown"
-							</h3>
-							
-						</a>
-						<hr>
-					</div><div class="post-preview item" data-tags="Code,CP">
-						<a href="/2022/08/26/lc518/">
-							<h2 class="post-title">
-								LC Problems' Solutions -518
-							</h2>
-							
-							<h3 class="post-subtitle">
-								 "LeetCode"
-							</h3>
-							
-						</a>
-						<hr>
-					</div><div class="post-preview item" data-tags="Code,CP">
-						<a href="/2022/08/26/My-LeetCode-Journey/">
-							<h2 class="post-title">
-								My LeetCode Journey
-							</h2>
-							
-							<h3 class="post-subtitle">
-								 "LeetCode"
-							</h3>
-							
-						</a>
-						<hr>
-					</div><div class="post-preview item" data-tags="Code,Life">
-						<a href="/2022/08/25/Hello-2022/">
-							<h2 class="post-title">
-								Hello 2022
-							</h2>
-							
-							<h3 class="post-subtitle">
-								 "Hello World, Hello Blog"
-							</h3>
-							
-						</a>
-						<hr>
-					</div></section>
-			</div>
-		</div>
-	</div>
+
+tLLWtG 的 Blog 开通了。
+
+看技术实现 
+
+2022 年，tLLWtG 总算有个地方可以好好写点东西了。
+
+
+
+正文
+
+接下来说说搭建这个博客的技术细节。
+
+简单来说就是 GitHub Pages + Jekyll 快速 Building Blog 的技术方案。
+
+其优点非常明显：
+
+
+  Markdown 带来的优雅写作体验
+  非常...
+            
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by tLLWtG on August 25, 2022
+    </p>
 </div>
+<hr>
+
+
+<!-- Pager -->
+
+<ul class="pager">
+    
+    <li class="previous">
+        <a href="/page2">&larr; Newer Posts</a>
+    </li>
+    
+    
+</ul>
+
+
+    </div>
+    <!-- Sidebar Container -->
+    <div
+      class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-12 col-xs-12 sidebar-container"
+    >
+      <!-- hitokoto -->
+      <!--
+  Created by tLLWtG
+-->
+
+<hr />
+<h5 style="display: inline">一言（ヒトコト）</h5>
+<div style="display: inline; font-size: 1.5em; color: #a3a3a3">
+  &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+<div
+  title="redo"
+  id="redo icon"
+  style="display: inline; font-weight: 600; font-size: 1.1em; color: #a3a3a3"
+>
+  next
+</div>
+<div
+  id="hitokoto_text"
+  style="margin-top: 20px; color: rgb(102, 102, 102)"
+></div>
+<div
+  style="text-align: right; margin-top: 15px; font-size: 0.9em"
+  id="hitokoto_from"
+></div>
+<style>
+  .containerload {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+  }
+
+  .itemload {
+    width: 12px;
+    height: 60px;
+    margin: 2px;
+    background-color: #ccc;
+    animation: wave 1.2s infinite ease-in-out;
+    animation-delay: var(--delay);
+  }
+
+  @keyframes wave {
+    0%,
+    40%,
+    100% {
+      transform: scale(0.4);
+    }
+    20% {
+      transform: scale(1);
+    }
+  }
+</style>
+<div class="containerload">
+  <span class="itemload item1" id="load1" style="--delay: -1.1s"></span>
+  <span class="itemload item2" id="load2" style="--delay: -1s"></span>
+  <span class="itemload item3" id="load3" style="--delay: -0.9s"></span>
+  <span class="itemload item4" id="load4" style="--delay: -0.8s"></span>
+  <span class="itemload item5" id="load5" style="--delay: -0.7s"></span>
+</div>
+<script>
+  function loading_on() {
+    const load1 = document.getElementById("load1");
+    const load2 = document.getElementById("load2");
+    const load3 = document.getElementById("load3");
+    const load4 = document.getElementById("load4");
+    const load5 = document.getElementById("load5");
+    load1.className = "itemload item1";
+    load2.className = "itemload item2";
+    load3.className = "itemload item3";
+    load4.className = "itemload item4";
+    load5.className = "itemload item5";
+  }
+  function loading_off() {
+    const load1 = document.getElementById("load1");
+    const load2 = document.getElementById("load2");
+    const load3 = document.getElementById("load3");
+    const load4 = document.getElementById("load4");
+    const load5 = document.getElementById("load5");
+    load1.className = "rand1";
+    load2.className = "rand2";
+    load3.className = "rand3";
+    load4.className = "rand4";
+    load5.className = "rand5";
+  }
+  function gethitokoto() {
+    fetch("https://v1.hitokoto.cn/?c=a&c=b&c=d&c=i&c=k")
+      .then((response) => response.json())
+      .then((data) => {
+        const hitokoto_text = document.getElementById("hitokoto_text");
+        hitokoto_text.href = "https://hitokoto.cn/?uuid=" + data.uuid;
+        hitokoto_text.innerText = data.hitokoto;
+        const hitokoto_from = document.getElementById("hitokoto_from");
+        hitokoto_from.href = "https://hitokoto.cn/?uuid=" + data.uuid;
+        hitokoto_from.innerText = "——" + data.from;
+        loading_off();
+      })
+      .catch(console.error);
+  }
+  //loading_on();
+  setTimeout(gethitokoto, 800);
+  const redo = document.getElementById("redo icon");
+  redo.addEventListener("click", (e) => {
+    const hitokoto_text = document.getElementById("hitokoto_text");
+    hitokoto_text.innerText = "";
+    const hitokoto_from = document.getElementById("hitokoto_from");
+    hitokoto_from.innerText = "";
+    // loading
+    loading_on();
+    setTimeout(gethitokoto, 800);
+  });
+  redo.addEventListener("mouseover", (e) => {
+    redo.style.cursor = "pointer";
+    redo.style.color = "#0085a1";
+  });
+  redo.addEventListener("mouseout", (e) => {
+    redo.style.color = "#a3a3a3";
+  });
+</script>
+
+
+      <!-- Short About -->
+      <section class="visible-md visible-lg">
+  <hr>
+  <h5><a href="/about/">ABOUT ME</a></h5>
+  <div class="short-about">
+    
+    <img src="https://avatars.githubusercontent.com/u/63890132" />
+    
+    
+    <p>要做一个有 swag 的程序员 <br></p>
+    
+    <!-- SNS Link -->
+    <!--
+  create a new tab for twitter 
+
+  Modified by tLLWtG
+-->
+
+
+
+
+<ul class="list-inline">
+
+
+  
+  <li>
+    <a href="/feed.xml">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  <li>
+    <a target="_blank" href="https://twitter.com/tLLWtG1">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  <li>
+    <a target="_blank" href="https://www.zhihu.com/people/tllwtg">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa  fa-stack-1x fa-inverse">知</i>
+      </span>
+    </a>
+  </li>
+  
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://github.com/tLLWtG">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+</ul>
+  </div>
+</section>
+
+      <!-- Featured Tags -->
+      <!--
+    rm useless hr
+
+    Modified by tLLWtG
+-->
+
+<hr>
+
+
+
+<section>
+    <!--  -->
+    <h5><a href="/archive/">FEATURED TAGS</a></h5>
+    <div class="tags">
+        
+            
+        
+            
+            <a data-sort="0003"
+                href="/archive/?tag=Code" title="Code"
+                rel="12">Code</a>
+            
+            
+            
+            <a data-sort="0004"
+                href="/archive/?tag=CP" title="CP"
+                rel="11">CP</a>
+            
+            <a data-sort="0011"
+                href="/archive/?tag=Life" title="Life"
+                rel="4">Life</a>
+            
+            <a data-sort="0011"
+                href="/archive/?tag=XMU" title="XMU"
+                rel="4">XMU</a>
+    </div>
+</section>
+
+
+      <!-- Friends Blog -->
+      <!-- rm "%" -->
+      <!-- { include friends.html } -->
+
+      <!-- Ads -->
+      <!--useless?-->
+      <!-- rm "%" -->
+      <!-- { include ads.html } -->
+    </div>
+    
+  </div>
+</div>
+
+
 
 
     <!-- Footer -->
@@ -764,18 +857,6 @@ https://github.com/kitian616/jekyll-TeXt-theme
 
 
 
-
-<!-- jquery.tagcloud.js -->
-<script>
-    async('/js/jquery.tagcloud.js', function () {
-        $.fn.tagcloud.defaults = {
-            //size: {start: 1, end: 1, unit: 'em'},
-            color: { start: '#bbbbee', end: '#2f93b4' },
-        };
-        $('#tag_cloud a').tagcloud();
-    })
-</script>
-<script src='/js/archive.js '></script>
 
 
 <!--fastClick.js -->

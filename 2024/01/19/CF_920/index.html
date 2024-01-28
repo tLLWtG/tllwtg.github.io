@@ -192,6 +192,8 @@
                         
                         
                         
+                        
+                        
                         <li class="search-icon">
                             <a href="javascript:void(0)">
                                 <i class="fa fa-search"></i>
@@ -467,7 +469,7 @@
 
 <h3 id="cf1921c-sending-messages">CF1921C Sending Messages</h3>
 
-<p>每次发信息前都贪心的进行抉择，选最优的方案。若最优的方案都无法满足则 NO，否则 YES。注意数数数清楚。</p>
+<p>每次发信息前都贪心的进行抉择，选最优的方案。若最优的方案都无法满足则 <code class="language-plaintext highlighter-rouge">NO</code>，否则 <code class="language-plaintext highlighter-rouge">YES</code>。注意数数数清楚。</p>
 
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -529,7 +531,7 @@
 
 <h3 id="cf1921d--very-different-array">CF1921D  Very Different Array</h3>
 
-<p>容易想到将数组排序并翻转，从而尽量将大数和小数匹配。接着贪心的从 brr 的两端选出绝对值之差更大的数，直到已选了出 n 个数。</p>
+<p>容易想到将数组排序并翻转，从而尽量将大数和小数匹配。接着贪心的从 $brr$ 的两端选出绝对值之差更大的数，直到已选了出 $n$ 个数。</p>
 
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -591,7 +593,7 @@
 
 <h3 id="cf1921e-eat-the-chip">CF1921E Eat the Chip</h3>
 
-<p>x1 &gt;= x2 的时候不会发生相遇，是平局。然后考虑 x1 &lt; x2。当 step 为偶数时，只会发生 Alice 赢或平局的情况。因为数据范围不大，这时可以暴力模拟每一步，并令 Bob 逃离 Alice，Alice 追赶 Bob。最后看是否追上即可判断结果。step 为奇数的讨论同上。</p>
+<p>$x_1 \ge x_2$ 的时候不会发生相遇，是平局。然后考虑 $x_1 \le x_2$。当 $step$ 为偶数时，只会发生 Alice 赢或平局的情况。因为数据范围不大，这时可以暴力模拟每一步，并令 Bob 逃离 Alice，Alice 追赶 Bob。最后看是否追上即可判断结果。$step$ 为奇数的讨论同上。</p>
 
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -715,23 +717,23 @@
 
 <p>这题用到下面两个算法。</p>
 <ol>
-  <li>带权前缀和
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre>sum(l-1) = a1 + 2*a2 + 3*a3 + ... + (l-1)*a(l-1)
-sum(r) = a1 + 2*a2 + 3*a3 + ... + l*al + ... + r*ar
-sum(r) - sum(l-1) = l*al + ... + r*ar = (l - 1)*(al + ... + ar) + al + ... + ar
-</pre></td></tr></tbody></table></code></pre></div>    </div>
+  <li>
+    <p>带权前缀和</p>
+
+    <p>$sum_{l-1}=a_1+2 \times a_2+3 \times a_3+…+(l-1) \times a_{l-1}$</p>
+
+    <p>$sum_{r}=a_1+2 \times a_2+3\times a_3+…+l \times a_l+…+r \times a_r$</p>
+
+    <p>$sum_{r}-sum_{l-1}=l \times a_l+…+r \times a_r=(l-1) \times (a_l+…+a_r)+a_l+…+a_r$</p>
   </li>
   <li>
     <p>根号分治</p>
 
-    <p>找到两种算法，复杂度分别为 O(D) 与 O(n/D) (或者类似的复杂度)。每次根据数据大小选取具体使用的算法。取分界点 D=sqrt(n)，可将复杂度降至 O(q*sqrt(n))。</p>
+    <p>找到两种算法，复杂度分别为 $O(D)$ 与 $O(\frac{n}{D})$ (或者类似的复杂度)。每次根据数据大小选取具体使用的算法。取分界点 $D=\sqrt{n}$，可将复杂度降至 $O(q \times \sqrt{n})$。</p>
   </li>
 </ol>
 
-<p>这题的带权前缀和按公差分为 lim 组，分别进行预处理。分界点可取 200，大于两百的数据暴力求解，小于两百的数据用带权前缀和直接计算答案。</p>
+<p>这题的带权前缀和按公差分为 $lim$ 组，分别进行预处理。分界点可取 $200$，大于两百的数据暴力求解，小于两百的数据用带权前缀和直接计算答案。</p>
 
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -895,7 +897,26 @@ sum(r) - sum(l-1) = l*al + ... + r*ar = (l - 1)*(al + ... + ar) + al + ... + ar
 </article>
 
 <!-- add support for mathjax by voleking-->
-   
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    SVG: {
+      scale: 90
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    }
+  });
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG">
+</script>    
 
 
     <!-- Footer -->

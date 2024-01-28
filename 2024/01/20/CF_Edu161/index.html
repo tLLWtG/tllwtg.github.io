@@ -192,6 +192,8 @@
                         
                         
                         
+                        
+                        
                         <li class="search-icon">
                             <a href="javascript:void(0)">
                                 <i class="fa fa-search"></i>
@@ -361,7 +363,7 @@
 
 <h3 id="cf1922a-tricky-template">CF1922A Tricky Template</h3>
 
-<p>只要存在一个位置，使得 c 和 a, b 均不同就能构造出答案。</p>
+<p>只要存在一个位置，使得 $c$ 和 $a, b$ 均不同就能构造出答案。</p>
 
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -451,7 +453,7 @@
   <p>时隔一年我又犯了等号写成赋值的错误，令人感慨。（老玩家集体类目）</p>
 </blockquote>
 
-<p>首先观察出能用最近点传送就一定用上，并且不会出现往回走的情况。然后看数据范围，要求快速计算两点间最短距离，那显然用前缀和做最合适了。先预处理出每个点的最近点，存在 cls 里，然后从两个方向分别前缀和。</p>
+<p>首先观察出能用最近点传送就一定用上，并且不会出现往回走的情况。然后看数据范围，要求快速计算两点间最短距离，那显然用前缀和做最合适了。先预处理出每个点的最近点，存在 $cls$ 里，然后从两个方向分别前缀和。</p>
 
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -551,9 +553,9 @@
 
 <h3 id="cf1922d-berserk-monsters">CF1922D Berserk Monsters</h3>
 
-<p>这道题需要一个能灵活删除元素的线性结构，那么就很容易想到用双向链表来存储怪兽。同时注意到，只有上一轮死亡怪物的左右两个位置才有可能在下一轮再发生变动。于是可以用 acti 来存储可能发生变动的位置。一开始所有位置都存入 acti 内，在每一轮去查询 acti 内存的位置对应的怪物是否死亡，若死亡则把左右两个怪物加入下一轮的 acti 中，像这样不断的模拟 n 轮即得到答案。</p>
+<p>这道题需要一个能灵活删除元素的线性结构，那么就很容易想到用双向链表来存储怪兽。同时注意到，只有上一轮死亡怪物的左右两个位置才有可能在下一轮再发生变动。于是可以用 $acti$ 来存储可能发生变动的位置。一开始所有位置都存入 $acti$ 内，在每一轮去查询 $acti$ 内存的位置对应的怪物是否死亡，若死亡则把左右两个怪物加入下一轮的 $acti$ 中，像这样不断的模拟 $n$ 轮即得到答案。</p>
 
-<p>再分析一下时间复杂度，存入 acti 内的怪物数量是是一个常数乘上 n，set 本身操作是 logn 级别，于是总的时间复杂度是 O(nlogn)。</p>
+<p>再分析一下时间复杂度，存入 $acti$ 内的怪物数量是是一个常数乘上 $n$，$set$ 本身操作是 $\log{n}$ 级别，于是总的时间复杂度是 $O(n \log{n})$。</p>
 
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -715,19 +717,21 @@
 
 <p>求递增子序列（IS）数量是一个经典的动态规划问题，这题反过来，给定数量要求构造原序列。</p>
 
-<p>首先抽象出下面两个操作（设 x 是 IS 的数量，不考虑空子序列）：</p>
+<p>首先抽象出下面两个操作（设 $x$ 是 IS 的数量，不考虑空子序列）：</p>
 
 <ol>
-  <li>在数组末尾添加一个最小的数，则 x 变为 x + 1。</li>
-  <li>在数组末尾添加一个比所有数都大的数，则 x 变为 2 * x + 1。</li>
+  <li>在数组末尾添加一个最小的数，则 $x$ 变为 $x+1$。</li>
+  <li>在数组末尾添加一个比所有数都大的数，则 $x$ 变为 $2 \times x+1$。</li>
 </ol>
 
-<p>然后逆向的考虑如何将 x 变为 0：</p>
+<p>然后逆向的考虑如何将 $x$ 变为 $0$：</p>
 
 <ol>
-  <li>x 为偶数时，在数组前面添加一个最小的数，则 x 变为 x - 1。</li>
-  <li>x 为奇数时，在数组前面添加 cur，则 x 变为 (x - 1) / 2。</li>
+  <li>$x$ 为偶数时，在数组前面添加一个最小的数，则 $x$ 变为 $x-1$。</li>
+  <li>$x$ 为奇数时，在数组前面添加 $cur$，则 $x$ 变为 $\frac{x-1}{2}$。</li>
 </ol>
+
+<p>逆向操作形成的数组即为答案。</p>
 
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -785,7 +789,7 @@
 
 <h4 id="解2">解2</h4>
 
-<p>由二项式定理得 0, 1, 2, 3, …, x - 1 的 IS 数量为 2^x。然后发现规律：先找出最大的 x，然后从大到小遍历每一个二进制位。如果第 i 位是 1，则在序列最后添加一个 i，这样操作会让答案增加 2^i。</p>
+<p>由二项式定理得 $0, 1, 2, 3, …, x-1$ 的 IS 数量为 $2^x$。然后发现规律：先找出最大的 $x$，然后从大到小遍历每一个二进制位。如果第 $i$ 位是 $1$，则在序列最后添加一个 $i$，这样操作会让答案增加 $2^i$。</p>
 
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -841,6 +845,18 @@
             </a>
           </li>
            
+          <li class="next">
+            <a
+              href="/2024/01/28/CF_921/"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Codeforces Round 921 (Div.2)"
+            >
+              Next<br />
+              <span>Codeforces Round 921 (Div.2)</span>
+            </a>
+          </li>
+          
         </ul>
         <hr style="visibility: hidden" />
 
@@ -901,7 +917,26 @@
 </article>
 
 <!-- add support for mathjax by voleking-->
-   
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    SVG: {
+      scale: 90
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    }
+  });
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG">
+</script>    
 
 
     <!-- Footer -->
