@@ -10,7 +10,6 @@ catalog: true
 tags:
     - XMU
     - Life
-    - Study
 ---
 
 > 这一鸽就过去了三个月捏（逃

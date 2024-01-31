@@ -9,7 +9,6 @@ header-mask: 0.4
 catalog: true
 tags:
     - Code
-    - Study
     - CP
     - XMU
 ---

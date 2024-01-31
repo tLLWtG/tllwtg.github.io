@@ -8,8 +8,8 @@ header-img: "img/post-bg-XMU.png"
 header-mask: 0.3
 catalog: true
 tags:
-    - XMU
     - Life
+    - XMU
 ---
 
 >紧张刺激的大学生活开始辽
