@@ -378,8 +378,18 @@
 <p>注意到，当其中一个排列有序时，总的逆序对数量最少()</p>
 
 <blockquote>
-  <p>今天找个时间补上证明</p>
+  <p><del>今天找个时间补上证明</del></p>
 </blockquote>
+
+<p>对于任意一对 $i,j$ 位置，其可能的逆序对总贡献度 $c_{i,j}$ 为 $0,1,2$ 。由于两个排列对应位置上的元素是绑定的，所以在任意操作后只可能会出现下面几种情况：</p>
+
+<ol>
+  <li>总贡献度 $c_{i,j}$ 由 $0$ 变成 $2$</li>
+  <li>总贡献度 $c_{i,j}$ 由 $1$ 变成 $1$</li>
+  <li>总贡献度 $c_{i,j}$ 由 $2$ 变成 $0$</li>
+</ol>
+
+<p>那么令其中一个排列有序时，只会出现上面的第 2, 3 种情况（其中一个排列有序时 $c_{i,j}$ 不会取到 $2$ ）。这样所有的 $c_{i,j}$ 都取到了最小值，则此时答案最小。</p>
 
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
