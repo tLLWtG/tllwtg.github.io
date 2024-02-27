@@ -1,0 +1,407 @@
+---
+layout:     post
+title:      "Codeforces Round 923 (Div.3)"
+subtitle:   " \"Solutions of problem A-G\""
+date:       2024-02-07 8:00:00
+author:     "tLLWtG"
+header-style: text
+mathjax: true
+catalog: true
+tags:
+    - Code
+    - CP
+---
+
+> 题目链接[点这里](https://codeforces.com/contest/1927)
+
+> ~~G 题在补了。 ```(=´ω`=)```~~
+
+G 题题解已更新。
+
+### CF1927A Make it White
+
+```cpp
+void solve()
+{
+    int n;
+    cin >> n;
+    string s;
+    cin >> s;
+    int a = -1, b = -1;
+    for (int i = 0; i < n; ++i)
+    {
+        if (s[i] == 'B')
+        {
+            if (a == -1)
+                a = i;
+            else
+                b = i;
+        }
+    }
+    if (a == -1)
+        cout << 0 << endl;
+    else if (b == -1)
+        cout << 1 << endl;
+    else
+        cout << b - a + 1 << endl;
+}
+```
+
+### CF1927B Following the String
+
+当前位置可用的字符都是等价的，所以找到次数满足条件的字符即可拿来填充答案。
+
+```cpp
+void solve()
+{
+    int n, x;
+    cin >> n;
+    map<char, int> book;
+    char cur = 'a';
+    string ans;
+    for (int i = 1; i <= n; ++i)
+    {
+        cin >> x;
+        if (x == 0)
+        {
+            ans.pb(cur);
+            book[cur++]++;
+        }
+        else
+        {
+            for (char ch = 'a'; ch < cur; ++ch)
+            {
+                if (book[ch] == x)
+                {
+                    book[ch]++;
+                    ans.pb(ch);
+                    break;
+                }
+            }
+        }
+    }
+    cout << ans << endl;
+}
+```
+
+### CF1927C Choose the Different Ones!
+
+$1$ 到 $k$ 遍历过程中，若某一数字只在 $arr$ 中出现，则必从 $arr$ 中选出它，$brr$ 同理。统计各数组必选的次数，若超过 $\frac{k}{2}$ 则无答案。
+
+```cpp
+void solve()
+{
+    int n, m, k, x, cnt1 = 0, cnt2 = 0;
+    cin >> n >> m >> k;
+    set<int> arr, brr;
+    for (int i = 0; i < n; ++i)
+        cin >> x, arr.insert(x);
+    for (int i = 0; i < m; ++i)
+        cin >> x, brr.insert(x);
+    for (int i = 1; i <= k; ++i)
+    {
+        if (arr.find(i) == arr.end() && brr.find(i) == brr.end())
+        {
+            cout << "NO" << endl;
+            return;
+        }
+        if (arr.find(i) != arr.end() && brr.find(i) == brr.end())
+            ++cnt1;
+        if (arr.find(i) == arr.end() && brr.find(i) != brr.end())
+            ++cnt2;
+        if (cnt1 > k / 2 || cnt2 > k / 2 )
+        {
+            cout << "NO" << endl;
+            return;
+        }
+    }
+    cout << "YES" << endl;
+}
+```
+
+### CF1927D Find the Different Ones!
+
+发现当前数字与下一个数字不同时，就在这个位置打上标记。然后查询时二分查找 $[l, r-1]$ 内是否存在标记。
+
+```cpp
+void solve()
+{
+    int n, q, l, r;
+    cin >> n;
+    vector<ll> arr(n + 1);
+    set<int> pos;
+    for (int i = 1; i <= n; ++i)
+        cin >> arr[i];
+    for (int i = 1; i < n; ++i)
+        if (arr[i] != arr[i + 1])
+            pos.insert(i);
+    cin >> q;
+    while (q--)
+    {
+        cin >> l >> r;
+        auto it = pos.lower_bound(l);
+        if (it == pos.end() || *it + 1 > r)
+        {
+            cout << -1 << " " << -1 << endl;
+            continue;
+        }
+        cout << *it << " " << (*it) + 1 << endl;
+    }
+    cout << endl;
+}
+```
+
+### CF1927E Klever Permutation
+
+将 $n=9,k=4$ 对应的方程组列出:
+
+$p_1+p_2+p_3+p_4=s_1$
+
+$p_2+p_3+p_4+p_5=s_2$
+
+$...$
+
+$p_6+p_7+p_8+p_9=s_6$
+
+然后两两相减得到：
+
+$p_5-p_1=s_2-s_1$
+
+$p_6-p_2=s_3-s_2$
+
+$...$
+
+$p_9-p_5=s_6-s_5$
+
+观察式子，发现可以将元素分为 $k$ 组，每组都有独立的递推公式（如 $p_1,p_5,p_9$ 为一组，$p_2,p_6$ 为一组）。由各个 $s$ 之间相差最多为 $1$，那么不妨令：
+
+$s_2-s_1=1$
+
+$s_3-s_2=-1$
+
+$s_4-s_3=1$
+
+$...$
+
+这样各个 $s$ 始终在两个相邻的值之间波动，此时各组元素内部是公差为 $1$ 或 $-1$ 的等差数列关系。再令 $p_1=1$，得到下面的代码。
+
+```cpp
+void solve()
+{
+    int n, k, cur = 1;
+    cin >> n >> k;
+    vector<int> ans(n + 1);
+    for (int i = 1; i <= k; ++i)
+    {
+        if (i % 2 == 1)
+        {
+            for (int j = i; j <= n; j += k)
+                ans[j] = cur++;
+        }
+        else
+        {
+            int st = n / k * k + i;
+            while (st > n)
+                st -= k;
+            for (int j = st; j >= 1; j -= k)
+                ans[j] = cur++;
+        }
+    }
+    for (int i = 1; i <= n; ++i)
+        cout << ans[i] << " ";
+    cout << endl;
+}
+```
+
+### CF1927F Microcycle
+
+由“最小的边”和“环”容易想到生成树算法。用 Kruskal 构造出最大生成树，同时记录可以成环的最小的边。因为树上任意两点之间再加一条边只会形成一个环，所以用 dfs 跑一遍即可找到要求的环。
+
+```cpp
+class DSU
+{
+private:
+    int n;
+    vector<int> fa, sz;
+ 
+public:
+    DSU(int _n) : n(_n)
+    {
+        fa.resize(n + 5);
+        sz.resize(n + 5);
+        for (int i = 1; i <= n; ++i)
+        {
+            fa[i] = i;
+            sz[i] = 1;
+        }
+    }
+    int find(int x)
+    {
+        if (fa[x] == x)
+            return x;
+        else
+        {
+            fa[x] = find(fa[x]);
+            return fa[x];
+        }
+    }
+    void merge(int x, int y)
+    {
+        if (x == y)
+            return;
+        int xfa = find(x), yfa = find(y);
+        if (sz[xfa] <= sz[yfa])
+        {
+            sz[yfa] += sz[xfa];
+            fa[xfa] = yfa;
+        }
+        else
+        {
+            sz[xfa] += sz[yfa];
+            fa[yfa] = xfa;
+        }
+    }
+    int get_size(int x)
+    {
+        return sz[find(x)];
+    }
+};
+ 
+ 
+struct edge
+{
+    int u, v, w;
+};
+static bool cmp(edge a, edge b)
+{
+    return a.w > b.w;
+}
+ 
+void solve()
+{
+    int n, m, u, v, w, mini = 1e9;
+    cin >> n >> m;
+    vector<vector<pii>> to(n + 1), to2(n + 1);
+    vector<edge> e(m);
+    DSU dsu(n);
+    for (int i = 1; i <= m; ++i)
+    {
+        cin >> u >> v >> w;
+        to[u].pb({v, w});
+        to[v].pb({u, w});
+        e[i - 1] = {u, v, w};
+    }
+    sort(all(e), cmp);
+    for (int i = 0; i < m; ++i)
+    {
+        if (dsu.find(e[i].u) == dsu.find(e[i].v))
+        {
+            u = e[i].u;
+            v = e[i].v;
+            mini = e[i].w;
+        }
+        else
+        {
+            to2[e[i].u].pb({e[i].v, e[i].w});
+            to2[e[i].v].pb({e[i].u, e[i].w});
+            dsu.merge(e[i].u, e[i].v);
+        }
+    }
+    vector<int> ans, vis(n + 1);
+    bool flag = false;
+    function<void(int uu, int dep)> dfs = [&](int uu, int dep)
+    {
+        ans.pb(uu);
+        vis[uu] = 1;
+        for (auto [vv, w]: to2[uu])
+        {
+            if (vis[vv])
+                continue;
+            if (vv == v)
+            {
+                if (dep <= 1)
+                    continue;
+                flag = true;
+                ans.pb(vv);
+                return;
+            }
+            else
+                dfs(vv, dep + 1);
+            if (flag)
+                return;
+        }
+        ans.pop_back();
+        vis[uu] = 0;
+    };
+    dfs(u, 1);
+    cout << mini << " " << ans.size() << endl;
+    for (int i = 0; i < ans.size(); ++i)
+        cout << ans[i] << " ";
+    cout << endl;
+}
+```
+
+### CF1927G Paint Charges
+
+设 dp 状态：$dp[i][j][k]$ 。其意义为，当使用前 $i$ 个元素，最左侧未填充位置是 $j$ ，最右侧已填充位置是 $k$ 时，所需要的最小操作数。
+
+由定义，dp 的初始状态是 $dp[0][1][0]=0$ 。所求答案则是 $dp[n][n+1][n]$ 。
+
+然后按照 $i\in[1,n],j\in[1,n+1],k\in[0,n]$ 的顺序进行状态转移。状态转移时有下面三种操作：
+
+1. 不进行操作的状态转移： $dp[i][j][k] = min(dp[i][j][k], dp[i - 1][j][k])$
+2. 向左填充操作的状态转移：根据 $l,i,j,k$ 的大小关系讨论。
+3. 向右填充操作的状态转移：根据 $r,i,j,k$ 的大小关系讨论。
+
+转移方程见代码部分。（为方便理解，下面将八种情况都列出来了，没有简化不必要的情况）
+
+```cpp
+void solve()
+{
+    int n;
+    cin >> n;
+    vector<int> arr(n + 1);
+    for (int i = 1; i <= n; ++i)
+        cin >> arr[i];
+    vector dp(n + 3, vector(n + 3, vector<int>(n + 3, 1e3)));
+    dp[0][1][0] = 0;
+    for (int i = 1; i <= n; ++i)
+        for (int j = 1; j <= n + 1; ++j)
+            for (int k = 0; k <= n; ++k)
+            {
+                int l = max(i - arr[i] + 1, 1), r = min(i + arr[i] - 1, n);
+                dp[i][j][k] = min(dp[i][j][k], dp[i - 1][j][k]);
+                // left
+                if (l <= j)
+                {
+                    if (i > k)
+                        dp[i][i + 1][i] = min(dp[i][i + 1][i], dp[i - 1][j][k] + 1);
+                    else if (i <= k)
+                        dp[i][k + 1][k] = min(dp[i][k + 1][k], dp[i - 1][j][k] + 1);
+                }
+                else if (l > j)
+                {
+                    if (i > k)
+                        dp[i][j][i] = min(dp[i][j][i], dp[i - 1][j][l] + 1);
+                    else if (i <= k)
+                        dp[i][j][k] = min(dp[i][j][k], dp[i - 1][j][k] + 1);
+                }
+                // right
+                if (r > k)
+                {
+                    if (i <= j)
+                        dp[i][r + 1][r] = min(dp[i][r + 1][r], dp[i - 1][j][k] + 1);
+                    else if (i > j)
+                        dp[i][j][r] = min(dp[i][j][r], dp[i - 1][j][k] + 1);
+                }
+                else if (r <= k)
+                {
+                    if (i <= j)
+                        dp[i][k + 1][k] = min(dp[i][k + 1][k], dp[i - 1][j][k] + 1);
+                    else if (i > j)
+                        dp[i][j][k] = min(dp[i][j][k], dp[i - 1][j][k] + 1);
+                }
+            }
+    cout << dp[n][n + 1][n] << endl;
+}
+```
